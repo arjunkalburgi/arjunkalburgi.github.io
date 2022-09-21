@@ -1,6 +1,8 @@
 import adapter from '@sveltejs/adapter-static';
+import * as dotenv from 'dotenv';
 
-const dev = process.env.NODE_ENV === 'development';
+dotenv.config()
+const dev = process.env.VITE_NODE_ENV === 'development';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

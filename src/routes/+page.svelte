@@ -1,13 +1,18 @@
 <script>
 	import { onMount } from 'svelte';
 	import { animate } from '@arjunanimations/leaves';
+	import { base } from '$app/paths';
 	// import HeaderImage from '$lib/HeaderImage.svelte';
 	// import CanIHaveYoEmail from '$lib/CanIHaveYoEmail.svelte';
 
 	const animationData = {
 		className: 'bg_animation_container',
 		numOfSprites: 12,
-		pathsOfSprites: ['/cloud/pink.PNG', '/cloud/orange.PNG', '/cloud/blue.PNG'],
+		pathsOfSprites: [
+			base + "/cloud/pink.PNG", 
+			base + "/cloud/orange.PNG", 
+			base + "/cloud/blue.PNG"
+		],
 		noRotation: true,
 		noSpin: true,
 		width: 800,

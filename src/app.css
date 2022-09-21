@@ -1,0 +1,69 @@
+/* @import '@fontsource/lato';
+@import '@fontsource/carter-one'; */
+
+html,
+body {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+:root {
+  font: normal 1rem/1.3 'Lato', sans-serif;
+  color: var(--text-color);
+  --font-display: normal 1.7rem/1.3 'Carter One', monospace;
+
+  --brand-colour: #12a962;
+  --brand-colourlight: #12a962;
+  --brand-colourdark: #005d31;
+  --brand-contrastlight: #efefef;
+  --brand-contrastdark: #081a11;
+
+  --secondary-color: #d0dde9;
+  --accent-color: var(--brand-colour);
+  --text-color: #4b4b4b;
+  --title-color: var(--brand-contrastdark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  color: var(--title-color);
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 2rem;
+  font: var(--font-display);
+}
+
+input,
+button {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (min-width: 720px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+}

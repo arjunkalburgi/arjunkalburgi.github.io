@@ -1,38 +1,23 @@
-# create-svelte
+# ArjunKalburgi.com v2022
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Purpose 
+I believe that at this stage of my career, my personal side should no longer be for a strictly professional audience. 
 
-## Creating a project
+> I think my personal site doesn't need to be for a professional audience anymore. I want it to be for potential friends, mentors, mentees, neighbors, etc; anyone that wants an introduction to me.
+https://twitter.com/arjunkalburgi/status/1475333986071293953
 
-If you're seeing this, you've probably already done this step. Congrats!
+Therefore, the purpose of the site is to act as an introduction to me and thereby create connection on my behalf. Anyone that comes to my site should feel engaged to connect.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Brand 
+I have centered my primary brand trait around connection. Whether at work or with friends, my ability to connect, stay connected, and facilitate new connections is where I bring high impact.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+Both my professional and personal relationships benefit from this quality, so it's a great choice for a website meant for anyone. 
 
-## Developing
+## Development
+Created in Svelte. 
+With Sass. 
+And @arjunanimations.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Design 
+High in warmth (colours, copy). 
+High in engagement (animations, copy, graphics). 

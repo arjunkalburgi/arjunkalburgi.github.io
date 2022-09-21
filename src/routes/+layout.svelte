@@ -1,6 +1,5 @@
 <script>
 	import { base } from '$app/paths';
-	import '../app.css';
 </script>
 
 <div class="container">
@@ -31,19 +30,19 @@
 		}
 	}
 
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
+	// footer {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	justify-content: center;
+	// 	align-items: center;
+	// 	padding: 40px;
 
-		a {
-			font-weight: bold;
-		}
+	// 	a {
+	// 		font-weight: bold;
+	// 	}
 
-		@media (min-width: 480px) {
-			padding: 40px 0;
-		}
-	}
+	// 	@media (min-width: 480px) {
+	// 		padding: 40px 0;
+	// 	}
+	// }
 </style>

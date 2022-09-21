@@ -1,7 +1,7 @@
 import { publish } from 'gh-pages';
 
 publish(
- 'build', // path to public directory
+ 'build',
  {
   branch: 'gh-pages',
   repo: 'https://github.com/arjunkalburgi/2022-website.git',

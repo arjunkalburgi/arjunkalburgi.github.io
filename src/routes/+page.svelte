@@ -3,7 +3,7 @@
 	import { animate } from '@arjunanimations/leaves';
 	import { base } from '$app/paths';
 	import HeaderImage from '$lib/HeaderImage.svelte';
-	// import CanIHaveYoEmail from '$lib/CanIHaveYoEmail.svelte';
+	import CanIHaveYoEmail from '$lib/CanIHaveYoEmail.svelte';
 
 	const animationData = {
 		className: 'bg_animation_container',
@@ -38,14 +38,14 @@
 			<HeaderImage alt="me with a big smile, welcoming you to my site" src="{base}/welcome.gif" />
 		</div>
 		<div class="txt_container">
-			<p class="small">⚠️ wip, come back soon! + <a href="https://www.arjunkalburgi.com/arjunkalburgi.github.io">peep my old site</a></p>
+			<p class="small">⚠️ wip, come back soon! peep my <a href="https://www.arjunkalburgi.com/arjunkalburgi.github.io">old site</a> mb?</p>
 			<h2>Heyyy yaaa!</h2>
 			<p>Welcome to my site, tysm for coming 🙏🏾</p>
 			<p>
 				I believe everything is better together, so let's hang out! We can share coffee on a video
 				call, host a movie night together, or even build the company of our dreams.
 			</p>
-			<!-- <CanIHaveYoEmail /> -->
+			<CanIHaveYoEmail />
 		</div>
 	</div>
 </section>

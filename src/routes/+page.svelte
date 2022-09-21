@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { animate } from '@arjunanimations/leaves';
 	import { base } from '$app/paths';
-	// import HeaderImage from '$lib/HeaderImage.svelte';
+	import HeaderImage from '$lib/HeaderImage.svelte';
 	// import CanIHaveYoEmail from '$lib/CanIHaveYoEmail.svelte';
 
 	const animationData = {
@@ -35,7 +35,7 @@
 
 	<div class="content">
 		<div class="img_container">
-			<!-- <HeaderImage alt="me with a big smile, welcoming you to my site" src="/welcome.gif" /> -->
+			<HeaderImage alt="me with a big smile, welcoming you to my site" src="{base}/welcome.gif" />
 		</div>
 		<div class="txt_container">
 			<p class="small">⚠️ wip, come back soon! + <a href="https://www.arjunkalburgi.com/arjunkalburgi.github.io">peep my old site</a></p>

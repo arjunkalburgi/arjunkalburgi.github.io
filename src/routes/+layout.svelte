@@ -20,6 +20,10 @@
 </div>
 
 <style lang="scss">
+	main {
+		margin-bottom: 10vh;
+	}
+
 	h1 {
 		position: absolute;
 		margin: 0;

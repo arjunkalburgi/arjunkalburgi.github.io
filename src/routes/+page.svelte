@@ -9,9 +9,9 @@
 		className: 'bg_animation_container',
 		numOfSprites: 12,
 		pathsOfSprites: [
-			base + "/cloud/pink.PNG", 
-			base + "/cloud/orange.PNG", 
-			base + "/cloud/blue.PNG"
+			base + '/cloud/pink.PNG',
+			base + '/cloud/orange.PNG',
+			base + '/cloud/blue.PNG'
 		],
 		noRotation: true,
 		noSpin: true,
@@ -38,7 +38,11 @@
 			<HeaderImage alt="me with a big smile, welcoming you to my site" src="{base}/welcome.gif" />
 		</div>
 		<div class="txt_container">
-			<p class="small">⚠️ wip, come back soon! peep my <a href="https://www.arjunkalburgi.com/arjunkalburgi.github.io">old site</a> mb?</p>
+			<p class="small">
+				🚧 wip, come back soon! peep my <a
+					href="https://www.arjunkalburgi.com/arjunkalburgi.github.io">old site</a
+				> mb?
+			</p>
 			<h2>Heyyy yaaa!</h2>
 			<p>Welcome to my site, tysm for coming 🙏🏾</p>
 			<p>
@@ -47,6 +51,36 @@
 			</p>
 			<CanIHaveYoEmail />
 		</div>
+	</div>
+</section>
+
+<section class="story">
+	<div class="content">
+		<h2>Together - the way the best stuff is always done</h2>
+		<p>
+			I love making things happen with my friends. When someone has an idea for something, we
+			quickly jump on it - sharing thoughts and brainstorming possibilities. Soon a plan will start
+			to form and everyone gets involved to make it real.
+		</p>
+		<p>
+			Sometimes our ideas are about spending time together, like dressing up fancy for a potluck or
+			hosting a dance party on a boat. Sometimes our ideas involve daily life, like furnishing
+			someone's home or creating a reward system for self-care. Sometimes our ideas are about
+			projects we want to do, art projects, hackathons, companies.
+		</p>
+		<div class="images">
+			<img src="{base}/together/bar.jpg" alt="group of friends at the bar" />
+			<img src="{base}/together/baseball.jpg" alt="group of friends at the baseball game" />
+			<img src="{base}/together/caribana.jpg" alt="group of friends at Caribana parade" />
+			<img src="{base}/together/hiking.jpg" alt="group of friends hiking" />
+			<img src="{base}/together/party-2.jpg" alt="group of friends at a house party" />
+			<img src="{base}/together/party.png" alt="group of friends partying outside" />
+			<img src="{base}/together/station.jpg" alt="group of friends in the subway station" />
+		</div>
+		<p>
+			The best part about it is that always so much fun - lots of laughter and jokes. We have a
+			great time. That's what life is about: joy and creation, together. Always together.
+		</p>
 	</div>
 </section>
 
@@ -125,6 +159,46 @@
 					.img_container {
 						width: 70%;
 					}
+				}
+			}
+		}
+
+		&.story {
+			.content {
+				width: 50%;
+				padding: 0 10vw;
+
+				@media screen and (max-width: 40rem) {
+					width: 100%;
+					padding: 0 7vw;
+				}
+			}
+
+			.images {
+				display: flex;
+				flex-direction: row;
+				gap: 1rem;
+				overflow-x: auto;
+				scroll-snap-type: x mandatory;
+				scroll-behavior: smooth;
+				-webkit-overflow-scrolling: touch;
+
+				&::-webkit-scrollbar {
+					width: 10px;
+					height: 10px;
+				}
+				&::-webkit-scrollbar-thumb {
+					background: black;
+					border-radius: 10px;
+				}
+				&::-webkit-scrollbar-track {
+					background: transparent;
+				}
+
+				img {
+					height: 250px;
+					width: auto;
+					margin-bottom: 11px;
 				}
 			}
 		}

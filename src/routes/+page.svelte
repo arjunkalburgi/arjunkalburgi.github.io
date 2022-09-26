@@ -69,19 +69,27 @@
 			projects we want to do, art projects, hackathons, companies.
 		</p>
 		<div class="images">
-			<img src="{base}/together/bar.jpg" alt="group of friends at the bar" />
-			<img src="{base}/together/baseball.jpg" alt="group of friends at the baseball game" />
-			<img src="{base}/together/caribana.jpg" alt="group of friends at Caribana parade" />
-			<img src="{base}/together/hiking.jpg" alt="group of friends hiking" />
-			<img src="{base}/together/party-2.jpg" alt="group of friends at a house party" />
-			<img src="{base}/together/party.png" alt="group of friends partying outside" />
-			<img src="{base}/together/station.jpg" alt="group of friends in the subway station" />
+			<div class="carosel">
+				<img src="{base}/together/bar.jpg" alt="group of friends at the bar" />
+				<img src="{base}/together/baseball.jpg" alt="group of friends at the baseball game" />
+				<img src="{base}/together/caribana.jpg" alt="group of friends at Caribana parade" />
+				<img src="{base}/together/hiking.jpg" alt="group of friends hiking" />
+				<img src="{base}/together/party-2.jpg" alt="group of friends at a house party" />
+				<img src="{base}/together/party.png" alt="group of friends partying outside" />
+				<img src="{base}/together/station.jpg" alt="group of friends in the subway station" />
+			</div>
 		</div>
 		<p>
 			The best part about it is that always so much fun - lots of laughter and jokes. We have a
 			great time. That's what life is about: joy and creation, together. Always together.
 		</p>
 	</div>
+</section>
+
+<section class="cta">
+	<h3>Let's make this you</h3>
+	<img src="{base}/abidandi.PNG" alt="me and a blank person having fun" />
+	<CanIHaveYoEmail />
 </section>
 
 <style lang="scss">
@@ -165,34 +173,42 @@
 
 		&.story {
 			.content {
-				width: 50%;
 				padding: 0 10vw;
+				width: 50%;
 
 				@media screen and (max-width: 40rem) {
-					width: 100%;
 					padding: 0 7vw;
+					width: unset;
 				}
 			}
 
 			.images {
-				display: flex;
-				flex-direction: row;
-				gap: 1rem;
-				overflow-x: auto;
-				scroll-snap-type: x mandatory;
-				scroll-behavior: smooth;
-				-webkit-overflow-scrolling: touch;
+				position: relative;
+				height: 250px;
+				overflow: hidden;
 
-				&::-webkit-scrollbar {
-					width: 10px;
-					height: 10px;
-				}
-				&::-webkit-scrollbar-thumb {
-					background: black;
-					border-radius: 10px;
-				}
-				&::-webkit-scrollbar-track {
-					background: transparent;
+				.carosel {
+					position: absolute;
+					width: 100%;
+					display: flex;
+					flex-direction: row;
+					gap: 1rem;
+					overflow-x: auto;
+					scroll-snap-type: x mandatory;
+					scroll-behavior: smooth;
+					-webkit-overflow-scrolling: touch;
+
+					&::-webkit-scrollbar {
+						width: 10px;
+						height: 10px;
+					}
+					&::-webkit-scrollbar-thumb {
+						background: black;
+						border-radius: 10px;
+					}
+					&::-webkit-scrollbar-track {
+						background: transparent;
+					}
 				}
 
 				img {
@@ -200,6 +216,22 @@
 					width: auto;
 					margin-bottom: 11px;
 				}
+			}
+		}
+
+		&.cta {
+			padding: 5vh 0;
+			width: 50%;
+			margin: auto;
+
+			@media screen and (max-width: 40rem) {
+				padding: 0 7vw;
+				width: unset;
+			}
+
+			img {
+				margin-bottom: 2rem;
+				width: 100%;
 			}
 		}
 	}

@@ -93,6 +93,18 @@
 	<CanIHaveYoEmail center />
 </section>
 
+<section class="more">
+	<h4>More</h4>
+	<p>Hate small talk? Let's get deep!</p>
+	<p>Checkout my writing, projects, books I'm reading and even my workouts</p>
+	<a
+		target="_blank"
+		href="https://www.notion.so/arjunkalburgi/About-Arjun-c7cb723a93dd467d9e7f237033572611"
+	>
+		Show me more
+	</a>
+</section>
+
 <style lang="scss">
 	section {
 		display: flex;
@@ -237,9 +249,49 @@
 				width: unset;
 			}
 
+			h4 {
+				margin-bottom: 0;
+			}
+
 			img {
 				margin-bottom: 2rem;
 				width: 100%;
+			}
+		}
+
+		&.more {
+			margin-top: 3rem;
+
+			h4 {
+				margin-bottom: 0.75rem;
+			}
+
+			p {
+				margin: 0.5rem 0;
+			}
+
+			p:last-of-type {
+				margin-top: 0;
+				margin-bottom: 1.5rem;
+			}
+
+			a {
+				padding: 0.75rem;
+				border: none;
+				border-radius: 0.5rem;
+				background: #c6ffdd; /* fallback for old browsers */
+				// background: linear-gradient(217deg, #5d26c1cc, rgba(255, 0, 0, 0) 70.71%),
+				// 	linear-gradient(127deg, #a17fe0cc, rgba(0, 255, 0, 0) 70.71%),
+				// 	linear-gradient(336deg, #59c173cc, rgba(0, 0, 255, 0) 70.71%);
+
+				// background: linear-gradient(217deg, #f7797dcc, rgba(255, 0, 0, 0) 70.71%),
+				// 	linear-gradient(127deg, #c6ffddcc, rgba(0, 255, 0, 0) 70.71%),
+				// 	linear-gradient(336deg, #fbd786cc, rgba(0, 0, 255, 0) 70.71%);
+
+				background: linear-gradient(217deg, rgba(255, 190, 115, 0.5), rgba(255, 0, 0, 0) 70.71%),
+					linear-gradient(127deg, rgba(217, 104, 255, 0.5), rgba(0, 255, 0, 0) 70.71%),
+					linear-gradient(336deg, rgba(104, 216, 255, 0.5), rgba(0, 0, 255, 0) 70.71%);
+				color: black;
 			}
 		}
 	}

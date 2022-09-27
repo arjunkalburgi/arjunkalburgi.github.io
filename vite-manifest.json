@@ -1,11 +1,11 @@
 {
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-bd602824.js",
+    "file": "_app/immutable/start-644889a5.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_paths-483da606.js",
-      "_singletons-e80dab2d.js"
+      "_paths-fd72a987.js",
+      "_singletons-20d7c497.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -14,34 +14,36 @@
     ]
   },
   "src/routes/+layout.svelte": {
-    "file": "_app/immutable/components/pages/_layout.svelte-cdea770e.js",
+    "file": "_app/immutable/components/pages/_layout.svelte-48b494e1.js",
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_paths-483da606.js"
+      "_paths-fd72a987.js",
+      "_CanIHaveYoEmail-d2cabb1e.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout-059da87d.css"
+      "_app/immutable/assets/_layout-9e1fcf56.css"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-512ff73e.js",
+    "file": "_app/immutable/components/error.svelte-7bf44438.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
-      "_paths-483da606.js",
-      "_singletons-e80dab2d.js"
+      "_paths-fd72a987.js",
+      "_singletons-20d7c497.js"
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-56bd4f94.js",
+    "file": "_app/immutable/components/pages/_page.svelte-bd527bf3.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_paths-483da606.js"
+      "_paths-fd72a987.js",
+      "_CanIHaveYoEmail-d2cabb1e.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-5a7cc82c.css"
+      "_app/immutable/assets/_page-a2f611c2.css"
     ]
   },
   "src/routes/+layout.js": {
@@ -52,20 +54,29 @@
       "__layout-8d2a742b.js"
     ]
   },
-  "_singletons-e80dab2d.js": {
-    "file": "_app/immutable/chunks/singletons-e80dab2d.js",
+  "_singletons-20d7c497.js": {
+    "file": "_app/immutable/chunks/singletons-20d7c497.js",
     "imports": [
-      "_paths-483da606.js"
+      "_paths-fd72a987.js"
     ]
   },
-  "_paths-483da606.js": {
-    "file": "_app/immutable/chunks/paths-483da606.js"
+  "_paths-fd72a987.js": {
+    "file": "_app/immutable/chunks/paths-fd72a987.js"
+  },
+  "_CanIHaveYoEmail-d2cabb1e.js": {
+    "file": "_app/immutable/chunks/CanIHaveYoEmail-d2cabb1e.js",
+    "imports": [
+      "_paths-fd72a987.js"
+    ],
+    "css": [
+      "_app/immutable/assets/CanIHaveYoEmail-80cf2643.css"
+    ]
   },
   "__layout-8d2a742b.js": {
     "file": "_app/immutable/chunks/_layout-8d2a742b.js"
   },
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "_app/immutable/chunks/0-15f13937.js",
+    "file": "_app/immutable/chunks/0-54b1f801.js",
     "src": ".svelte-kit/generated/nodes/0.js",
     "isDynamicEntry": true,
     "imports": [
@@ -74,7 +85,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-feca733b.js",
+    "file": "_app/immutable/chunks/1-763fe98f.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -82,7 +93,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-e72a7b00.js",
+    "file": "_app/immutable/chunks/2-1f91d985.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
@@ -90,11 +101,15 @@
     ]
   },
   "src/routes/+layout.css": {
-    "file": "_app/immutable/assets/_layout-059da87d.css",
+    "file": "_app/immutable/assets/_layout-9e1fcf56.css",
     "src": "src/routes/+layout.css"
   },
+  "CanIHaveYoEmail.css": {
+    "file": "_app/immutable/assets/CanIHaveYoEmail-80cf2643.css",
+    "src": "CanIHaveYoEmail.css"
+  },
   "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page-5a7cc82c.css",
+    "file": "_app/immutable/assets/_page-a2f611c2.css",
     "src": "src/routes/+page.css"
   }
 }

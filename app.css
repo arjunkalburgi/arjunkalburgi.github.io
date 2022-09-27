@@ -1,5 +1,4 @@
-/* @import '@fontsource/lato';
-@import '@fontsource/carter-one'; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap');
 
 html,
 body {
@@ -10,7 +9,7 @@ body {
 :root {
   font: normal 1rem/1.3 'Lato', sans-serif;
   color: var(--text-color);
-  --font-display: normal 1.7rem/1.3 'Carter One', monospace;
+  --font-display: normal 1.7rem/1.3 'Roboto Mono', monospace;
 
   --brand-colour: #12a962;
   --brand-colourlight: #12a962;
@@ -30,8 +29,18 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: 'Roboto Mono', monospace;
   font-weight: 400;
   color: var(--title-color);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 2rem;
 }
 
 p {
@@ -45,11 +54,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-h2 {
-  font-size: 2rem;
-  font: var(--font-display);
 }
 
 input,

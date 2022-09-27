@@ -90,7 +90,8 @@
 <section class="cta">
 	<h4>Let's make this you</h4>
 	<img src="{base}/abidandi.PNG" alt="me and a blank person having fun" />
-	<CanIHaveYoEmail />
+	<CanIHaveYoEmail center />
+</section>
 </section>
 
 <style lang="scss">

@@ -56,7 +56,7 @@
 
 <section class="story">
 	<div class="content">
-		<h2>Together - the way the best stuff is always done</h2>
+		<h3>Together - the way the best stuff is always done</h3>
 		<p>
 			I love making things happen with my friends. When someone has an idea for something, we
 			quickly jump on it - sharing thoughts and brainstorming possibilities. Soon a plan will start
@@ -78,6 +78,7 @@
 				<img src="{base}/together/party.png" alt="group of friends partying outside" />
 				<img src="{base}/together/station.jpg" alt="group of friends in the subway station" />
 			</div>
+			<span>scroll 👉🏾</span>
 		</div>
 		<p>
 			The best part about it is that always so much fun - lots of laughter and jokes. We have a
@@ -87,7 +88,7 @@
 </section>
 
 <section class="cta">
-	<h3>Let's make this you</h3>
+	<h4>Let's make this you</h4>
 	<img src="{base}/abidandi.PNG" alt="me and a blank person having fun" />
 	<CanIHaveYoEmail />
 </section>
@@ -184,7 +185,7 @@
 
 			.images {
 				position: relative;
-				height: 250px;
+				height: 261px;
 				overflow: hidden;
 
 				.carosel {
@@ -209,6 +210,13 @@
 					&::-webkit-scrollbar-track {
 						background: transparent;
 					}
+				}
+
+				span {
+					position: absolute;
+					bottom: -4.5px;
+					right: 0;
+					font-size: 0.9rem;
 				}
 
 				img {

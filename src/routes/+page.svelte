@@ -92,7 +92,6 @@
 	<img src="{base}/abidandi.PNG" alt="me and a blank person having fun" />
 	<CanIHaveYoEmail center />
 </section>
-</section>
 
 <style lang="scss">
 	section {

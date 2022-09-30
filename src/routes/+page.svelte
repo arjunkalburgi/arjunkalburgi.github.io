@@ -87,12 +87,6 @@
 	</div>
 </section>
 
-<section class="cta">
-	<h4>Let's make this you</h4>
-	<img src="{base}/abidandi.PNG" alt="me and a blank person having fun" />
-	<CanIHaveYoEmail center />
-</section>
-
 <section class="more">
 	<h4>More</h4>
 	<p>Hate small talk? Let's get deep!</p>
@@ -103,6 +97,13 @@
 	>
 		Show me more
 	</a>
+</section>
+
+<section class="img">
+	<img
+		src="{base}/makethisyou.png"
+		alt="me and a blank person hanging out with the words 'make this you' on top"
+	/>
 </section>
 
 <style lang="scss">
@@ -239,8 +240,8 @@
 			}
 		}
 
-		&.cta {
-			padding: 5vh 0;
+		&.img {
+			padding: 5vh 0 0;
 			width: 50%;
 			margin: auto;
 
@@ -249,13 +250,8 @@
 				width: unset;
 			}
 
-			h4 {
-				margin-bottom: 0;
-			}
-
 			img {
-				margin-bottom: 2rem;
-				width: 100%;
+				width: 50%;
 			}
 		}
 
@@ -294,5 +290,9 @@
 				color: black;
 			}
 		}
+	}
+
+	:global(main) {
+		margin-bottom: 0 !important;
 	}
 </style>

@@ -18,9 +18,26 @@
 		width: 800,
 		height: 800
 	};
+	let carosel;
+	let scrollDirection = 'left';
 
 	onMount(() => {
 		animate(animationData);
+
+		setInterval(() => {
+			if (scrollDirection === 'left') {
+				carosel.scrollTo(carosel.scrollLeft + 5, 0);
+				if (carosel.scrollLeft === carosel.scrollLeftMax) {
+					scrollDirection = 'right';
+				}
+			}
+			if (scrollDirection === 'right') {
+				carosel.scrollTo(carosel.scrollLeft - 5, 0);
+				if (carosel.scrollLeft === 0) {
+					scrollDirection = 'left';
+				}
+			}
+		}, 15);
 	});
 </script>
 
@@ -68,7 +85,7 @@
 			our dreams, we always have so much fun.
 		</p>
 		<div class="images">
-			<div class="carosel">
+			<div class="carosel" bind:this={carosel}>
 				<img src="{base}/together/bar.jpg" alt="group of friends at the bar" />
 				<img src="{base}/together/baseball.jpg" alt="group of friends at the baseball game" />
 				<img src="{base}/together/caribana.jpg" alt="group of friends at Caribana parade" />
@@ -77,7 +94,6 @@
 				<img src="{base}/together/party.png" alt="group of friends partying outside" />
 				<img src="{base}/together/station.jpg" alt="group of friends in the subway station" />
 			</div>
-			<span>scroll 👉🏾</span>
 		</div>
 		<p>The fun is the best part. It's what life is about, having fun together. Always together.</p>
 		<CanIHaveYoEmail center label="enter your email! Let's have fun making your ideas real" />
@@ -195,7 +211,7 @@
 
 			.images {
 				position: relative;
-				height: 261px;
+				height: 250px;
 				overflow: hidden;
 
 				.carosel {
@@ -220,13 +236,6 @@
 					&::-webkit-scrollbar-track {
 						background: transparent;
 					}
-				}
-
-				span {
-					position: absolute;
-					bottom: -4.5px;
-					right: 0;
-					font-size: 0.9rem;
 				}
 
 				img {

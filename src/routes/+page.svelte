@@ -47,7 +47,7 @@
 			<p>Welcome to my site, tysm for coming 🙏🏾</p>
 			<p>
 				I hope this site can introduce me well! But nothing will beat getting to know each other.
-				Please reach out! I'd love to hear from you
+				Please connect! I'd love to hear from you
 			</p>
 			<CanIHaveYoEmail />
 		</div>
@@ -80,6 +80,7 @@
 			<span>scroll 👉🏾</span>
 		</div>
 		<p>The fun is the best part. It's what life is about, having fun together. Always together.</p>
+		<CanIHaveYoEmail center label="enter your email! Let's have fun making your ideas real" />
 	</div>
 </section>
 

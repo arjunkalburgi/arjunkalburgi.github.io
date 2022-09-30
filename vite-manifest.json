@@ -1,11 +1,11 @@
 {
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-a0d62747.js",
+    "file": "_app/immutable/start-250ebd64.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_paths-7696f170.js",
-      "_singletons-f1f63979.js"
+      "_singletons-b29790d1.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -26,12 +26,12 @@
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-8e64c609.js",
+    "file": "_app/immutable/components/error.svelte-fa23f42a.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
       "_paths-7696f170.js",
-      "_singletons-f1f63979.js"
+      "_singletons-b29790d1.js"
     ]
   },
   "src/routes/+page.svelte": {
@@ -54,8 +54,8 @@
       "__layout-8d2a742b.js"
     ]
   },
-  "_singletons-f1f63979.js": {
-    "file": "_app/immutable/chunks/singletons-f1f63979.js",
+  "_singletons-b29790d1.js": {
+    "file": "_app/immutable/chunks/singletons-b29790d1.js",
     "imports": [
       "_paths-7696f170.js"
     ]
@@ -85,7 +85,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-5f7ee889.js",
+    "file": "_app/immutable/chunks/1-e408a7cc.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -104,12 +104,12 @@
     "file": "_app/immutable/assets/_layout-9e1fcf56.css",
     "src": "src/routes/+layout.css"
   },
-  "CanIHaveYoEmail.css": {
-    "file": "_app/immutable/assets/CanIHaveYoEmail-80cf2643.css",
-    "src": "CanIHaveYoEmail.css"
-  },
   "src/routes/+page.css": {
     "file": "_app/immutable/assets/_page-0af12ea7.css",
     "src": "src/routes/+page.css"
+  },
+  "CanIHaveYoEmail.css": {
+    "file": "_app/immutable/assets/CanIHaveYoEmail-80cf2643.css",
+    "src": "CanIHaveYoEmail.css"
   }
 }

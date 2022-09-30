@@ -46,8 +46,8 @@
 			<h2>Heyyy yaaa!</h2>
 			<p>Welcome to my site, tysm for coming 🙏🏾</p>
 			<p>
-				I believe everything is better together, so let's hang out! We can share coffee on a video
-				call, host a movie night together, or even build the company of our dreams.
+				I hope this site can introduce me well! But nothing will beat getting to know each other.
+				Please reach out! I'd love to hear from you
 			</p>
 			<CanIHaveYoEmail />
 		</div>
@@ -56,17 +56,16 @@
 
 <section class="story">
 	<div class="content">
-		<h3>Together - the way the best stuff is always done</h3>
+		<h3>isn't life better together?</h3>
 		<p>
 			I love making things happen with my friends. When someone has an idea for something, we
-			quickly jump on it - sharing thoughts and brainstorming possibilities. Soon a plan will start
-			to form and everyone gets involved to make it real.
+			quickly jump on it - sharing thoughts and brainstorming possibilities. Everyone helps make it
+			real.
 		</p>
 		<p>
-			Sometimes our ideas are about spending time together, like dressing up fancy for a potluck or
-			hosting a dance party on a boat. Sometimes our ideas involve daily life, like furnishing
-			someone's home or creating a reward system for self-care. Sometimes our ideas are about
-			projects we want to do, art projects, hackathons, companies.
+			Sometimes our ideas are about spending time together, or a project we want to do, or even just
+			daily life. Whether it's a fancy potluck, furnishing someone's home or starting the company of
+			our dreams, we always have so much fun.
 		</p>
 		<div class="images">
 			<div class="carosel">
@@ -80,10 +79,7 @@
 			</div>
 			<span>scroll 👉🏾</span>
 		</div>
-		<p>
-			The best part about it is that always so much fun - lots of laughter and jokes. We have a
-			great time. That's what life is about: joy and creation, together. Always together.
-		</p>
+		<p>The fun is the best part. It's what life is about, having fun together. Always together.</p>
 	</div>
 </section>
 

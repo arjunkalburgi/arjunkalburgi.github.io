@@ -12,7 +12,7 @@
 	},
 	"dependencies": {
 		"dotenv": "^16.0.2",
-	    "@arjunanimations/leaves": "^0.3.2"
+		"@arjunanimations/leaves": "^0.4.0"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^1.0.0-next.43",

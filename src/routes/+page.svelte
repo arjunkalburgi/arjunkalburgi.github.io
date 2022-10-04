@@ -5,7 +5,7 @@
 	import HeaderImage from '$lib/HeaderImage.svelte';
 	import CanIHaveYoEmail from '$lib/CanIHaveYoEmail.svelte';
 
-	const animationData = {
+	const cloudAnimationData = {
 		className: 'bg_animation_container',
 		numOfSprites: 12,
 		pathsOfSprites: [
@@ -18,12 +18,20 @@
 		width: 800,
 		height: 800
 	};
+	const elementAnimationData = {
+		className: 'element_animation_container',
+		numOfSprites: 20,
+		pathsOfSprites: [base + '/favicon.png'],
+		width: 35,
+		height: 35
+	};
 	let carosel;
 	let scrollDirection = 'left';
 	let currTab = 'more';
 
 	onMount(() => {
-		animate(animationData);
+		animate(cloudAnimationData);
+		animate(elementAnimationData);
 
 		setInterval(() => {
 			if (!carosel) return;
@@ -102,98 +110,110 @@
 	</div>
 </section>
 
-<section class="more">
-	<div class="tabs">
-		<div class="tab-buttons">
-			<button class:selected={currTab === 'more'} on:click={() => (currTab = 'more')}>More</button>
-			<button class:selected={currTab === 'book'} on:click={() => (currTab = 'book')}>
-				Book rec's
-			</button>
-			<button class:selected={currTab === 'ppl'} on:click={() => (currTab = 'ppl')}>
-				My people
-			</button>
-			<button class:selected={currTab === 'work'} on:click={() => (currTab = 'work')}>Work</button>
-		</div>
-		<div class="tab-content {currTab}">
-			{#if currTab === 'more'}
-				<p>Ah you made it down this far and are still reading?! Just connect with me.</p>
-				<p>
-					<CanIHaveYoEmail center hideLabel />
-				</p>
-				<p>
-					I also have a lot of writing, etc from over the years that I've collected and put in one
-					place. Check it out!
-				</p>
-				<a href="https://www.notion.so/arjunkalburgi/About-Arjun-c7cb723a93dd467d9e7f237033572611">
-					See more
-				</a>
-			{:else if currTab === 'book'}
-				<p>There are two books I recommend to anyone.</p>
-				<p>
-					<a href="https://www.goodreads.com/en/book/show/33517721-the-culture-code"
-						>The Culture Code by Daniel Coyle</a
-					> is a business book, but learning how to make the people around you feel comfortable is universal.
-				</p>
-				<p>
-					I'm very far from religious, but the takeaways of <a
-						href="https://www.goodreads.com/book/show/6708.The_Power_of_Now"
-						>The Power of Now by Eckhart Tolle</a
-					> are incredibly valuable. Tolle distills spiritual messages in a way that makes so much sense.
-				</p>
-				<p>
-					I can recommend more! Find my other recommendations below but even better would be to talk
-					to you
-				</p>
-				<a
-					href="https://arjunkalburgi.notion.site/Arjun-s-Book-Recommendations-577c486a40ce45a49104030ad79b9130"
-				>
-					More rec's
-				</a>
-			{:else if currTab === 'ppl'}
-				<p>I'm incredibly blessed to have amazing people in my life.</p>
-				<p>
-					<a href="https://instagram.com/krisna.bhargava">Krisna</a> is my cousin/big brother. He practically
-					taught me how to think over 10 years of FaceTiming.
-				</p>
-				<p>
-					<a href="https://instagram.com/sincerelysanika">Sanika</a> and I became besties over the internet.
-					She is often the catalyst of my emotional growth.
-				</p>
-				<p>
-					<a href="https://instagram.com/radhikals">Radhika</a> and I are two peas in a pod. No one soaks-in
-					life like her, but I'm a close second.
-				</p>
-				<p>More shoutouts of incredible people below, also featuring their thoughts on me.</p>
-				<a
-					href="https://arjunkalburgi.notion.site/The-friends-along-the-way-eaa33349cc1c4712a3156be0cfb5faf8"
-				>
-					More people
-				</a>
-			{:else if currTab === 'work'}
-				<p>
-					I can wear a lot of hats so I need to figure out what work I should show! Please let me
-					know what you think should go here
-				</p>
-				<p>I have lots of my work on Github and my Notion, check them out.</p>
-				<div>
+<div class="animation-container">
+	<div class="element_animation_container" />
+
+	<section class="more">
+		<div class="tabs">
+			<div class="tab-buttons">
+				<button class:selected={currTab === 'more'} on:click={() => (currTab = 'more')}>
+					More
+				</button>
+				<button class:selected={currTab === 'book'} on:click={() => (currTab = 'book')}>
+					Book rec's
+				</button>
+				<button class:selected={currTab === 'ppl'} on:click={() => (currTab = 'ppl')}>
+					My people
+				</button>
+				<button class:selected={currTab === 'work'} on:click={() => (currTab = 'work')}>
+					Work
+				</button>
+			</div>
+			<div class="tab-content {currTab}">
+				{#if currTab === 'more'}
+					<p>Ah you made it down this far and are still reading?! Just connect with me.</p>
+					<p>
+						<CanIHaveYoEmail center hideLabel />
+					</p>
+					<p>
+						I also have a lot of writing, etc from over the years that I've collected and put in one
+						place. Check it out!
+					</p>
 					<a
 						href="https://www.notion.so/arjunkalburgi/About-Arjun-c7cb723a93dd467d9e7f237033572611"
 					>
-						More work
+						See more
 					</a>
-					<a href="https://github.com/arjunkalburgi"> Github </a>
-				</div>
-			{/if}
+				{:else if currTab === 'book'}
+					<p>There are two books I recommend to anyone.</p>
+					<p>
+						<a href="https://www.goodreads.com/en/book/show/33517721-the-culture-code"
+							>The Culture Code by Daniel Coyle</a
+						> is a business book, but learning how to make the people around you feel comfortable is
+						universal.
+					</p>
+					<p>
+						I'm very far from religious, but the takeaways of <a
+							href="https://www.goodreads.com/book/show/6708.The_Power_of_Now"
+							>The Power of Now by Eckhart Tolle</a
+						> are incredibly valuable. Tolle distills spiritual messages in a way that makes so much
+						sense.
+					</p>
+					<p>
+						I can recommend more! Find my other recommendations below but even better would be to
+						talk to you
+					</p>
+					<a
+						href="https://arjunkalburgi.notion.site/Arjun-s-Book-Recommendations-577c486a40ce45a49104030ad79b9130"
+					>
+						More rec's
+					</a>
+				{:else if currTab === 'ppl'}
+					<p>I'm incredibly blessed to have amazing people in my life.</p>
+					<p>
+						<a href="https://instagram.com/krisna.bhargava">Krisna</a> is my cousin/big brother. He practically
+						taught me how to think over 10 years of FaceTiming.
+					</p>
+					<p>
+						<a href="https://instagram.com/sincerelysanika">Sanika</a> and I became besties over the
+						internet. She is often the catalyst of my emotional growth.
+					</p>
+					<p>
+						<a href="https://instagram.com/radhikals">Radhika</a> and I are two peas in a pod. No one
+						soaks-in life like her, but I'm a close second.
+					</p>
+					<p>More shoutouts of incredible people below, also featuring their thoughts on me.</p>
+					<a
+						href="https://arjunkalburgi.notion.site/The-friends-along-the-way-eaa33349cc1c4712a3156be0cfb5faf8"
+					>
+						More people
+					</a>
+				{:else if currTab === 'work'}
+					<p>
+						I can wear a lot of hats so I need to figure out what work I should show! Please let me
+						know what you think should go here
+					</p>
+					<p>I have lots of my work on Github and my Notion, check them out.</p>
+					<div>
+						<a
+							href="https://www.notion.so/arjunkalburgi/About-Arjun-c7cb723a93dd467d9e7f237033572611"
+						>
+							More work
+						</a>
+						<a href="https://github.com/arjunkalburgi"> Github </a>
+					</div>
+				{/if}
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-<section class="img">
-	<img
-		src="{base}/makethisyou.png"
-		alt="me and a blank person hanging out with the words 'make this you' on top"
-	/>
-</section>
+	<section class="img">
+		<img
+			src="{base}/makethisyou.png"
+			alt="me and a blank person hanging out with the words 'make this you' on top"
+		/>
+	</section>
+</div>
 
 <style lang="scss">
 	section {
@@ -354,7 +374,7 @@
 			}
 
 			.tab-buttons button {
-				background: none;
+				background: #ffffffcc;
 				border: 1px solid grey;
 				border-radius: 6px 6px 0 0;
 				padding: 0.5rem 0.75rem;
@@ -372,6 +392,7 @@
 				padding: 3rem;
 				display: flex;
 				flex-direction: column;
+				background: #ffffffcc;
 
 				div {
 					display: flex;
@@ -401,6 +422,21 @@
 				color: black;
 				cursor: pointer;
 			}
+		}
+	}
+
+	.animation-container {
+		position: relative;
+
+		.element_animation_container {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			overflow: hidden;
+			z-index: -1;
+			pointer-events: none;
 		}
 	}
 

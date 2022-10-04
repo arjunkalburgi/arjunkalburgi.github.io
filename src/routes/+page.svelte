@@ -169,14 +169,11 @@
 						> are incredibly valuable. Tolle distills spiritual messages in a way that makes so much
 						sense.
 					</p>
-					<p>
-						I can recommend more! Find my other recommendations below but even better would be to
-						talk to you
-					</p>
+					<p>I can recommend more! Let's chat all about books</p>
 					<a
-						href="https://arjunkalburgi.notion.site/Arjun-s-Book-Recommendations-577c486a40ce45a49104030ad79b9130"
+						href="https://www.notion.so/arjunkalburgi/eaf021a4614746a2ad6c91d5bad6772c?v=89329eec6f0b47839c58fe1b8a0a2b46"
 					>
-						More rec's
+						My books
 					</a>
 				{:else if currTab === 'ppl'}
 					<p>I'm incredibly blessed to have amazing people in my life.</p>
@@ -274,7 +271,10 @@
 				grid-template-columns: 40% auto;
 				grid-gap: 5vw;
 				align-items: center;
-				padding: 0 10vw;
+
+				@media screen and (min-width: 40rem) {
+					padding: 0 10vw;
+				}
 
 				.img_container {
 					width: 100%;
@@ -405,6 +405,10 @@
 				display: flex;
 				flex-direction: column;
 				background: #ffffffcc;
+
+				@media screen and (max-width: 40rem) {
+					padding: 1.5rem;
+				}
 
 				div {
 					display: flex;

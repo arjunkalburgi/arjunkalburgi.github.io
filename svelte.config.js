@@ -3,12 +3,12 @@ import preprocess from 'svelte-preprocess';
 import * as dotenv from 'dotenv';
 
 dotenv.config()
-const dev = process.env.VITE_NODE_ENV === 'development';
+const main = true; // process.env.VITE_NODE_ENV === 'development';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: preprocess(),
-	
+
 	kit: {
 		adapter: adapter({
 			pages: 'build',
@@ -17,7 +17,7 @@ const config = {
 			precompress: false
 		}),
 		paths: {
-			base: dev ? '' : '/2022-website',
+			base: main ? '' : '/2022-website',
 		},
 
 	}

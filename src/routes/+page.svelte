@@ -76,11 +76,7 @@
 			<HeaderImage alt="me with a big smile, welcoming you to my site" src="{base}/welcome.gif" />
 		</div>
 		<div class="txt_container">
-			<p class="small">
-				🚧 wip, come back soon! peep my <a
-					href="https://www.arjunkalburgi.com/arjunkalburgi.github.io">old site</a
-				> mb?
-			</p>
+			<p class="small">🚧 wip, give me feedback! come back soon</p>
 			<h2>Heyyy yaaa!</h2>
 			<p>Welcome to my site, tysm for coming 🙏🏾</p>
 			<p>

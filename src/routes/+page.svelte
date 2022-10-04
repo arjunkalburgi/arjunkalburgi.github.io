@@ -20,8 +20,18 @@
 	};
 	const elementAnimationData = {
 		className: 'element_animation_container',
-		numOfSprites: 20,
-		pathsOfSprites: [base + '/favicon.png'],
+		numOfSprites: 45,
+		pathsOfSprites: [
+			base + '/element/leaf01.svg',
+			base + '/element/leaf02.svg',
+			base + '/element/leaf03.svg',
+			base + '/element/bolt01.svg',
+			base + '/element/bolt02.svg',
+			base + '/element/bolt03.svg',
+			base + '/element/bulb01.svg',
+			base + '/element/bulb02.svg',
+			base + '/element/bulb03.svg'
+		],
 		width: 35,
 		height: 35
 	};

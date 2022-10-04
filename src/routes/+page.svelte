@@ -114,19 +114,19 @@
 	<div class="element_animation_container" />
 
 	<section class="more">
-		<div class="tabs">
+		<div class="tabs content">
 			<div class="tab-buttons">
 				<button class:selected={currTab === 'more'} on:click={() => (currTab = 'more')}>
-					More
+					➕ <span>More</span>
 				</button>
 				<button class:selected={currTab === 'book'} on:click={() => (currTab = 'book')}>
-					Book rec's
+					📚 <span>Book rec's</span>
 				</button>
 				<button class:selected={currTab === 'ppl'} on:click={() => (currTab = 'ppl')}>
-					My people
+					🫂 <span>My people</span>
 				</button>
 				<button class:selected={currTab === 'work'} on:click={() => (currTab = 'work')}>
-					Work
+					💼 <span>Work</span>
 				</button>
 			</div>
 			<div class="tab-content {currTab}">
@@ -223,8 +223,24 @@
 		align-items: center;
 		flex: 1;
 
+		.content {
+			padding: 0 10vw;
+			width: 50%;
+
+			@media screen and (max-width: 60rem) {
+				padding: 0 10vw;
+				width: 75%;
+			}
+
+			@media screen and (max-width: 40rem) {
+				padding: 0 7vw;
+				width: unset;
+			}
+		}
+
 		&.hero {
 			padding: 20vh 0;
+			width: unset;
 			position: relative;
 
 			.bg_animation_container {
@@ -267,10 +283,8 @@
 					margin-top: 0.5rem;
 				}
 			}
-		}
 
-		@media screen and (max-width: 40rem) {
-			&.hero {
+			@media screen and (max-width: 40rem) {
 				padding: 10vh 0;
 
 				.bg_animation_container {
@@ -281,7 +295,6 @@
 					display: flex;
 					flex-direction: column;
 					align-items: flex-start;
-					padding: 0 7vw;
 
 					.txt_container {
 						margin-top: 2rem;
@@ -295,16 +308,6 @@
 		}
 
 		&.story {
-			.content {
-				padding: 0 10vw;
-				width: 50%;
-
-				@media screen and (max-width: 40rem) {
-					padding: 0 7vw;
-					width: unset;
-				}
-			}
-
 			.images {
 				position: relative;
 				height: 250px;
@@ -344,13 +347,7 @@
 
 		&.img {
 			padding: 5vh 0 0;
-			width: 50%;
 			margin: auto;
-
-			@media screen and (max-width: 40rem) {
-				padding: 0 7vw;
-				width: unset;
-			}
 
 			img {
 				width: 30%;
@@ -364,14 +361,6 @@
 		&.more {
 			position: relative;
 			padding: 10vh 0;
-			.tabs {
-				width: 50%;
-
-				@media screen and (max-width: 40rem) {
-					padding: 0 7vw;
-					width: unset;
-				}
-			}
 
 			.tab-buttons button {
 				background: #ffffffcc;
@@ -379,6 +368,19 @@
 				border-radius: 6px 6px 0 0;
 				padding: 0.5rem 0.75rem;
 				cursor: pointer;
+
+				@media screen and (max-width: 40rem) {
+					&:not(.selected) span {
+						position: absolute;
+						overflow: hidden;
+						clip: rect(0 0 0 0);
+						height: 1px;
+						width: 1px;
+						margin: -1px;
+						padding: 0;
+						border: 0;
+					}
+				}
 
 				&.selected {
 					border-color: grey;

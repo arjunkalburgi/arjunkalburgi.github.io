@@ -1,11 +1,11 @@
 {
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-44d06508.js",
+    "file": "_app/immutable/start-0c18f0da.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_paths-7696f170.js",
-      "_singletons-c0f088c0.js"
+      "_singletons-ea09994a.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -26,16 +26,16 @@
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-b22308c6.js",
+    "file": "_app/immutable/components/error.svelte-b5e134ef.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
       "_paths-7696f170.js",
-      "_singletons-c0f088c0.js"
+      "_singletons-ea09994a.js"
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-18960de5.js",
+    "file": "_app/immutable/components/pages/_page.svelte-b538dd0f.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
@@ -54,8 +54,8 @@
       "__layout-8d2a742b.js"
     ]
   },
-  "_singletons-c0f088c0.js": {
-    "file": "_app/immutable/chunks/singletons-c0f088c0.js",
+  "_singletons-ea09994a.js": {
+    "file": "_app/immutable/chunks/singletons-ea09994a.js",
     "imports": [
       "_paths-7696f170.js"
     ]
@@ -85,7 +85,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-84bf5ad9.js",
+    "file": "_app/immutable/chunks/1-df6faa6a.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -93,7 +93,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-73efac32.js",
+    "file": "_app/immutable/chunks/2-68f8a0ef.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
@@ -104,12 +104,12 @@
     "file": "_app/immutable/assets/_layout-9e1fcf56.css",
     "src": "src/routes/+layout.css"
   },
-  "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page-ac9f97ad.css",
-    "src": "src/routes/+page.css"
-  },
   "CanIHaveYoEmail.css": {
     "file": "_app/immutable/assets/CanIHaveYoEmail-80cf2643.css",
     "src": "CanIHaveYoEmail.css"
+  },
+  "src/routes/+page.css": {
+    "file": "_app/immutable/assets/_page-ac9f97ad.css",
+    "src": "src/routes/+page.css"
   }
 }

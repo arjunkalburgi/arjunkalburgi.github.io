@@ -92,13 +92,13 @@
 	<div class="content">
 		<h3>isn't life better together?</h3>
 		<p>
-			I love enjoying with friends. It helps that I find friends everywhere, and 
- 			there is no shortage of activities, projects and hangs to make happen
+			I love enjoying with friends. It helps that I find friends everywhere, and there is no
+			shortage of activities, projects and hangs to make happen
 		</p>
 		<p>
-			The best is when there's an idea for something, and everyone gets together to make it 
-			real. We host fancy dinners, discuss how to make our futures happen and start companies 
-			- all because we're together
+			The best is when there's an idea for something, and everyone gets together to make it real. We
+			host fancy dinners, discuss how to make our futures happen and start companies - all because
+			we're together
 		</p>
 		<div class="images">
 			<div class="carosel" bind:this={carosel}>
@@ -192,11 +192,13 @@
 					</a>
 				{:else if currTab === 'work'}
 					<p>
-						I'm a PM + UX Dev but enjoy wearing other hats including UI/UX design, defining culture, etc.
+						I'm a PM + UX Dev but enjoy wearing other hats including UI/UX design, defining culture,
+						etc.
 					</p>
 					<p>
-						In previous roles, I built products with lots of unknowns and united teams together to do it. 
-						Both require deep listening, group learning and preaching vision - 3 things I love to do
+						In previous roles, I built products with lots of unknowns and united teams together to
+						do it. Both require deep listening, group learning and preaching vision - 3 things I
+						love to do
 					</p>
 					<p>I have lots of writing, thoughts and work on Github and Notion, check them out.</p>
 					<div>
@@ -370,31 +372,46 @@
 			position: relative;
 			padding: 10vh 0;
 
-			.tab-buttons button {
-				background: #ffffffcc;
-				border: 1px solid grey;
-				border-radius: 6px 6px 0 0;
-				padding: 0.5rem 0.75rem;
-				cursor: pointer;
+			.tab-buttons {
+				border-bottom: 1px solid grey;
 
-				@media screen and (max-width: 40rem) {
-					&:not(.selected) span {
-						position: absolute;
-						overflow: hidden;
-						clip: rect(0 0 0 0);
-						height: 1px;
-						width: 1px;
-						margin: -1px;
-						padding: 0;
-						border: 0;
+				button {
+					background: #ffffffcc;
+					border: 1px solid grey;
+					border-bottom: none;
+					border-radius: 6px 6px 0 0;
+					padding: 0.5rem 0.75rem;
+					cursor: pointer;
+
+					@media screen and (max-width: 40rem) {
+						&:not(.selected) span {
+							position: absolute;
+							overflow: hidden;
+							clip: rect(0 0 0 0);
+							height: 1px;
+							width: 1px;
+							margin: -1px;
+							padding: 0;
+							border: 0;
+						}
 					}
-				}
 
-				&.selected {
-					border-color: grey;
-					border-width: 2px;
-					padding: 0.5rem 1rem;
-					border-bottom: 3px solid white;
+					&.selected {
+						border-color: grey;
+						border-width: 2px;
+						padding: 0.5rem 1rem;
+						position: relative;
+
+						&::after {
+							content: ' ';
+							position: absolute;
+							width: 100%;
+							height: 2px;
+							background-color: white;
+							bottom: -1px;
+							left: 0;
+						}
+					}
 				}
 			}
 

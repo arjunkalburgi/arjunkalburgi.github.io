@@ -92,14 +92,13 @@
 	<div class="content">
 		<h3>isn't life better together?</h3>
 		<p>
-			I love making things happen with my friends. When someone has an idea for something, we
-			quickly jump on it - sharing thoughts and brainstorming possibilities. Everyone helps make it
-			real.
+			I love enjoying with friends. It helps that I find friends everywhere, and 
+ 			there is no shortage of activities, projects and hangs to make happen
 		</p>
 		<p>
-			Sometimes our ideas are about spending time together, or a project we want to do, or even just
-			daily life. Whether it's a fancy potluck, furnishing someone's home or starting the company of
-			our dreams, we always have so much fun.
+			The best is when there's an idea for something, and everyone gets together to make it 
+			real. We host fancy dinners, discuss how to make our futures happen and start companies 
+			- all because we're together
 		</p>
 		<div class="images">
 			<div class="carosel" bind:this={carosel}>
@@ -112,7 +111,7 @@
 				<img src="{base}/together/station.jpg" alt="group of friends in the subway station" />
 			</div>
 		</div>
-		<p>The fun is the best part. It's what life is about, having fun together. Always together.</p>
+		<p>So. Much. Fun.</p>
 	</div>
 </section>
 
@@ -193,15 +192,18 @@
 					</a>
 				{:else if currTab === 'work'}
 					<p>
-						I can wear a lot of hats so I need to figure out what work I should show! Please let me
-						know what you think should go here
+						I'm a PM + UX Dev but enjoy wearing other hats including UI/UX design, defining culture, etc.
 					</p>
-					<p>I have lots of my work on Github and my Notion, check them out.</p>
+					<p>
+						In previous roles, I built products with lots of unknowns and united teams together to do it. 
+						Both require deep listening, group learning and preaching vision - 3 things I love to do
+					</p>
+					<p>I have lots of writing, thoughts and work on Github and Notion, check them out.</p>
 					<div>
 						<a
 							href="https://www.notion.so/arjunkalburgi/About-Arjun-c7cb723a93dd467d9e7f237033572611"
 						>
-							More work
+							Notion
 						</a>
 						<a href="https://github.com/arjunkalburgi"> Github </a>
 					</div>

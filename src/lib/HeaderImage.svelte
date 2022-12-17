@@ -38,6 +38,22 @@
 		bottom: 0;
 		right: -28%;
 		width: 116%;
+
+		@media screen and (max-width: 791px) {
+			bottom: -40%;
+			right: -8%;
+			width: 76%;
+		}
+
+		@media screen and (max-width: 591px) {
+			bottom: -30%;
+			right: -18%;
+			width: 96%;
+		}
+
+		@media screen and (max-width: 391px) {
+			bottom: -10%;
+		}
 	}
 
 	.bg {

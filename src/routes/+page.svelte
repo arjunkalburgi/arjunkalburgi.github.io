@@ -236,7 +236,7 @@
 
 		max-width: 800px;
 
-		@media screen and (max-width: 991px) {
+		@media screen and (max-width: 791px) {
 			padding-left: 10px;
 			padding-right: 10px;
 			width: unset;
@@ -257,7 +257,7 @@
 
 			max-width: 700px;
 
-			@media screen and (max-width: 991px) {
+			@media screen and (max-width: 791px) {
 				padding-left: 20px;
 				padding-right: 20px;
 				width: unset;
@@ -267,8 +267,6 @@
 
 	section.hero {
 		display: grid;
-		width: 100%;
-		padding-left: 0px;
 		grid-auto-columns: 1fr;
 		grid-column-gap: 32px;
 		grid-row-gap: 0px;
@@ -292,7 +290,7 @@
 			position: relative;
 			border-radius: 10px;
 
-			@media screen and (max-width: 991px) {
+			@media screen and (max-width: 791px) {
 				height: 300px;
 				grid-row-start: 1;
 				grid-row-end: 2;
@@ -325,7 +323,7 @@
 			// line-height: 1.3;
 			white-space: normal;
 
-			@media screen and (max-width: 991px) {
+			@media screen and (max-width: 791px) {
 				margin-right: 1rem;
 				grid-row-start: span 1;
 				grid-row-end: span 1;
@@ -358,10 +356,17 @@
 			div {
 				display: flex;
 				flex-direction: row;
+				justify-content: center;
+				align-items: center;
 
 				p {
 					transform: rotate(-90deg);
 					text-align: center;
+					width: 50%;
+
+					@media screen and (max-width: 791px) {
+						display: none;
+					}
 				}
 			}
 		}
@@ -372,7 +377,7 @@
 		grid-template-columns: 1fr auto;
 		grid-column-gap: 50px;
 
-		@media screen and (max-width: 991px) {
+		@media screen and (max-width: 791px) {
 			display: block;
 		}
 
@@ -408,7 +413,7 @@
 				column-gap: 40px;
 				margin-bottom: 0;
 
-				@media screen and (max-width: 991px) {
+				@media screen and (max-width: 791px) {
 					column-count: 1;
 				}
 			}
@@ -419,6 +424,8 @@
 		position: relative;
 		height: 250px;
 		overflow: hidden;
+		padding-left: 0;
+		padding-right: 0;
 
 		.carosel {
 			position: absolute;
@@ -456,6 +463,10 @@
 		grid-gap: 50px;
 		grid-template-columns: auto auto;
 
+		@media screen and (max-width: 791px) {
+			grid-gap: 20px;
+		}
+
 		div {
 			padding: 2rem;
 			border: 1px solid #ababab;
@@ -487,7 +498,7 @@
 		}
 
 		.blog---featured-post---image {
-			@media screen and (max-width: 991px) {
+			@media screen and (max-width: 791px) {
 				height: 300px;
 				overflow: hidden;
 				grid-row-start: 1;
@@ -527,7 +538,7 @@
 			// line-height: 1.3;
 			white-space: normal;
 
-			@media screen and (max-width: 991px) {
+			@media screen and (max-width: 791px) {
 				margin-right: 1rem;
 				grid-row-start: span 1;
 				grid-row-end: span 1;

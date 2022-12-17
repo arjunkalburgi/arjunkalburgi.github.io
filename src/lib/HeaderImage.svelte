@@ -1,44 +1,54 @@
 <script>
-  import { onMount } from 'svelte';
-  import { animate } from '@arjunanimations/leaves';
+	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
+	import { animate } from '@arjunanimations/leaves';
 
-  export let alt;
-  export let src;
+	export let alt;
+	export let src;
 
-  const animationData = {
-    className: 'elements_animation_container',
-    numOfSprites: 5,
-    pathsOfSprites: [base + '/favicon.png']
-  };
+	const cloudAnimationData = {
+		className: 'bg_animation_container',
+		numOfSprites: 12,
+		pathsOfSprites: [
+			base + '/cloud/pink.PNG',
+			base + '/cloud/orange.PNG',
+			base + '/cloud/blue.PNG'
+		],
+		noRotation: true,
+		noSpin: true,
+		width: 800,
+		height: 800
+	};
 
-  onMount(() => {
-    // animate(animationData);
-  });
+	onMount(() => {
+		animate(cloudAnimationData);
+	});
 </script>
 
-<div class="elements_animation_container">
-  <div class="oval" />
-  <img class="main" {alt} {src} />
+<div>
+	<div class="bg">
+		<div class="bg_animation_container" />
+	</div>
+	<img class="main" {alt} {src} />
 </div>
 
 <style lang="scss">
-  div {
-    position: relative;
-  }
-  .main {
-    width: 100%;
-  }
-  .oval {
-    width: 80%;
-    position: absolute;
-    bottom: -18%;
-    z-index: -1;
-    left: 0;
-    right: 0;
-    margin: auto;
-    height: 40%;
-    background-color: #484e64;
-    border-radius: 100%;
-  }
+	.main {
+		position: absolute;
+		bottom: 0;
+		right: -28%;
+		width: 116%;
+	}
+
+	.bg {
+		background-color: #e6e7f0;
+		background-color: #e6e7f036;
+		height: 620px;
+
+		.bg_animation_container {
+			position: absolute;
+			top: -50%;
+			left: -50%;
+		}
+	}
 </style>

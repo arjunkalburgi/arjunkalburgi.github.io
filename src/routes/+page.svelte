@@ -18,30 +18,11 @@
 		width: 800,
 		height: 800
 	};
-	const elementAnimationData = {
-		className: 'element_animation_container',
-		numOfSprites: 45,
-		pathsOfSprites: [
-			base + '/element/leaf01.svg',
-			base + '/element/leaf02.svg',
-			base + '/element/leaf03.svg',
-			base + '/element/bolt01.svg',
-			base + '/element/bolt02.svg',
-			base + '/element/bolt03.svg',
-			base + '/element/bulb01.svg',
-			base + '/element/bulb02.svg',
-			base + '/element/bulb03.svg'
-		],
-		width: 35,
-		height: 35
-	};
 	let carosel;
 	let scrollDirection = 'left';
-	let currTab = 'more';
 
 	onMount(() => {
 		animate(cloudAnimationData);
-		animate(elementAnimationData);
 
 		setInterval(() => {
 			if (!carosel) return;
@@ -68,12 +49,7 @@
 
 <section class="hero wide">
 	<div class="blog---featured-post---image">
-		<img
-			loading="lazy"
-			src="https://assets.website-files.com/628d1b812d83aff048417c8c/634489aeec18e87d214aaaba_burnout-feature.png"
-			alt=""
-			class="blog---featured---image"
-		/>
+		<HeaderImage alt="me with a big smile, welcoming you to my site" src="{base}/welcome.gif" />
 	</div>
 	<div class="blog---feature---content">
 		<p class="small">🚧 wip, give me feedback! come back soon</p>
@@ -312,9 +288,12 @@
 		}
 
 		.blog---featured-post---image {
+			overflow: hidden;
+			position: relative;
+			border-radius: 10px;
+
 			@media screen and (max-width: 991px) {
 				height: 300px;
-				overflow: hidden;
 				grid-row-start: 1;
 				grid-row-end: 2;
 				grid-column-start: 1;
@@ -322,7 +301,6 @@
 			}
 
 			@media screen and (min-width: 1240px) {
-				overflow: hidden;
 				min-height: 500px;
 				align-self: start;
 			}
@@ -332,11 +310,6 @@
 				grid-column-end: span 1;
 				grid-row-start: span 1;
 				grid-row-end: span 1;
-			}
-
-			img {
-				max-width: 100%;
-				border-radius: 10px;
 			}
 		}
 

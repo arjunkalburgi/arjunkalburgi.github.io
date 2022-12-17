@@ -1,11 +1,11 @@
 {
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-dcffb805.js",
+    "file": "_app/immutable/start-97052267.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_paths-7696f170.js",
-      "_singletons-d912eab9.js"
+      "_singletons-3712e42e.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -26,16 +26,16 @@
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-f99c005c.js",
+    "file": "_app/immutable/components/error.svelte-b168d520.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
       "_paths-7696f170.js",
-      "_singletons-d912eab9.js"
+      "_singletons-3712e42e.js"
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-b0ebba74.js",
+    "file": "_app/immutable/components/pages/_page.svelte-ab4efc34.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
@@ -43,7 +43,7 @@
       "_CanIHaveYoEmail-870b3f24.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-cb0f8a44.css"
+      "_app/immutable/assets/_page-06050a1e.css"
     ]
   },
   "src/routes/+layout.js": {
@@ -54,8 +54,8 @@
       "__layout-8d2a742b.js"
     ]
   },
-  "_singletons-d912eab9.js": {
-    "file": "_app/immutable/chunks/singletons-d912eab9.js",
+  "_singletons-3712e42e.js": {
+    "file": "_app/immutable/chunks/singletons-3712e42e.js",
     "imports": [
       "_paths-7696f170.js"
     ]
@@ -85,7 +85,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-6bd0f07f.js",
+    "file": "_app/immutable/chunks/1-0fd01f0e.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -93,7 +93,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-4e3ca475.js",
+    "file": "_app/immutable/chunks/2-9dd88623.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
@@ -109,7 +109,7 @@
     "src": "CanIHaveYoEmail.css"
   },
   "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page-cb0f8a44.css",
+    "file": "_app/immutable/assets/_page-06050a1e.css",
     "src": "src/routes/+page.css"
   }
 }

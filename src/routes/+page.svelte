@@ -66,408 +66,533 @@
 	<title>Home</title>
 </svelte:head>
 
-<section class="hero">
-	<div class="bg_animation_container">
-		<div />
+<section class="hero wide">
+	<div class="blog---featured-post---image">
+		<img
+			loading="lazy"
+			src="https://assets.website-files.com/628d1b812d83aff048417c8c/634489aeec18e87d214aaaba_burnout-feature.png"
+			alt=""
+			class="blog---featured---image"
+		/>
 	</div>
+	<div class="blog---feature---content">
+		<p class="small">🚧 wip, give me feedback! come back soon</p>
+		<p>
+			Welcome to my site, tysm for coming 🙏🏾 This is a place where I can introduce myself online. Of
+			course, nothing is better than in-person (which I would love to do, virtually or irl) but with
+			this site I’m going to try my best to do that digitally. The first thing to know about me is
+			that I believe that
+		</p>
+		<div>
+			<h2>Life is meant to be enjoyed - preferably together</h2>
+			<p>Living life Arjun style</p>
+		</div>
+		<p>
+			This means wide smiles, enthusiastic hugs, occasionally slightly embarrassing behaviour. It
+			means bringing people together, sharing each other’s company and exploring the world. It means
+			finding new things to learn and create. In general, it’s a lot of fun.
+		</p>
+		<p>Let me show you how I do this.</p>
+	</div>
+</section>
 
-	<div class="content">
-		<div class="img_container">
-			<HeaderImage alt="me with a big smile, welcoming you to my site" src="{base}/welcome.gif" />
-		</div>
-		<div class="txt_container">
-			<p class="small">🚧 wip, give me feedback! come back soon</p>
-			<h2>Heyyy yaaa!</h2>
-			<p>Welcome to my site, tysm for coming 🙏🏾</p>
+<section class="intro-content thin">
+	<div class="posts">
+		<div class="post">
+			<div />
+			<h4>What it Means to be an Entrepreneur</h4>
 			<p>
-				I hope this site introduces me well! But nothing will beat getting in touch. Please connect!
-				I'd love to hear from you
+				My take? Entrepreneurs are like any other type of artist or creative, their job is to
+				create.
 			</p>
-			<CanIHaveYoEmail />
 		</div>
+		<div class="post">
+			<div />
+			<h4>Personal Finance that Feels Good</h4>
+			<p>
+				I want to productize healthy personal finance that helps people make the most of their money
+			</p>
+		</div>
+	</div>
+	<div class="tiktok">
+		<blockquote
+			class="tiktok-embed"
+			cite="https://www.tiktok.com/@arjipoo/video/7167011413393706246"
+			data-video-id="7167011413393706246"
+			style="width: 325px;"
+		>
+			<div>
+				<a target="_blank" title="@arjipoo" href="https://www.tiktok.com/@arjipoo?refer=embed"
+					>@arjipoo</a
+				>
+				<p>Bhangra Flex</p>
+			</div>
+		</blockquote>
+		<script async src="https://www.tiktok.com/embed.js"></script>
 	</div>
 </section>
 
 <section class="story">
-	<div class="content">
-		<h3>isn't life better together?</h3>
+	<div>
+		<h2>Bringing people together</h2>
 		<p>
-			I love enjoying with friends. It helps that I find friends everywhere, and there is no
-			shortage of activities, projects and hangs to make happen
+			I’m so extroverted, I welcome social challenges. Hate small talk? I’ll get deep. All
+			strangers? I know what to say. Crippling anxiety? I am a safe place. But there’s no better
+			time for my extroversion than when I myself am feeling depressed.<br /><br />In early November
+			2022, I was so sad. My dad’s passing 10 months prior was hitting me hard. One particularly
+			down day, I hosted six friends for a game of We Are Not Strangers. They all knew my sadness,
+			and came with their hearts open.<br /><br />By the end of the night we had all cried, laughed
+			a good amount, exchanged several hugs, and shared some of the darkest parts of ourselves. I
+			can’t really describe how it felt afterwards, like I was uplifted, like we had healed
+			together.<br /><br />As each friend said their goodbyes, it became apparent how rare and
+			beautiful this night was. I truly believe that this night was an example of the beauty of
+			life. I want to live every day connecting with others and bringing people together.
 		</p>
-		<p>
-			The best is when there's an idea for something, and everyone gets together to make it real. We
-			host fancy dinners, discuss how to make our futures happen and start companies - all because
-			we're together
-		</p>
-		<div class="images">
-			<div class="carosel" bind:this={carosel}>
-				<img src="{base}/together/bar.jpg" alt="group of friends at the bar" />
-				<img src="{base}/together/baseball.jpg" alt="group of friends at the baseball game" />
-				<img src="{base}/together/caribana.jpg" alt="group of friends at Caribana parade" />
-				<img src="{base}/together/hiking.jpg" alt="group of friends hiking" />
-				<img src="{base}/together/party-2.jpg" alt="group of friends at a house party" />
-				<img src="{base}/together/party.png" alt="group of friends partying outside" />
-				<img src="{base}/together/station.jpg" alt="group of friends in the subway station" />
-			</div>
-		</div>
-		<p>So. Much. Fun.</p>
 	</div>
 </section>
 
-<div class="animation-container">
-	<div class="element_animation_container" />
+<section class="images wide">
+	<div class="carosel" bind:this={carosel}>
+		<img src="{base}/together/bar.jpg" alt="group of friends at the bar" />
+		<img src="{base}/together/baseball.jpg" alt="group of friends at the baseball game" />
+		<img src="{base}/together/caribana.jpg" alt="group of friends at Caribana parade" />
+		<img src="{base}/together/hiking.jpg" alt="group of friends hiking" />
+		<img src="{base}/together/party-2.jpg" alt="group of friends at a house party" />
+		<img src="{base}/together/party.png" alt="group of friends partying outside" />
+		<img src="{base}/together/station.jpg" alt="group of friends in the subway station" />
+	</div>
+</section>
 
-	<section class="more">
-		<div class="tabs content">
-			<div class="tab-buttons">
-				<button class:selected={currTab === 'more'} on:click={() => (currTab = 'more')}>
-					➕ <span>More</span>
-				</button>
-				<button class:selected={currTab === 'book'} on:click={() => (currTab = 'book')}>
-					📚 <span>Book rec's</span>
-				</button>
-				<button class:selected={currTab === 'ppl'} on:click={() => (currTab = 'ppl')}>
-					🫂 <span>My people</span>
-				</button>
-				<button class:selected={currTab === 'work'} on:click={() => (currTab = 'work')}>
-					💼 <span>Work</span>
-				</button>
-			</div>
-			<div class="tab-content {currTab}">
-				{#if currTab === 'more'}
-					<p>Ah you made it down this far and are still reading?! Just connect with me.</p>
-					<p>
-						<CanIHaveYoEmail center hideLabel />
-					</p>
-					<p>
-						I also have a lot of writing, etc from over the years that I've collected and put in one
-						place. Check it out!
-					</p>
-					<a
-						href="https://www.notion.so/arjunkalburgi/About-Arjun-c7cb723a93dd467d9e7f237033572611"
-					>
-						See more
-					</a>
-				{:else if currTab === 'book'}
-					<p>There are two books I recommend to anyone.</p>
-					<p>
-						<a href="https://www.goodreads.com/en/book/show/33517721-the-culture-code"
-							>The Culture Code by Daniel Coyle</a
-						> is a business book, but learning how to make the people around you feel comfortable is
-						universal.
-					</p>
-					<p>
-						I'm very far from religious, but the takeaways of <a
-							href="https://www.goodreads.com/book/show/6708.The_Power_of_Now"
-							>The Power of Now by Eckhart Tolle</a
-						> are incredibly valuable. Tolle distills spiritual messages in a way that makes so much
-						sense.
-					</p>
-					<p>I can recommend more! Let's chat all about books</p>
-					<a
-						href="https://www.notion.so/arjunkalburgi/eaf021a4614746a2ad6c91d5bad6772c?v=89329eec6f0b47839c58fe1b8a0a2b46"
-					>
-						My books
-					</a>
-				{:else if currTab === 'ppl'}
-					<p>I'm incredibly blessed to have amazing people in my life.</p>
-					<p>
-						<a href="https://instagram.com/krisna.bhargava">Krisna</a> is my cousin/big brother. He practically
-						taught me how to think over 10 years of FaceTiming.
-					</p>
-					<p>
-						<a href="https://instagram.com/sincerelysanika">Sanika</a> and I became besties over the
-						internet. She is often the catalyst of my emotional growth.
-					</p>
-					<p>
-						<a href="https://instagram.com/radhikals">Radhika</a> and I are two peas in a pod. No one
-						soaks-in life like her, but I'm a close second.
-					</p>
-					<p>More shoutouts of incredible people below, also featuring their thoughts on me.</p>
-					<a
-						href="https://arjunkalburgi.notion.site/The-friends-along-the-way-eaa33349cc1c4712a3156be0cfb5faf8"
-					>
-						More people
-					</a>
-				{:else if currTab === 'work'}
-					<p>
-						I'm a PM + UX Dev but enjoy wearing other hats including UI/UX design, defining culture,
-						etc.
-					</p>
-					<p>
-						In previous roles, I built products with lots of unknowns and united teams together to
-						do it. Both require deep listening, group learning and preaching vision - 3 things I
-						love to do
-					</p>
-					<p>I have lots of writing, thoughts and work on Github and Notion, check them out.</p>
-					<div>
-						<a
-							href="https://www.notion.so/arjunkalburgi/About-Arjun-c7cb723a93dd467d9e7f237033572611"
-						>
-							Notion
-						</a>
-						<a href="https://github.com/arjunkalburgi"> Github </a>
-					</div>
-				{/if}
-			</div>
+<section class="mid-contact thin">
+	<h3>Let’s be in touch</h3>
+	<p>Enter your email and I’ll reach out! Let’s see how we can <i>inspire each other</i>.</p>
+	<CanIHaveYoEmail />
+</section>
+
+<section class="recs">
+	<div class="books">
+		<h4>Love me, I’m a book worm</h4>
+		<p>There are two books I recommend to anyone.</p>
+		<p>
+			<a href="https://www.goodreads.com/en/book/show/33517721-the-culture-code"
+				>The Culture Code by Daniel Coyle</a
+			> is a business book, but learning how to make the people around you feel comfortable is universal.
+		</p>
+		<p>
+			I'm very far from religious, but the takeaways of <a
+				href="https://www.goodreads.com/book/show/6708.The_Power_of_Now"
+				>The Power of Now by Eckhart Tolle</a
+			> are incredibly valuable. Tolle distills spiritual messages in a way that makes so much sense.
+		</p>
+		<p>I can recommend more! Let's chat all about books</p>
+		<a
+			href="https://www.notion.so/arjunkalburgi/eaf021a4614746a2ad6c91d5bad6772c?v=89329eec6f0b47839c58fe1b8a0a2b46"
+		>
+			More books...
+		</a>
+	</div>
+	<div>
+		<h4>It takes a village</h4>
+		<p>I'm incredibly blessed to have amazing people in my life.</p>
+		<p>
+			<a href="https://instagram.com/krisna.bhargava">Krisna</a> is my cousin/big brother. He practically
+			taught me how to think over 10 years of FaceTiming.
+		</p>
+		<p>
+			<a href="https://instagram.com/sincerelysanika">Sanika</a> and I became besties over the internet.
+			She is often the catalyst of my emotional growth.
+		</p>
+		<p>
+			<a href="https://instagram.com/radhikals">Radhika</a> and I are two peas in a pod. No one soaks-in
+			life like her, but I'm a close second.
+		</p>
+		<p>More shoutouts of incredible people below, also featuring their thoughts on me.</p>
+		<a
+			href="https://arjunkalburgi.notion.site/The-friends-along-the-way-eaa33349cc1c4712a3156be0cfb5faf8"
+		>
+			More people...
+		</a>
+	</div>
+</section>
+
+<section class="career wide">
+	<div class="blog---feature---content">
+		<p>
+			In my career life, I've had roles as a PM and Dev, but really I love UX and systems. I like to
+			get deep into the workings of something and push buttons using my technical and people skills
+			to create results for users. Actions make things happen!
+		</p>
+		<div>
+			<h2>I build product with deep listening, group learning & attention to detail</h2>
 		</div>
-	</section>
-
-	<section class="img">
+		<p>
+			In previous roles, I built products with lots of unknowns and united teams together to do it.
+			I found that focusing on the learning cohesion of my team benefits productivity, enables more
+			creative solutions and creates high team culture. It cemented my leadership and product
+			management style.
+		</p>
+		<p>
+			<a href="#">Read more about my approach...</a>
+		</p>
+	</div>
+	<div class="blog---featured-post---image">
 		<img
-			src="{base}/makethisyou.png"
-			alt="me and a blank person hanging out with the words 'make this you' on top"
+			loading="lazy"
+			src="https://assets.website-files.com/628d1b812d83aff048417c8c/634489aeec18e87d214aaaba_burnout-feature.png"
+			alt=""
+			class="blog---featured---image"
 		/>
-	</section>
-</div>
+	</div>
+</section>
 
 <style lang="scss">
 	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
+		margin-right: auto;
+		margin-left: auto;
 
-		.content {
-			padding: 0 10vw;
-			width: 50%;
+		padding-top: 10rem;
+		padding-right: 0rem;
+		padding-left: 0rem;
 
-			@media screen and (max-width: 60rem) {
-				padding: 0 10vw;
-				width: 75%;
-			}
-
-			@media screen and (max-width: 40rem) {
-				padding: 0 7vw;
-				width: unset;
-			}
+		@media screen and (min-width: 1240px) {
+			max-width: 1000px;
 		}
 
-		&.hero {
-			padding: 20vh 0;
+		max-width: 800px;
+
+		@media screen and (max-width: 991px) {
+			padding-left: 10px;
+			padding-right: 10px;
 			width: unset;
-			position: relative;
-
-			.bg_animation_container {
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				overflow: hidden;
-				z-index: -1;
-
-				display: flex;
-				div {
-					height: 100px;
-					width: 100%;
-					margin-top: auto;
-					background-image: linear-gradient(rgba(0, 0, 0, 0), white);
-				}
-			}
-
-			.content {
-				display: grid;
-				grid-template-columns: 40% auto;
-				grid-gap: 5vw;
-				align-items: center;
-
-				@media screen and (min-width: 40rem) {
-					padding: 0 10vw;
-				}
-
-				.img_container {
-					width: 100%;
-				}
-
-				p.small {
-					font-size: 0.9rem;
-				}
-
-				h2 {
-					margin-top: 1.5rem;
-					margin-bottom: 0.5rem;
-				}
-
-				h2 + p {
-					margin-top: 0.5rem;
-				}
-			}
-
-			@media screen and (max-width: 40rem) {
-				padding: 10vh 0;
-
-				.bg_animation_container {
-					height: 60%;
-					top: 0;
-				}
-				.content {
-					display: flex;
-					flex-direction: column;
-					align-items: flex-start;
-
-					.txt_container {
-						margin-top: 2rem;
-					}
-
-					.img_container {
-						width: 70%;
-					}
-				}
-			}
 		}
 
-		&.story {
-			.images {
-				position: relative;
-				height: 250px;
-				overflow: hidden;
-
-				.carosel {
-					position: absolute;
-					width: 100%;
-					display: flex;
-					flex-direction: row;
-					gap: 1rem;
-					overflow-x: auto;
-					scroll-snap-type: x mandatory;
-					scroll-behavior: smooth;
-					-webkit-overflow-scrolling: touch;
-
-					&::-webkit-scrollbar {
-						width: 10px;
-						height: 10px;
-					}
-					&::-webkit-scrollbar-thumb {
-						background: black;
-						border-radius: 10px;
-					}
-					&::-webkit-scrollbar-track {
-						background: transparent;
-					}
-				}
-
-				img {
-					height: 250px;
-					width: auto;
-					margin-bottom: 11px;
-				}
+		&.wide {
+			@media screen and (min-width: 1240px) {
+				max-width: 1350px;
 			}
+
+			max-width: 1000px;
 		}
 
-		&.img {
-			padding: 5vh 0 0;
-			margin: auto;
-
-			img {
-				width: 30%;
-
-				@media screen and (max-width: 40rem) {
-					width: 50%;
-				}
-			}
-		}
-
-		&.more {
-			position: relative;
-			padding: 10vh 0;
-
-			.tab-buttons {
-				border-bottom: 1px solid grey;
-
-				button {
-					background: #ffffffcc;
-					border: 1px solid grey;
-					border-bottom: none;
-					border-radius: 6px 6px 0 0;
-					padding: 0.5rem 0.75rem;
-					cursor: pointer;
-
-					@media screen and (max-width: 40rem) {
-						&:not(.selected) span {
-							position: absolute;
-							overflow: hidden;
-							clip: rect(0 0 0 0);
-							height: 1px;
-							width: 1px;
-							margin: -1px;
-							padding: 0;
-							border: 0;
-						}
-					}
-
-					&.selected {
-						border-color: grey;
-						border-width: 2px;
-						padding: 0.5rem 1rem;
-						position: relative;
-
-						&::after {
-							content: ' ';
-							position: absolute;
-							width: 100%;
-							height: 2px;
-							background-color: white;
-							bottom: -1px;
-							left: 0;
-						}
-					}
-				}
+		&.thin {
+			@media screen and (min-width: 1240px) {
+				max-width: 800px;
 			}
 
-			.tab-content {
-				padding: 3rem;
-				display: flex;
-				flex-direction: column;
-				background: #ffffffcc;
+			max-width: 700px;
 
-				@media screen and (max-width: 40rem) {
-					padding: 1.5rem;
-				}
-
-				div {
-					display: flex;
-					justify-content: center;
-					gap: 0.5rem;
-				}
-			}
-
-			p {
-				margin: 0.5rem 0;
-			}
-
-			p:last-of-type {
-				margin-bottom: 2rem;
-			}
-
-			.tab-content > a,
-			.tab-content > div > a {
-				align-self: center;
-				padding: 0.75rem;
-				border: none;
-				border-radius: 0.5rem;
-				background: #c6ffdd;
-				background: linear-gradient(217deg, rgba(255, 190, 115, 0.5), rgba(255, 0, 0, 0) 70.71%),
-					linear-gradient(127deg, rgba(217, 104, 255, 0.5), rgba(0, 255, 0, 0) 70.71%),
-					linear-gradient(336deg, rgba(104, 216, 255, 0.5), rgba(0, 0, 255, 0) 70.71%);
-				color: black;
-				cursor: pointer;
+			@media screen and (max-width: 991px) {
+				padding-left: 20px;
+				padding-right: 20px;
+				width: unset;
 			}
 		}
 	}
 
-	.animation-container {
-		position: relative;
+	section.hero {
+		display: grid;
+		width: 100%;
+		padding-left: 0px;
+		grid-auto-columns: 1fr;
+		grid-column-gap: 32px;
+		grid-row-gap: 0px;
+		grid-template-columns: minmax(250px, 1fr) 0.25fr 1fr;
+		grid-template-rows: auto auto auto;
 
-		.element_animation_container {
+		@media screen and (min-width: 1240px) {
+			-webkit-box-align: start;
+			align-items: start;
+			grid-template-columns: minmax(250px, 1fr) 0.25fr 1fr;
+			grid-template-rows: auto auto auto auto auto;
+		}
+
+		@media screen and (min-width: 1920px) {
+			grid-column-gap: 86px;
+			grid-template-columns: 1.5fr 1fr 1fr;
+		}
+
+		.blog---featured-post---image {
+			@media screen and (max-width: 991px) {
+				height: 300px;
+				overflow: hidden;
+				grid-row-start: 1;
+				grid-row-end: 2;
+				grid-column-start: 1;
+				grid-column-end: 4;
+			}
+
+			@media screen and (min-width: 1240px) {
+				overflow: hidden;
+				min-height: 500px;
+				align-self: start;
+			}
+
+			@media screen and (min-width: 1920px) {
+				grid-column-start: span 1;
+				grid-column-end: span 1;
+				grid-row-start: span 1;
+				grid-row-end: span 1;
+			}
+
+			img {
+				max-width: 100%;
+				border-radius: 10px;
+			}
+		}
+
+		.blog---feature---content {
+			grid-row-start: 1;
+			grid-row-end: 2;
+			grid-column-start: 2;
+			grid-column-end: 4;
+			grid-column-gap: 1rem;
+			grid-row-gap: 1rem;
+			// font-family: Bely, sans-serif;
+			// font-size: 2.3rem;
+			// line-height: 1.3;
+			white-space: normal;
+
+			@media screen and (max-width: 991px) {
+				margin-right: 1rem;
+				grid-row-start: span 1;
+				grid-row-end: span 1;
+				grid-column-start: span 3;
+				grid-column-end: span 3;
+			}
+
+			@media screen and (min-width: 1240px) {
+				margin-right: 0px;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-webkit-flex-direction: column;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				grid-column-gap: 1rem;
+				grid-row-gap: 1rem;
+				// font-size: 2.3rem;
+				// line-height: 1.3;
+				// font-weight: 400;
+			}
+
+			& > p {
+				margin-left: 2rem;
+
+				@media screen and (min-width: 1240px) {
+					margin-left: 5rem;
+				}
+			}
+
+			div {
+				display: flex;
+				flex-direction: row;
+
+				p {
+					transform: rotate(-90deg);
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	section.intro-content {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		grid-column-gap: 50px;
+
+		@media screen and (max-width: 991px) {
+			display: block;
+		}
+
+		.posts {
+			justify-content: space-evenly;
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+
+			.post {
+				div {
+					height: 160px;
+					background-color: aliceblue;
+					border-radius: 10px;
+				}
+			}
+		}
+	}
+
+	section.story {
+		div {
+			padding: 3rem 3rem 1rem;
+			border: 1px solid #ababab;
+			background-color: white;
+			border-radius: 10px;
+
+			h2 {
+				margin-top: 0;
+			}
+
+			p {
+				column-count: 2;
+				column-gap: 40px;
+				margin-bottom: 0;
+
+				@media screen and (max-width: 991px) {
+					column-count: 1;
+				}
+			}
+		}
+	}
+
+	section.images {
+		position: relative;
+		height: 250px;
+		overflow: hidden;
+
+		.carosel {
 			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			overflow: hidden;
-			z-index: -1;
-			pointer-events: none;
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			gap: 1rem;
+			overflow-x: auto;
+			scroll-snap-type: x mandatory;
+			scroll-behavior: smooth;
+			-webkit-overflow-scrolling: touch;
+
+			&::-webkit-scrollbar {
+				width: 10px;
+				height: 10px;
+			}
+			&::-webkit-scrollbar-thumb {
+				background: black;
+				border-radius: 10px;
+			}
+			&::-webkit-scrollbar-track {
+				background: transparent;
+			}
+		}
+
+		img {
+			height: 250px;
+			width: auto;
+			margin-bottom: 11px;
+		}
+	}
+
+	section.recs {
+		display: grid;
+		grid-gap: 50px;
+		grid-template-columns: auto auto;
+
+		div {
+			padding: 2rem;
+			border: 1px solid #ababab;
+			background-color: white;
+			border-radius: 10px;
+		}
+	}
+
+	section.career {
+		display: grid;
+		width: 100%;
+		padding-left: 0px;
+		grid-auto-columns: 1fr;
+		grid-column-gap: 32px;
+		grid-row-gap: 0px;
+		grid-template-columns: minmax(250px, 1fr) 0.25fr 1fr;
+		grid-template-rows: auto auto auto;
+
+		@media screen and (min-width: 1240px) {
+			-webkit-box-align: start;
+			align-items: start;
+			grid-template-columns: minmax(250px, 1fr) 0.25fr 1fr;
+			grid-template-rows: auto auto auto auto auto;
+		}
+
+		@media screen and (min-width: 1920px) {
+			grid-column-gap: 86px;
+			grid-template-columns: 1.5fr 1fr 1fr;
+		}
+
+		.blog---featured-post---image {
+			@media screen and (max-width: 991px) {
+				height: 300px;
+				overflow: hidden;
+				grid-row-start: 1;
+				grid-row-end: 2;
+				grid-column-start: 1;
+				grid-column-end: 4;
+			}
+
+			@media screen and (min-width: 1240px) {
+				overflow: hidden;
+				min-height: 500px;
+				align-self: start;
+			}
+
+			@media screen and (min-width: 1920px) {
+				grid-column-start: span 1;
+				grid-column-end: span 1;
+				grid-row-start: span 1;
+				grid-row-end: span 1;
+			}
+
+			img {
+				max-width: 100%;
+				border-radius: 10px;
+			}
+		}
+
+		.blog---feature---content {
+			grid-row-start: 1;
+			grid-row-end: 2;
+			grid-column-start: 1;
+			grid-column-end: 3;
+			grid-column-gap: 1rem;
+			grid-row-gap: 1rem;
+			// font-family: Bely, sans-serif;
+			// font-size: 2.3rem;
+			// line-height: 1.3;
+			white-space: normal;
+
+			@media screen and (max-width: 991px) {
+				margin-right: 1rem;
+				grid-row-start: span 1;
+				grid-row-end: span 1;
+				grid-column-start: span 3;
+				grid-column-end: span 3;
+			}
+
+			@media screen and (min-width: 1240px) {
+				margin-right: 0px;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-webkit-flex-direction: column;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				grid-column-gap: 1rem;
+				grid-row-gap: 1rem;
+				// font-size: 2.3rem;
+				// line-height: 1.3;
+				// font-weight: 400;
+			}
+
+			& > p {
+				margin-left: 2rem;
+
+				@media screen and (min-width: 1240px) {
+					margin-left: 5rem;
+				}
+			}
+
+			div {
+				display: flex;
+				flex-direction: row;
+
+				p {
+					transform: rotate(-90deg);
+					text-align: center;
+				}
+			}
 		}
 	}
 

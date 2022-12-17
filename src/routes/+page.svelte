@@ -3,6 +3,7 @@
 	import { animate } from '@arjunanimations/leaves';
 	import { base } from '$app/paths';
 	import HeaderImage from '$lib/HeaderImage.svelte';
+	import BackgroundEffect from '$lib/BackgroundEffect.svelte';
 	import CanIHaveYoEmail from '$lib/CanIHaveYoEmail.svelte';
 
 	const cloudAnimationData = {
@@ -75,7 +76,10 @@
 <section class="intro-content thin">
 	<div class="posts">
 		<div class="post">
-			<div />
+			<div>
+				<BackgroundEffect />
+				<span>#writing</span>
+			</div>
 			<h4>What it Means to be an Entrepreneur</h4>
 			<p>
 				My take? Entrepreneurs are like any other type of artist or creative, their job is to
@@ -83,7 +87,10 @@
 			</p>
 		</div>
 		<div class="post">
-			<div />
+			<div>
+				<BackgroundEffect />
+				<span>#project</span>
+			</div>
 			<h4>Personal Finance that Feels Good</h4>
 			<p>
 				I want to productize healthy personal finance that helps people make the most of their money
@@ -212,12 +219,7 @@
 		</p>
 	</div>
 	<div class="blog---featured-post---image">
-		<img
-			loading="lazy"
-			src="https://assets.website-files.com/628d1b812d83aff048417c8c/634489aeec18e87d214aaaba_burnout-feature.png"
-			alt=""
-			class="blog---featured---image"
-		/>
+		<BackgroundEffect />
 	</div>
 </section>
 
@@ -389,9 +391,14 @@
 
 			.post {
 				div {
+					position: relative;
 					height: 160px;
-					background-color: aliceblue;
-					border-radius: 10px;
+
+					span {
+						position: absolute;
+						bottom: 5px;
+						right: 5px;
+					}
 				}
 			}
 		}

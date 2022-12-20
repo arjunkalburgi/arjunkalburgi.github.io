@@ -62,7 +62,7 @@
 		</p>
 		<div>
 			<h2>Life is meant to be enjoyed - preferably together</h2>
-			<p>Living life Arjun style</p>
+			<p>Living life,<br />Arjun style</p>
 		</div>
 		<p>
 			This means wide smiles, enthusiastic hugs, occasionally slightly embarrassing behaviour. It
@@ -362,6 +362,7 @@
 				align-items: center;
 
 				p {
+					font: var(--alt-text);
 					transform: rotate(-90deg);
 					text-align: center;
 					width: 50%;
@@ -395,10 +396,20 @@
 					height: 160px;
 
 					span {
+						font: var(--alt-text);
 						position: absolute;
 						bottom: 5px;
-						right: 5px;
+						right: 8px;
 					}
+				}
+
+				h4 {
+					margin-top: 1rem;
+					margin-bottom: 0.5rem;
+				}
+
+				p {
+					margin: 0;
 				}
 			}
 		}
@@ -479,6 +490,11 @@
 			border: 1px solid #ababab;
 			background-color: white;
 			border-radius: 10px;
+
+			& > a {
+				font: var(--alt-text);
+				text-decoration: underline;
+			}
 		}
 	}
 
@@ -540,9 +556,6 @@
 			grid-column-end: 3;
 			grid-column-gap: 1rem;
 			grid-row-gap: 1rem;
-			// font-family: Bely, sans-serif;
-			// font-size: 2.3rem;
-			// line-height: 1.3;
 			white-space: normal;
 
 			@media screen and (max-width: 791px) {
@@ -583,6 +596,11 @@
 					transform: rotate(-90deg);
 					text-align: center;
 				}
+			}
+
+			a {
+				font: var(--alt-text);
+				text-decoration: underline;
 			}
 		}
 	}

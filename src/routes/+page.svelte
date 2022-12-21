@@ -304,6 +304,7 @@
 			overflow: hidden;
 			position: relative;
 			border-radius: 10px;
+			isolation: isolate;
 
 			@media screen and (max-width: 791px) {
 				height: 300px;

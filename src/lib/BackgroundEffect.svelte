@@ -35,6 +35,7 @@
 		position: relative;
 		overflow: hidden;
 		border-radius: 10px;
+		isolation: isolate;
 
 		.bg_animation_container {
 			position: absolute;

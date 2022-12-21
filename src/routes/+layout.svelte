@@ -41,6 +41,11 @@
 
 		img {
 			width: 10rem;
+
+			@media screen and (max-width: 791px) {
+				width: 15rem;
+				margin-top: 1rem;
+			}
 		}
 	}
 

@@ -21,6 +21,7 @@
 	};
 	let carosel;
 	let scrollDirection = 'left';
+	let tiktokScript = false;
 
 	onMount(() => {
 		animate(cloudAnimationData);
@@ -41,6 +42,10 @@
 				}
 			}
 		}, 15);
+
+		setTimeout(() => {
+			tiktokScript = true;
+		}, 1500);
 	});
 </script>
 
@@ -98,20 +103,28 @@
 		</div>
 	</div>
 	<div class="tiktok">
-		<blockquote
-			class="tiktok-embed"
-			cite="https://www.tiktok.com/@arjipoo/video/7167011413393706246"
-			data-video-id="7167011413393706246"
-			style="width: 325px;"
-		>
-			<div>
-				<a target="_blank" title="@arjipoo" href="https://www.tiktok.com/@arjipoo?refer=embed"
-					>@arjipoo</a
-				>
-				<p>Bhangra Flex</p>
-			</div>
-		</blockquote>
-		<script async src="https://www.tiktok.com/embed.js"></script>
+		{#if tiktokScript}
+			<blockquote
+				class="tiktok-embed"
+				cite="https://www.tiktok.com/@arjipoo/video/7167011413393706246"
+				data-video-id="7167011413393706246"
+				style="width: 325px;"
+			>
+				<div>
+					<a target="_blank" title="@arjipoo" href="https://www.tiktok.com/@arjipoo?refer=embed"
+						>@arjipoo</a
+					>
+					<p>Bhangra Flex</p>
+					<a
+						target="_blank"
+						title="♬ Rich Flex - Drake &#38; 21 Savage"
+						href="https://www.tiktok.com/music/Rich-Flex-7162017080122820610?refer=embed"
+						>♬ Rich Flex - Drake &#38; 21 Savage</a
+					>
+				</div>
+			</blockquote>
+			<script async src="https://www.tiktok.com/embed.js"></script>
+		{/if}
 	</div>
 </section>
 
@@ -483,6 +496,7 @@
 
 		@media screen and (max-width: 791px) {
 			grid-gap: 20px;
+			overflow: scroll;
 		}
 
 		div {
@@ -490,6 +504,10 @@
 			border: 1px solid #ababab;
 			background-color: white;
 			border-radius: 10px;
+
+			@media screen and (max-width: 791px) {
+				width: 67vw;
+			}
 
 			& > a {
 				font: var(--alt-text);
@@ -500,13 +518,12 @@
 
 	section.career {
 		display: grid;
-		width: 100%;
-		padding-left: 0px;
 		grid-auto-columns: 1fr;
 		grid-column-gap: 32px;
 		grid-row-gap: 0px;
 		grid-template-columns: minmax(250px, 1fr) 0.25fr 1fr;
 		grid-template-rows: auto auto auto;
+		padding-bottom: 10rem;
 
 		@media screen and (min-width: 1240px) {
 			-webkit-box-align: start;

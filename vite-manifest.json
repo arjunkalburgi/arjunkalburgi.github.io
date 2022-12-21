@@ -1,11 +1,11 @@
 {
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-3b96fc87.js",
+    "file": "_app/immutable/start-3e19cb16.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_paths-7696f170.js",
-      "_singletons-0d713724.js"
+      "_singletons-e34fd656.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -26,16 +26,16 @@
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-c2cfcbb8.js",
+    "file": "_app/immutable/components/error.svelte-15a198bc.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
       "_paths-7696f170.js",
-      "_singletons-0d713724.js"
+      "_singletons-e34fd656.js"
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-d899d629.js",
+    "file": "_app/immutable/components/pages/_page.svelte-ea491664.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
@@ -43,7 +43,7 @@
       "_CanIHaveYoEmail-870b3f24.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-9aadce55.css"
+      "_app/immutable/assets/_page-bd20f437.css"
     ]
   },
   "src/routes/+layout.js": {
@@ -54,8 +54,8 @@
       "__layout-8d2a742b.js"
     ]
   },
-  "_singletons-0d713724.js": {
-    "file": "_app/immutable/chunks/singletons-0d713724.js",
+  "_singletons-e34fd656.js": {
+    "file": "_app/immutable/chunks/singletons-e34fd656.js",
     "imports": [
       "_paths-7696f170.js"
     ]
@@ -85,7 +85,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-f063d925.js",
+    "file": "_app/immutable/chunks/1-eeb1f849.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -93,7 +93,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-5fbf42f7.js",
+    "file": "_app/immutable/chunks/2-99ea6d9f.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
@@ -104,12 +104,12 @@
     "file": "_app/immutable/assets/_layout-3647c056.css",
     "src": "src/routes/+layout.css"
   },
+  "src/routes/+page.css": {
+    "file": "_app/immutable/assets/_page-bd20f437.css",
+    "src": "src/routes/+page.css"
+  },
   "CanIHaveYoEmail.css": {
     "file": "_app/immutable/assets/CanIHaveYoEmail-80cf2643.css",
     "src": "CanIHaveYoEmail.css"
-  },
-  "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page-9aadce55.css",
-    "src": "src/routes/+page.css"
   }
 }

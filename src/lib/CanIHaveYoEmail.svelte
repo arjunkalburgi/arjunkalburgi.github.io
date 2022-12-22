@@ -50,10 +50,10 @@
 			width: 250px;
 
 			input {
-				border: 1px solid #ddd;
-				border-radius: 1px;
+				border: 1px solid black;
+				border-radius: 10px;
 				width: 250px;
-				padding: 5px 0 5px 0.4rem;
+				padding: 16px 20px;
 				font-size: 0.9rem;
 
 				&:active,
@@ -74,10 +74,10 @@
 				border: 1px solid transparent;
 				border-radius: 1px;
 				position: absolute;
-				right: -8px;
+				right: -24px;
 				top: 0px;
 				bottom: 0px;
-				padding: 0px 7px;
+				padding: 0px;
 
 				&:focus-visible,
 				&:active {

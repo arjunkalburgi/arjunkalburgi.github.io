@@ -4,7 +4,6 @@
 	import { base } from '$app/paths';
 	import HeaderImage from '$lib/HeaderImage.svelte';
 	import BackgroundEffect from '$lib/BackgroundEffect.svelte';
-	import CanIHaveYoEmail from '$lib/CanIHaveYoEmail.svelte';
 
 	const cloudAnimationData = {
 		className: 'bg_animation_container',
@@ -50,7 +49,7 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Introducing Arjun</title>
 </svelte:head>
 
 <section class="hero wide">
@@ -60,71 +59,75 @@
 	<div class="blog---feature---content">
 		<p class="small">🚧 wip, give me feedback! come back soon</p>
 		<p>
-			Welcome to my site, tysm for coming 🙏🏾 This is a place where I can introduce myself online. Of
-			course, nothing is better than in-person (which I would love to do, virtually or irl) but with
-			this site I’m going to try my best to do that digitally. The first thing to know about me is
-			that I believe that
+			Hi there! My name is Arjun, I love learning new things and being creative with what I learn. I
+			got a big smile, a huge laugh and boatloads of enthusiasm from my belief that
 		</p>
 		<div>
 			<h2>Life is meant to be enjoyed - preferably together</h2>
 			<p>Living life,<br />Arjun style</p>
 		</div>
 		<p>
-			This means wide smiles, enthusiastic hugs, occasionally slightly embarrassing behaviour. It
-			means bringing people together, sharing each other’s company and exploring the world. It means
-			finding new things to learn and create. In general, it’s a lot of fun.
+			This means I like exploring the world we live in, thinking about how things work experimenting
+			with it. It means bringing people together, sharing each other’s company and having fun
+			goofing off. In general, it’s a lot of fun.
 		</p>
-		<p>Let me show you how I do this.</p>
+		<p>Let me show you...</p>
 	</div>
 </section>
 
 <section class="intro-content thin">
-	<div class="posts">
-		<div class="post">
-			<div>
-				<BackgroundEffect />
-				<span>#writing</span>
-			</div>
-			<h4>What it Means to be an Entrepreneur</h4>
-			<p>
-				My take? Entrepreneurs are like any other type of artist or creative, their job is to
-				create.
-			</p>
-		</div>
-		<div class="post">
-			<div>
-				<BackgroundEffect />
-				<span>#project</span>
-			</div>
-			<h4>Personal Finance that Feels Good</h4>
-			<p>
-				I want to productize healthy personal finance that helps people make the most of their money
-			</p>
-		</div>
-	</div>
-	<div class="tiktok">
-		{#if tiktokScript}
-			<blockquote
-				class="tiktok-embed"
-				cite="https://www.tiktok.com/@arjipoo/video/7167011413393706246"
-				data-video-id="7167011413393706246"
-				style="width: 325px;"
-			>
+	<h3>Creative Output</h3>
+	<span>writing, projects, art</span>
+	<hr />
+	<div>
+		<div class="posts">
+			<div class="post">
 				<div>
-					<a target="_blank" title="@arjipoo" href="https://www.tiktok.com/@arjipoo?refer=embed"
-						>@arjipoo</a
-					>
-					<p>Bhangra Flex</p>
-					<a
-						target="_blank"
-						title="♬ Rich Flex - Drake &#38; 21 Savage"
-						href="https://www.tiktok.com/music/Rich-Flex-7162017080122820610?refer=embed"
-						>♬ Rich Flex - Drake &#38; 21 Savage</a
-					>
+					<BackgroundEffect />
+					<span>#writing</span>
 				</div>
-			</blockquote>
-			<script async src="https://www.tiktok.com/embed.js"></script>
-		{/if}
+				<h4>What it Means to be an Entrepreneur</h4>
+				<p>
+					My take? Entrepreneurs are like any other type of artist or creative, their job is to
+					create.
+				</p>
+			</div>
+			<div class="post">
+				<div>
+					<BackgroundEffect />
+					<span>#project</span>
+				</div>
+				<h4>Personal Finance that Feels Good</h4>
+				<p>
+					I want to productize healthy personal finance that helps people make the most of their
+					money
+				</p>
+			</div>
+		</div>
+		<div class="tiktok">
+			{#if tiktokScript}
+				<blockquote
+					class="tiktok-embed"
+					cite="https://www.tiktok.com/@arjipoo/video/7167011413393706246"
+					data-video-id="7167011413393706246"
+					style="width: 325px;"
+				>
+					<div>
+						<a target="_blank" title="@arjipoo" href="https://www.tiktok.com/@arjipoo?refer=embed"
+							>@arjipoo</a
+						>
+						<p>Bhangra Flex</p>
+						<a
+							target="_blank"
+							title="♬ Rich Flex - Drake &#38; 21 Savage"
+							href="https://www.tiktok.com/music/Rich-Flex-7162017080122820610?refer=embed"
+							>♬ Rich Flex - Drake &#38; 21 Savage</a
+						>
+					</div>
+				</blockquote>
+				<script async src="https://www.tiktok.com/embed.js"></script>
+			{/if}
+		</div>
 	</div>
 </section>
 
@@ -157,12 +160,6 @@
 		<img src="{base}/together/party.png" alt="group of friends partying outside" />
 		<img src="{base}/together/station.jpg" alt="group of friends in the subway station" />
 	</div>
-</section>
-
-<section class="mid-contact thin">
-	<h3>Let’s be in touch</h3>
-	<p>Enter your email and I’ll reach out! Let’s see how we can <i>inspire each other</i>.</p>
-	<CanIHaveYoEmail />
 </section>
 
 <section class="recs">
@@ -375,6 +372,10 @@
 				justify-content: center;
 				align-items: center;
 
+				h2 {
+					color: #ff6f4d;
+				}
+
 				p {
 					font: var(--alt-text);
 					transform: rotate(-90deg);
@@ -390,12 +391,22 @@
 	}
 
 	section.intro-content {
-		display: grid;
-		grid-template-columns: 1fr auto;
-		grid-column-gap: 50px;
+		h3 {
+			margin-bottom: 0.2rem;
+		}
 
-		@media screen and (max-width: 791px) {
-			display: block;
+		span {
+			font: var(--alt-text);
+		}
+
+		& > div {
+			display: grid;
+			grid-template-columns: 1fr auto;
+			grid-column-gap: 50px;
+
+			@media screen and (max-width: 791px) {
+				display: block;
+			}
 		}
 
 		.posts {
@@ -410,7 +421,6 @@
 					height: 160px;
 
 					span {
-						font: var(--alt-text);
 						position: absolute;
 						bottom: 5px;
 						right: 8px;
@@ -438,6 +448,7 @@
 
 			h2 {
 				margin-top: 0;
+				color: #714dff;
 			}
 
 			p {

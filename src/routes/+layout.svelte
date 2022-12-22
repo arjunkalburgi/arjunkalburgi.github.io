@@ -19,13 +19,16 @@
 	</main>
 
 	<footer>
-		<h4>Let's get in touch</h4>
-		<CanIHaveYoEmail center hideLabel />
-		<ul class="buttonRow">
-			<li><a href="https://twitter.com/arjunkalburgi"><Twitter /></a></li>
-			<li><a href="https://linkedin.com/in/arjunkalburgi"><LinkedIn /></a></li>
-			<li><a href="https://github.com/arjunkalburgi"><Github /></a></li>
-		</ul>
+		<h3>Let’s be in touch</h3>
+		<p>Enter your email and I’ll reach out! Let’s see how we can <i>inspire each other</i>.</p>
+		<div>
+			<CanIHaveYoEmail hideLabel />
+			<ul class="buttonRow">
+				<li><a href="https://twitter.com/arjunkalburgi"><Twitter /></a></li>
+				<li><a href="https://linkedin.com/in/arjunkalburgi"><LinkedIn /></a></li>
+				<li><a href="https://github.com/arjunkalburgi"><Github /></a></li>
+			</ul>
+		</div>
 	</footer>
 </div>
 
@@ -50,10 +53,18 @@
 	}
 
 	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		@media screen and (min-width: 1240px) {
+			max-width: 800px;
+		}
+
+		max-width: 700px;
+
+		@media screen and (max-width: 791px) {
+			padding-left: 20px;
+			padding-right: 20px;
+			width: unset;
+		}
+
 		padding: 40px;
 		margin-bottom: 3rem;
 

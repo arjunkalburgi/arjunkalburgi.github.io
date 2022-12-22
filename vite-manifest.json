@@ -1,11 +1,11 @@
 {
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-3e19cb16.js",
+    "file": "_app/immutable/start-a8db2b46.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_paths-7696f170.js",
-      "_singletons-e34fd656.js"
+      "_paths-c726fbc2.js",
+      "_singletons-361aaebd.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -14,36 +14,34 @@
     ]
   },
   "src/routes/+layout.svelte": {
-    "file": "_app/immutable/components/pages/_layout.svelte-907cc799.js",
+    "file": "_app/immutable/components/pages/_layout.svelte-18075389.js",
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_paths-7696f170.js",
-      "_CanIHaveYoEmail-870b3f24.js"
+      "_paths-c726fbc2.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout-3647c056.css"
+      "_app/immutable/assets/_layout-85ca5364.css"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-15a198bc.js",
+    "file": "_app/immutable/components/error.svelte-c7743a93.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
-      "_paths-7696f170.js",
-      "_singletons-e34fd656.js"
+      "_paths-c726fbc2.js",
+      "_singletons-361aaebd.js"
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-ea491664.js",
+    "file": "_app/immutable/components/pages/_page.svelte-8abf8c1c.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_paths-7696f170.js",
-      "_CanIHaveYoEmail-870b3f24.js"
+      "_paths-c726fbc2.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-bd20f437.css"
+      "_app/immutable/assets/_page-4d24d568.css"
     ]
   },
   "src/routes/+layout.js": {
@@ -54,29 +52,20 @@
       "__layout-8d2a742b.js"
     ]
   },
-  "_singletons-e34fd656.js": {
-    "file": "_app/immutable/chunks/singletons-e34fd656.js",
+  "_singletons-361aaebd.js": {
+    "file": "_app/immutable/chunks/singletons-361aaebd.js",
     "imports": [
-      "_paths-7696f170.js"
+      "_paths-c726fbc2.js"
     ]
   },
-  "_paths-7696f170.js": {
-    "file": "_app/immutable/chunks/paths-7696f170.js"
-  },
-  "_CanIHaveYoEmail-870b3f24.js": {
-    "file": "_app/immutable/chunks/CanIHaveYoEmail-870b3f24.js",
-    "imports": [
-      "_paths-7696f170.js"
-    ],
-    "css": [
-      "_app/immutable/assets/CanIHaveYoEmail-80cf2643.css"
-    ]
+  "_paths-c726fbc2.js": {
+    "file": "_app/immutable/chunks/paths-c726fbc2.js"
   },
   "__layout-8d2a742b.js": {
     "file": "_app/immutable/chunks/_layout-8d2a742b.js"
   },
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "_app/immutable/chunks/0-a44659e4.js",
+    "file": "_app/immutable/chunks/0-66507768.js",
     "src": ".svelte-kit/generated/nodes/0.js",
     "isDynamicEntry": true,
     "imports": [
@@ -85,7 +74,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-eeb1f849.js",
+    "file": "_app/immutable/chunks/1-f24c59d3.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -93,7 +82,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-99ea6d9f.js",
+    "file": "_app/immutable/chunks/2-7e7834d7.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
@@ -101,15 +90,11 @@
     ]
   },
   "src/routes/+layout.css": {
-    "file": "_app/immutable/assets/_layout-3647c056.css",
+    "file": "_app/immutable/assets/_layout-85ca5364.css",
     "src": "src/routes/+layout.css"
   },
   "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page-bd20f437.css",
+    "file": "_app/immutable/assets/_page-4d24d568.css",
     "src": "src/routes/+page.css"
-  },
-  "CanIHaveYoEmail.css": {
-    "file": "_app/immutable/assets/CanIHaveYoEmail-80cf2643.css",
-    "src": "CanIHaveYoEmail.css"
   }
 }

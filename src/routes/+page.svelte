@@ -170,18 +170,18 @@
 
 <section class="recs">
 	<div class="books">
-		<h4>Love me, I’m a book worm</h4>
-		<p>There are two books I recommend to anyone.</p>
+		<h4>Book club hours</h4>
+		<p>Here are two books I recommend to anyone.</p>
 		<p>
 			<a href="https://www.goodreads.com/en/book/show/33517721-the-culture-code"
 				>The Culture Code by Daniel Coyle</a
-			> is a business book, but learning how to make the people around you feel comfortable is universal.
+			> teaches you how to make people around you feel comfortable.
 		</p>
 		<p>
-			I'm very far from religious, but the takeaways of <a
+			I'm not religious, but the takeaways of <a
 				href="https://www.goodreads.com/book/show/6708.The_Power_of_Now"
 				>The Power of Now by Eckhart Tolle</a
-			> are incredibly valuable. Tolle distills spiritual messages in a way that makes so much sense.
+			> help me view the world.
 		</p>
 		<p>I can recommend more! Let's chat all about books</p>
 		<a
@@ -205,7 +205,6 @@
 			<a href="https://instagram.com/radhikals">Radhika</a> and I are two peas in a pod. No one soaks-in
 			life like her, but I'm a close second.
 		</p>
-		<p>More shoutouts of incredible people below, also featuring their thoughts on me.</p>
 		<a
 			href="https://arjunkalburgi.notion.site/The-friends-along-the-way-eaa33349cc1c4712a3156be0cfb5faf8"
 		>
@@ -216,14 +215,14 @@
 
 <section class="career wide">
 	<div class="blog---feature---content">
+		<h3>Career Life</h3>
+		<hr />
 		<p>
-			In my career life, I've had roles as a PM and Dev, but really I love UX and systems. I like to
-			get deep into the workings of something and push buttons using my technical and people skills
-			to create results for users. Actions make things happen!
+			I've had roles as a PM and Dev, but really I love UX and systems. I like to get deep into the
+			workings of something and push buttons using my technical and people skills to create results
+			for users. Actions make things happen!
 		</p>
-		<div>
-			<h2>I build product with deep listening, group learning & attention to detail</h2>
-		</div>
+		<h2>I build product with deep listening, group learning & attention to detail</h2>
 		<p>
 			In previous roles, I built products with lots of unknowns and united teams together to do it.
 			I found that focusing on the learning cohesion of my team benefits productivity, enables more
@@ -577,7 +576,7 @@
 
 			@media screen and (min-width: 1240px) {
 				overflow: hidden;
-				min-height: 500px;
+				height: 500px;
 				align-self: start;
 			}
 
@@ -633,14 +632,8 @@
 				}
 			}
 
-			div {
-				display: flex;
-				flex-direction: row;
-
-				p {
-					transform: rotate(-90deg);
-					text-align: center;
-				}
+			h2 {
+				color: #4d5fff;
 			}
 
 			a {

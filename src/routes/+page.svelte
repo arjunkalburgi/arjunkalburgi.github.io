@@ -81,7 +81,10 @@
 	<hr />
 	<div>
 		<div class="posts">
-			<div class="post">
+			<a
+				class="post"
+				href="https://www.notion.so/arjunkalburgi/What-it-means-to-be-an-Entrepreneur-0c90fcc2fe104673bc1afa5c92bc4998"
+			>
 				<div>
 					<BackgroundEffect />
 					<span>#writing</span>
@@ -91,8 +94,11 @@
 					My take? Entrepreneurs are like any other type of artist or creative, their job is to
 					create.
 				</p>
-			</div>
-			<div class="post">
+			</a>
+			<a
+				class="post"
+				href="https://www.notion.so/arjunkalburgi/Personal-Finance-that-Feels-Good-4ea821686e764038a808822a8b41ea64"
+			>
 				<div>
 					<BackgroundEffect />
 					<span>#project</span>
@@ -102,7 +108,7 @@
 					I want to productize healthy personal finance that helps people make the most of their
 					money
 				</p>
-			</div>
+			</a>
 		</div>
 		<div class="tiktok">
 			{#if tiktokScript}
@@ -419,11 +425,16 @@
 				div {
 					position: relative;
 					height: 160px;
+					transition: transform 0.2s ease-in-out;
 
 					span {
 						position: absolute;
 						bottom: 5px;
 						right: 8px;
+					}
+
+					&:hover {
+						transform: scale(1.05);
 					}
 				}
 
@@ -509,6 +520,11 @@
 		@media screen and (max-width: 791px) {
 			grid-gap: 20px;
 			overflow: scroll;
+		}
+
+		a {
+			text-decoration: underline;
+			text-decoration-color: #ababab;
 		}
 
 		div {

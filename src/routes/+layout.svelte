@@ -58,6 +58,8 @@
 		}
 
 		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
 
 		@media screen and (max-width: 791px) {
 			padding-left: 20px;
@@ -66,7 +68,7 @@
 		}
 
 		padding: 40px;
-		margin-bottom: 3rem;
+		margin-bottom: 8rem;
 
 		@media (min-width: 480px) {
 			padding: 40px 0;

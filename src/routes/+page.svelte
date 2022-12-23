@@ -336,9 +336,6 @@
 			grid-column-end: 4;
 			grid-column-gap: 1rem;
 			grid-row-gap: 1rem;
-			// font-family: Bely, sans-serif;
-			// font-size: 2.3rem;
-			// line-height: 1.3;
 			white-space: normal;
 
 			@media screen and (max-width: 791px) {
@@ -378,7 +375,7 @@
 				align-items: center;
 
 				h2 {
-					color: #ff6f4d;
+					color: #e9681b;
 				}
 
 				p {
@@ -431,10 +428,10 @@
 						bottom: 5px;
 						right: 8px;
 					}
+				}
 
-					&:hover {
-						transform: scale(1.05);
-					}
+				&:hover div {
+					transform: scale(1.05);
 				}
 
 				h4 {
@@ -527,7 +524,7 @@
 		}
 
 		div {
-			padding: 2rem;
+			padding: 0.5rem 2rem 2rem;
 			border: 1px solid #ababab;
 			background-color: white;
 			border-radius: 10px;
@@ -624,7 +621,9 @@
 				// font-weight: 400;
 			}
 
-			& > p {
+			& > p,
+			& > h3,
+			& > hr {
 				margin-left: 2rem;
 
 				@media screen and (min-width: 1240px) {

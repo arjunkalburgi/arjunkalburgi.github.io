@@ -43,7 +43,7 @@
 		}, 15);
 
 		setTimeout(() => {
-			tiktokScript = !window.navigator.userAgent.includes('iPhone');
+			// tiktokScript = !window.navigator.userAgent.includes('iPhone');
 		}, 1500);
 	});
 </script>
@@ -411,7 +411,10 @@
 			grid-column-gap: 50px;
 
 			@media screen and (max-width: 791px) {
-				display: block;
+				display: flex;
+				flex-direction: column;
+				gap: 40px;
+				align-items: center;
 			}
 		}
 

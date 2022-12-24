@@ -43,7 +43,7 @@
 		}, 15);
 
 		setTimeout(() => {
-			tiktokScript = true;
+			tiktokScript = !window.navigator.userAgent.includes('iPhone');
 		}, 1500);
 	});
 </script>
@@ -127,6 +127,15 @@
 					/>
 				</blockquote>
 				<script async src="https://www.tiktok.com/embed.js"></script>
+			{:else}
+				<a href="https://www.tiktok.com/@arjipoo/video/7167011413393706246">
+					<img
+						target="_blank"
+						style="width: 325px;"
+						src="{base}/tiktok.jpeg"
+						alt="Arjun's Bhangra Flex tiktok screenshot"
+					/>
+				</a>
 			{/if}
 		</div>
 	</div>

@@ -131,7 +131,7 @@
 						>
 					</div>
 				</blockquote>
-				<script async src="https://www.tiktok.com/embed.js"></script>
+				<script async src="https://www.arjunkalburgi.com/embed.js"></script>
 			{/if}
 		</div>
 	</div>

@@ -43,7 +43,8 @@
 		}, 15);
 
 		setTimeout(() => {
-			// tiktokScript = !window.navigator.userAgent.includes('iPhone');
+			tiktokScript = false;
+			//!window.navigator.userAgent.includes('iPhone');
 		}, 1500);
 	});
 </script>

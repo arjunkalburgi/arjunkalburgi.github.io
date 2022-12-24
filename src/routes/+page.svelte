@@ -118,20 +118,15 @@
 					data-video-id="7167011413393706246"
 					style="width: 325px;"
 				>
-					<div>
-						<a target="_blank" title="@arjipoo" href="https://www.tiktok.com/@arjipoo?refer=embed"
-							>@arjipoo</a
-						>
-						<p>Bhangra Flex</p>
-						<a
-							target="_blank"
-							title="♬ Rich Flex - Drake &#38; 21 Savage"
-							href="https://www.tiktok.com/music/Rich-Flex-7162017080122820610?refer=embed"
-							>♬ Rich Flex - Drake &#38; 21 Savage</a
-						>
-					</div>
+					<iframe
+						title="Arjun's Bhangra Flex tiktok video"
+						name="__tt_embed__v7167011413393706246"
+						sandbox="allow-popups allow-popups-to-escape-sandbox allow-scripts allow-top-navigation allow-same-origin"
+						src="https://www.tiktok.com/embed/v2/7167011413393706246?lang=en-US&amp;"
+						style="width: 100%; height: 707px; display: block; visibility: unset; max-height: 707px;"
+					/>
 				</blockquote>
-				<script async src="https://www.arjunkalburgi.com/embed.js"></script>
+				<script async src="https://www.tiktok.com/embed.js"></script>
 			{/if}
 		</div>
 	</div>

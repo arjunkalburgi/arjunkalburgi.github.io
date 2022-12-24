@@ -43,8 +43,8 @@
 		}, 15);
 
 		setTimeout(() => {
-			tiktokScript = false;
-			//!window.navigator.userAgent.includes('iPhone');
+			tiktokScript = !window.navigator.userAgent.includes('iPhone') || true;
+			console.log('agent', window.navigator.userAgent);
 		}, 1500);
 	});
 </script>
@@ -124,10 +124,9 @@
 						name="__tt_embed__v7167011413393706246"
 						sandbox="allow-popups allow-popups-to-escape-sandbox allow-scripts allow-top-navigation allow-same-origin"
 						src="https://www.tiktok.com/embed/v2/7167011413393706246?lang=en-US&amp;"
-						style="width: 100%; height: 707px; display: block; visibility: unset; max-height: 707px;"
+						style="width: 100%; height: 720px; display: block; visibility: unset;"
 					/>
 				</blockquote>
-				<script async src="https://www.tiktok.com/embed.js"></script>
 			{:else}
 				<a href="https://www.tiktok.com/@arjipoo/video/7167011413393706246">
 					<img

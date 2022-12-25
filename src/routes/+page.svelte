@@ -21,9 +21,10 @@
 	let carosel;
 	let scrollDirection = 'left';
 	// let tiktokScript = false;
-	console.log('agent', window.navigator.userAgent);
 
 	onMount(() => {
+		console.log('agent', window.navigator.userAgent);
+
 		animate(cloudAnimationData);
 
 		setInterval(() => {
@@ -44,7 +45,7 @@
 		}, 15);
 
 		// setTimeout(() => {
-		// 	tiktokScript = !window.navigator.userAgent.includes('iPhone') || true;
+		// 	// tiktokScript = !window.navigator.userAgent.includes('iPhone') || true;
 		// }, 1500);
 	});
 </script>

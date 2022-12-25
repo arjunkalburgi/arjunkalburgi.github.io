@@ -13,6 +13,7 @@
 		],
 		noRotation: true,
 		noSpin: true,
+		noSway: window.navigator.userAgent.includes('iPhone'),
 		width: 800,
 		height: 800
 	};

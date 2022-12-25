@@ -23,7 +23,7 @@
 	// let tiktokScript = false;
 
 	onMount(() => {
-		console.log('agent', window.navigator.userAgent);
+		console.log('agent', window.navigator.platform);
 
 		animate(cloudAnimationData);
 

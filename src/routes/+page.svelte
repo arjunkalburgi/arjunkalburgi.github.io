@@ -27,7 +27,7 @@
 		}, 15);
 
 		setTimeout(() => {
-			tiktokScript = !window.navigator.userAgent.includes('iPhone') || true;
+			tiktokScript = true; //!window.navigator.userAgent.includes('iPhone');
 		}, 1500);
 	});
 </script>
@@ -110,6 +110,7 @@
 						style="width: 100%; height: 720px; display: block; visibility: unset;"
 					/>
 				</blockquote>
+				<script async src="https://www.tiktok.com/embed.js"></script>
 			{:else}
 				<a href="https://www.tiktok.com/@arjipoo/video/7167011413393706246">
 					<img

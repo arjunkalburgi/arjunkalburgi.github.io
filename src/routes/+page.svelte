@@ -1,30 +1,14 @@
 <script>
 	import { onMount } from 'svelte';
-	import { animate } from '@arjunanimations/leaves';
 	import { base } from '$app/paths';
-	import HeaderImage from '$lib/HeaderImage.svelte';
-	import BackgroundEffect from '$lib/BackgroundEffect.svelte';
+	// import HeaderImage from '$lib/HeaderImage.svelte';
+	// import BackgroundEffect from '$lib/BackgroundEffect.svelte';
 
-	const cloudAnimationData = {
-		className: 'bg_animation_container',
-		numOfSprites: 12,
-		pathsOfSprites: [
-			base + '/cloud/pink.PNG',
-			base + '/cloud/orange.PNG',
-			base + '/cloud/blue.PNG'
-		],
-		noRotation: true,
-		noSpin: true,
-		width: 800,
-		height: 800
-	};
 	let carosel;
 	let scrollDirection = 'left';
 	// let tiktokScript = false;
 
 	onMount(() => {
-		animate(cloudAnimationData);
-
 		setInterval(() => {
 			if (!carosel) return;
 
@@ -54,7 +38,7 @@
 
 <section class="hero wide">
 	<div class="blog---featured-post---image">
-		<HeaderImage alt="me with a big smile, welcoming you to my site" src="{base}/welcome.gif" />
+		<!-- <HeaderImage alt="me with a big smile, welcoming you to my site" src="{base}/welcome.gif" /> -->
 	</div>
 	<div class="blog---feature---content">
 		<p class="small">🚧 wip, give me feedback! come back soon</p>
@@ -86,7 +70,7 @@
 				href="https://www.notion.so/arjunkalburgi/What-it-means-to-be-an-Entrepreneur-0c90fcc2fe104673bc1afa5c92bc4998"
 			>
 				<div>
-					<BackgroundEffect />
+					<!-- <BackgroundEffect /> -->
 					<span>#writing</span>
 				</div>
 				<h4>What it Means to be an Entrepreneur</h4>
@@ -100,7 +84,7 @@
 				href="https://www.notion.so/arjunkalburgi/Personal-Finance-that-Feels-Good-4ea821686e764038a808822a8b41ea64"
 			>
 				<div>
-					<BackgroundEffect />
+					<!-- <BackgroundEffect /> -->
 					<span>#project</span>
 				</div>
 				<h4>Personal Finance that Feels Good</h4>
@@ -218,7 +202,7 @@
 		</p>
 	</div>
 	<div class="blog---featured-post---image">
-		<BackgroundEffect />
+		<!-- <BackgroundEffect /> -->
 	</div>
 </section>
 

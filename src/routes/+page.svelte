@@ -6,7 +6,7 @@
 
 	let carosel;
 	let scrollDirection = 'left';
-	// let tiktokScript = false;
+	let tiktokScript = false;
 
 	onMount(() => {
 		setInterval(() => {
@@ -26,9 +26,9 @@
 			}
 		}, 15);
 
-		// setTimeout(() => {
-		// 	// tiktokScript = !window.navigator.platform.includes('iPhone') || true;
-		// }, 1500);
+		setTimeout(() => {
+			tiktokScript = !window.navigator.userAgent.includes('iPhone') || true;
+		}, 1500);
 	});
 </script>
 
@@ -95,12 +95,31 @@
 			</a>
 		</div>
 		<div class="tiktok">
-			<img
-				target="_blank"
-				style="width: 325px;"
-				src="{base}/tiktok.jpeg"
-				alt="Arjun's Bhangra Flex tiktok screenshot"
-			/>
+			{#if tiktokScript}
+				<blockquote
+					class="tiktok-embed"
+					cite="https://www.tiktok.com/@arjipoo/video/7167011413393706246"
+					data-video-id="7167011413393706246"
+					style="width: 325px;"
+				>
+					<iframe
+						title="Arjun's Bhangra Flex tiktok video"
+						name="__tt_embed__v7167011413393706246"
+						sandbox="allow-popups allow-popups-to-escape-sandbox allow-scripts allow-top-navigation allow-same-origin"
+						src="https://www.tiktok.com/embed/v2/7167011413393706246?lang=en-US&amp;"
+						style="width: 100%; height: 720px; display: block; visibility: unset;"
+					/>
+				</blockquote>
+			{:else}
+				<a href="https://www.tiktok.com/@arjipoo/video/7167011413393706246">
+					<img
+						target="_blank"
+						style="width: 325px;"
+						src="{base}/tiktok.jpeg"
+						alt="Arjun's Bhangra Flex tiktok screenshot"
+					/>
+				</a>
+			{/if}
 		</div>
 	</div>
 </section>

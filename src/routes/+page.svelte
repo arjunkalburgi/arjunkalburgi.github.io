@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
+	import { useLazyImage as lazyImage } from 'svelte-lazy-image';
 	import HeaderImage from '$lib/HeaderImage.svelte';
 	import BackgroundEffect from '$lib/BackgroundEffect.svelte';
 
@@ -10,8 +11,8 @@
 
 	onMount(() => {
 		if (
-			window.navigator.userAgent.includes('iPhone') ||
-			window.navigator.userAgent.includes('iPad') ||
+			!window.navigator.userAgent.includes('iPhone') ||
+			!window.navigator.userAgent.includes('iPad') ||
 			window.matchMedia('(prefers-reduced-motion: reduce)')
 		) {
 			setInterval(() => {
@@ -148,13 +149,33 @@
 
 <section class="images wide">
 	<div class="carosel" bind:this={carosel}>
-		<img src="{base}/together/bar.jpg" alt="group of friends at the bar" />
-		<img src="{base}/together/baseball.jpg" alt="group of friends at the baseball game" />
-		<img src="{base}/together/caribana.jpg" alt="group of friends at Caribana parade" />
-		<img src="{base}/together/hiking.jpg" alt="group of friends hiking" />
-		<img src="{base}/together/party-2.jpg" alt="group of friends at a house party" />
-		<img src="{base}/together/party.png" alt="group of friends partying outside" />
-		<img src="{base}/together/station.jpg" alt="group of friends in the subway station" />
+		<img use:lazyImage data-src="{base}/together/bar.jpg" alt="group of friends at the bar" />
+		<img
+			use:lazyImage
+			data-src="{base}/together/baseball.jpg"
+			alt="group of friends at the baseball game"
+		/>
+		<img
+			use:lazyImage
+			data-src="{base}/together/caribana.jpg"
+			alt="group of friends at Caribana parade"
+		/>
+		<img use:lazyImage data-src="{base}/together/hiking.jpg" alt="group of friends hiking" />
+		<img
+			use:lazyImage
+			data-src="{base}/together/party-2.jpg"
+			alt="group of friends at a house party"
+		/>
+		<img
+			use:lazyImage
+			data-src="{base}/together/party.png"
+			alt="group of friends partying outside"
+		/>
+		<img
+			use:lazyImage
+			data-src="{base}/together/station.jpg"
+			alt="group of friends in the subway station"
+		/>
 	</div>
 </section>
 

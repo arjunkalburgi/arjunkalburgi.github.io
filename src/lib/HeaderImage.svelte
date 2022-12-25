@@ -16,12 +16,12 @@
 		],
 		noRotation: true,
 		noSpin: true,
-		noSway: window.navigator.userAgent.includes('iPhone'),
 		width: 800,
 		height: 800
 	};
 
 	onMount(() => {
+		cloudAnimationData.noSway = window.navigator.userAgent.includes('iPhone');
 		animate(cloudAnimationData);
 	});
 </script>

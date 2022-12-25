@@ -9,22 +9,24 @@
 	let tiktokScript = false;
 
 	onMount(() => {
-		setInterval(() => {
-			if (!carosel) return;
+		if (
+			window.navigator.userAgent.includes('iPhone') ||
+			window.navigator.userAgent.includes('iPad') ||
+			window.matchMedia('(prefers-reduced-motion: reduce)')
+		) {
+			setInterval(() => {
+				if (!carosel) return;
 
-			if (scrollDirection === 'left') {
-				carosel.scrollTo(carosel.scrollLeft + 5, 0);
-				if (carosel.scrollLeft === carosel.scrollLeftMax) {
-					scrollDirection = 'right';
+				if (scrollDirection === 'left') {
+					carosel.scrollTo(carosel.scrollLeft + 5, 0);
+					if (carosel.scrollLeft === carosel.scrollLeftMax) scrollDirection = 'right';
 				}
-			}
-			if (scrollDirection === 'right') {
-				carosel.scrollTo(carosel.scrollLeft - 5, 0);
-				if (carosel.scrollLeft === 0) {
-					scrollDirection = 'left';
+				if (scrollDirection === 'right') {
+					carosel.scrollTo(carosel.scrollLeft - 5, 0);
+					if (carosel.scrollLeft === 0) scrollDirection = 'left';
 				}
-			}
-		}, 15);
+			}, 15);
+		}
 
 		setTimeout(() => {
 			tiktokScript = true;

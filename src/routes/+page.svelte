@@ -23,8 +23,6 @@
 	// let tiktokScript = false;
 
 	onMount(() => {
-		console.log('agent', window.navigator.platform);
-
 		animate(cloudAnimationData);
 
 		setInterval(() => {
@@ -45,7 +43,7 @@
 		}, 15);
 
 		// setTimeout(() => {
-		// 	// tiktokScript = !window.navigator.userAgent.includes('iPhone') || true;
+		// 	// tiktokScript = !window.navigator.platform.includes('iPhone') || true;
 		// }, 1500);
 	});
 </script>
@@ -113,14 +111,12 @@
 			</a>
 		</div>
 		<div class="tiktok">
-			<a href="https://www.tiktok.com/@arjipoo/video/7167011413393706246">
-				<img
-					target="_blank"
-					style="width: 325px;"
-					src="{base}/tiktok.jpeg"
-					alt="Arjun's Bhangra Flex tiktok screenshot"
-				/>
-			</a>
+			<img
+				target="_blank"
+				style="width: 325px;"
+				src="{base}/tiktok.jpeg"
+				alt="Arjun's Bhangra Flex tiktok screenshot"
+			/>
 		</div>
 	</div>
 </section>

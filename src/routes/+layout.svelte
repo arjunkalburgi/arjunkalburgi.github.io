@@ -70,12 +70,9 @@
 		padding: 40px;
 		margin-bottom: 8rem;
 
-		@media (min-width: 480px) {
-			padding: 40px 0;
-		}
-
 		.buttonRow {
 			padding-left: 0px;
+			height: 32px;
 
 			li {
 				float: left;

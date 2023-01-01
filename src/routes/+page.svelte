@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
+	import { animate } from '@arjunanimations/leaves';
 	import { useLazyImage as lazyImage } from 'svelte-lazy-image';
 	import HeaderImage from '$lib/HeaderImage.svelte';
 	import BackgroundEffect from '$lib/BackgroundEffect.svelte';
@@ -27,6 +28,16 @@
 					if (carosel.scrollLeft === 0) scrollDirection = 'left';
 				}
 			}, 15);
+
+			animate({
+				className: 'intro-bg',
+				numOfSprites: 12,
+				pathsOfSprites: [
+					base + '/element/leaf01.svg',
+					base + '/element/leaf02.svg',
+					base + '/element/leaf03.svg'
+				]
+			});
 		}
 
 		setTimeout(() => {
@@ -67,6 +78,7 @@
 </section>
 
 <section class="intro-content thin">
+	<div class="intro-bg" />
 	<h3>Creative Output</h3>
 	<span>
 		<a
@@ -425,6 +437,8 @@
 	}
 
 	section.intro-content {
+		position: relative;
+
 		h3 {
 			margin-bottom: 0.2rem;
 		}
@@ -478,6 +492,19 @@
 				p {
 					margin: 0;
 				}
+			}
+		}
+
+		.intro-bg {
+			position: absolute;
+			width: 100vw;
+
+			@media screen and (min-width: 1240px) {
+				left: calc(-1 * (100vw - 800px) / 2);
+			}
+
+			@media screen and (min-width: 791px) {
+				left: calc(-1 * (100vw - 700px) / 2);
 			}
 		}
 	}
@@ -673,6 +700,14 @@
 
 			h2 {
 				color: #4d5fff;
+
+				@media screen and (min-width: 1240px) {
+					padding-left: 10px;
+				}
+
+				@media screen and (max-width: 1030px) and (min-width: 791px) {
+					padding-left: 10px;
+				}
 			}
 
 			a {

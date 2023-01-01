@@ -42,6 +42,7 @@
 		width: 30%;
 		bottom: -5%;
 		transform: rotate(20deg);
+		filter: brightness(90%);
 	}
 
 	.bg {

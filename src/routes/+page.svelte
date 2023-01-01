@@ -68,7 +68,17 @@
 
 <section class="intro-content thin">
 	<h3>Creative Output</h3>
-	<span>writing, projects, art</span>
+	<span>
+		<a
+			href="https://www.notion.so/arjunkalburgi/eaf021a4614746a2ad6c91d5bad6772c?v=cdeb161315c34b5b88711535371ee71a"
+			>writing...</a
+		>
+		<a
+			href="https://www.notion.so/arjunkalburgi/eaf021a4614746a2ad6c91d5bad6772c?v=f9dea10aacda4c6696842874cd77fb67"
+			>projects...</a
+		>
+		<a href="https://www.tiktok.com/@arjipoo">art...</a>
+	</span>
 	<hr />
 	<div>
 		<div class="posts">
@@ -248,7 +258,11 @@
 			management style.
 		</p>
 		<p>
-			<a href="#">Read more about my approach...</a>
+			<a
+				href="https://www.notion.so/arjunkalburgi/My-Approach-How-I-Build-Products-with-Teams-db411d150cf346f8b4c0098422016b10"
+			>
+				Read more about my approach...
+			</a>
 		</p>
 	</div>
 	<div class="blog---featured-post---image">

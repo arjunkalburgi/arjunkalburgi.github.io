@@ -24,9 +24,9 @@
 		<div>
 			<CanIHaveYoEmail hideLabel />
 			<ul class="buttonRow">
-				<li><a href="https://twitter.com/arjunkalburgi"><Twitter /></a></li>
 				<li><a href="https://linkedin.com/in/arjunkalburgi"><LinkedIn /></a></li>
 				<li><a href="https://github.com/arjunkalburgi"><Github /></a></li>
+				<li><a href="https://twitter.com/arjunkalburgi"><Twitter /></a></li>
 			</ul>
 		</div>
 	</footer>

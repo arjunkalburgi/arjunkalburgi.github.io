@@ -481,7 +481,11 @@
 				}
 
 				&:hover div {
-					transform: scale(1.05);
+					border: 1px solid #656565;
+					border-radius: 10px;
+					box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					-webkit-box-sizing: border-box;
 				}
 
 				h4 {

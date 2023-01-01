@@ -23,7 +23,7 @@
 	onMount(() => {
 		cloudAnimationData.noSway =
 			window.navigator.userAgent.includes('iPhone') ||
-			window.matchMedia('(prefers-reduced-motion: reduce)');
+			window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 		animate(cloudAnimationData);
 	});
 </script>

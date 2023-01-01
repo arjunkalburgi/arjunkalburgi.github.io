@@ -14,7 +14,7 @@
 		if (
 			!window.navigator.userAgent.includes('iPhone') ||
 			!window.navigator.userAgent.includes('iPad') ||
-			window.matchMedia('(prefers-reduced-motion: reduce)')
+			window.matchMedia('(prefers-reduced-motion: reduce)').matches
 		) {
 			setInterval(() => {
 				if (!carosel) return;

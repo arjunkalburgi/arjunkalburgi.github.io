@@ -532,8 +532,12 @@
 		grid-template-columns: auto auto;
 
 		@media screen and (max-width: 791px) {
+			padding-left: 20px;
+			padding-right: 20px;
 			grid-gap: 20px;
+
 			overflow: scroll;
+			padding-bottom: 10px;
 		}
 
 		a {

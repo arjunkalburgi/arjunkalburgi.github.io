@@ -37,6 +37,10 @@
 
 <svelte:head>
 	<title>Introducing Arjun</title>
+	<meta
+		name="description"
+		content="Hello! My name is Arjun and this website is for you to learn about me. You'll find some of my writing, projects I've worked on, my latest art projects, stories I love to tell and more!"
+	/>
 </svelte:head>
 
 <section class="hero wide">

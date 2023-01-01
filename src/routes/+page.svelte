@@ -77,7 +77,7 @@
 				href="https://www.notion.so/arjunkalburgi/What-it-means-to-be-an-Entrepreneur-0c90fcc2fe104673bc1afa5c92bc4998"
 			>
 				<div>
-					<BackgroundEffect />
+					<BackgroundEffect alt="lightbulb switching on and off" src="{base}/lightbulb.gif" />
 					<span>#writing</span>
 				</div>
 				<h4>What it Means to be an Entrepreneur</h4>
@@ -91,7 +91,10 @@
 				href="https://www.notion.so/arjunkalburgi/Personal-Finance-that-Feels-Good-4ea821686e764038a808822a8b41ea64"
 			>
 				<div>
-					<BackgroundEffect />
+					<BackgroundEffect
+						alt="stack of money with wings flapping up and down"
+						src="{base}/money-wings.gif"
+					/>
 					<span>#project</span>
 				</div>
 				<h4>Personal Finance that Feels Good</h4>
@@ -440,6 +443,7 @@
 					position: relative;
 					height: 160px;
 					transition: transform 0.2s ease-in-out;
+					overflow: hidden;
 
 					span {
 						position: absolute;

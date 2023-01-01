@@ -2,6 +2,10 @@
 	import { base } from '$app/paths';
 	import { onMount } from 'svelte';
 	import { animate } from '@arjunanimations/leaves';
+	import { useLazyImage as lazyImage } from 'svelte-lazy-image';
+
+	export let alt;
+	export let src;
 
 	const cloudAnimationData = {
 		className: 'bg_animation_container',
@@ -28,8 +32,18 @@
 <div class="bg">
 	<div class="bg_animation_container" />
 </div>
+{#if src}
+	<img {alt} use:lazyImage data-src={src} />
+{/if}
 
 <style lang="scss">
+	img {
+		position: absolute;
+		width: 30%;
+		bottom: -5%;
+		transform: rotate(20deg);
+	}
+
 	.bg {
 		background-color: #e6e7f0;
 		background-color: #e6e7f036;

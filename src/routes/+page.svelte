@@ -10,6 +10,21 @@
 	let scrollDirection = 'left';
 	let tiktokScript = false;
 
+	const links = {
+		projects:
+			'https://www.notion.so/arjunkalburgi/eaf021a4614746a2ad6c91d5bad6772c?v=f9dea10aacda4c6696842874cd77fb67',
+		entreStory:
+			'https://www.notion.so/arjunkalburgi/What-it-means-to-be-an-Entrepreneur-0c90fcc2fe104673bc1afa5c92bc4998',
+		writing:
+			'https://www.notion.so/arjunkalburgi/eaf021a4614746a2ad6c91d5bad6772c?v=cdeb161315c34b5b88711535371ee71a',
+		lilaStory:
+			'https://www.notion.so/arjunkalburgi/Personal-Finance-that-Feels-Good-4ea821686e764038a808822a8b41ea64',
+		books:
+			'https://www.notion.so/arjunkalburgi/eaf021a4614746a2ad6c91d5bad6772c?v=89329eec6f0b47839c58fe1b8a0a2b46',
+		careerStory:
+			'https://www.notion.so/arjunkalburgi/My-Approach-How-I-Build-Products-with-Teams-db411d150cf346f8b4c0098422016b10'
+	};
+
 	onMount(() => {
 		if (
 			!window.navigator.userAgent.includes('iPhone') ||
@@ -61,7 +76,7 @@
 		<p class="small">🚧 wip, give me feedback! come back soon</p>
 		<p>
 			Hi there! My name is Arjun, I love learning new things and being creative with what I learn. I
-			got a big smile, a huge laugh and boatloads of enthusiasm from my belief that
+			got a big smile, a huge laugh and boatloads of enthusiasm from my belief that:
 		</p>
 		<div>
 			<h2>Life is meant to be enjoyed - preferably together</h2>
@@ -79,54 +94,51 @@
 <section class="intro-content thin">
 	<a name="Content" aria-hidden="true" style="visibility: hidden">My creativity</a>
 	<div class="intro-bg" />
-	<h3>Creative Output</h3>
-	<span>
-		<a
-			href="https://www.notion.so/arjunkalburgi/eaf021a4614746a2ad6c91d5bad6772c?v=cdeb161315c34b5b88711535371ee71a"
-			>writing...</a
-		>
-		<a
-			href="https://www.notion.so/arjunkalburgi/eaf021a4614746a2ad6c91d5bad6772c?v=f9dea10aacda4c6696842874cd77fb67"
-			>projects...</a
-		>
-		<a href="https://www.tiktok.com/@arjipoo">art...</a>
-	</span>
+	<h3>Creative output</h3>
+	<p>
+		Expressing myself is a huge part of how I enjoy life and there are so many ways in which I love
+		to do that.
+	</p>
 	<hr />
 	<div>
 		<div class="posts">
-			<a
-				class="post"
-				href="https://www.notion.so/arjunkalburgi/What-it-means-to-be-an-Entrepreneur-0c90fcc2fe104673bc1afa5c92bc4998"
-			>
+			<div class="section">
+				<a class="post" href={links.entreStory}>
+					<div class="post-art">
+						<BackgroundEffect alt="lightbulb switching on and off" src="{base}/lightbulb.gif" />
+						<span>#writing</span>
+					</div>
+					<h4>What it means to be an entrepreneur</h4>
+					<p>
+						My take? Entrepreneurs are like any other type of artist or creative, their job is to
+						create.
+					</p>
+				</a>
 				<div>
-					<BackgroundEffect alt="lightbulb switching on and off" src="{base}/lightbulb.gif" />
-					<span>#writing</span>
+					<a class="link-button" target="_blank" href={links.writing}>Read more writing</a>
 				</div>
-				<h4>What it Means to be an Entrepreneur</h4>
-				<p>
-					My take? Entrepreneurs are like any other type of artist or creative, their job is to
-					create.
-				</p>
-			</a>
-			<a
-				class="post"
-				href="https://www.notion.so/arjunkalburgi/Personal-Finance-that-Feels-Good-4ea821686e764038a808822a8b41ea64"
-			>
+			</div>
+			<div class="section">
+				<a class="post" href={links.lilaStory}>
+					<div class="post-art">
+						<BackgroundEffect
+							alt="stack of money with wings flapping up and down"
+							src="{base}/money-wings.gif"
+						/>
+						<span>#project</span>
+					</div>
+					<h4>Personal Finance that Feels Good</h4>
+					<p>
+						I want to productize healthy personal finance that helps people make the most of their
+						money
+					</p>
+				</a>
 				<div>
-					<BackgroundEffect
-						alt="stack of money with wings flapping up and down"
-						src="{base}/money-wings.gif"
-					/>
-					<span>#project</span>
+					<a class="link-button" target="_blank" href={links.projects}> See more projects </a>
 				</div>
-				<h4>Personal Finance that Feels Good</h4>
-				<p>
-					I want to productize healthy personal finance that helps people make the most of their
-					money
-				</p>
-			</a>
+			</div>
 		</div>
-		<div class="tiktok">
+		<div class="tiktok section">
 			{#if tiktokScript}
 				<blockquote
 					class="tiktok-embed"
@@ -153,6 +165,11 @@
 					/>
 				</a>
 			{/if}
+			<div>
+				<a class="link-button" target="_blank" href="https://www.tiktok.com/@arjipoo">
+					Watch more Tiktoks
+				</a>
+			</div>
 		</div>
 	</div>
 </section>
@@ -224,11 +241,7 @@
 			> help me view the world.
 		</p>
 		<p>I can recommend more! Let's chat all about books</p>
-		<a
-			href="https://www.notion.so/arjunkalburgi/eaf021a4614746a2ad6c91d5bad6772c?v=89329eec6f0b47839c58fe1b8a0a2b46"
-		>
-			More books...
-		</a>
+		<a href={links.books}> More books... </a>
 	</div>
 	<div>
 		<h4>It takes a village</h4>
@@ -271,11 +284,7 @@
 			management style.
 		</p>
 		<p>
-			<a
-				href="https://www.notion.so/arjunkalburgi/My-Approach-How-I-Build-Products-with-Teams-db411d150cf346f8b4c0098422016b10"
-			>
-				Read more about my approach...
-			</a>
+			<a href={links.careerStory}> Read more about my approach... </a>
 		</p>
 	</div>
 	<div class="blog---featured-post---image">
@@ -468,7 +477,7 @@
 			gap: 2rem;
 
 			.post {
-				div {
+				div.post-art {
 					position: relative;
 					height: 160px;
 					transition: transform 0.2s ease-in-out;
@@ -481,7 +490,7 @@
 					}
 				}
 
-				&:hover div {
+				&:hover div.post-art {
 					border: 1px solid #656565;
 					border-radius: 10px;
 					box-sizing: border-box;
@@ -498,6 +507,12 @@
 					margin: 0;
 				}
 			}
+		}
+
+		.section {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
 		}
 
 		.intro-bg {
@@ -720,6 +735,14 @@
 				text-decoration: underline;
 			}
 		}
+	}
+
+	.link-button {
+		border: 1px solid lightgray;
+		background: white;
+		padding: 0.75rem;
+		border-radius: 10px;
+		margin: 1rem 0;
 	}
 
 	:global(main) {

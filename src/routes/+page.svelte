@@ -73,7 +73,6 @@
 		<HeaderImage alt="me with a big smile, welcoming you to my site" src="{base}/welcome.gif" />
 	</div>
 	<div class="blog---feature---content">
-		<p class="small">🚧 wip, give me feedback! come back soon</p>
 		<p>
 			Hi there! My name is Arjun, I love learning new things and being creative with what I learn. I
 			got a big smile, a huge laugh and boatloads of enthusiasm from my belief that:

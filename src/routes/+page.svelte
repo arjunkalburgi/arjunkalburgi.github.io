@@ -268,27 +268,23 @@
 
 <section class="career wide">
 	<a name="Career" aria-hidden="true" style="visibility: hidden">My career</a>
-	<div class="blog---feature---content">
-		<h3>Career Life</h3>
-		<hr />
-		<p>
-			I've had roles as a PM and Dev, but really I love UX and systems. I like to get deep into the
-			workings of something and push buttons using my technical and people skills to create results
-			for users. Actions make things happen!
-		</p>
-		<h2>I build product with deep listening, group learning & attention to detail</h2>
-		<p>
-			In previous roles, I built products with lots of unknowns and united teams together to do it.
-			I found that focusing on the learning cohesion of my team benefits productivity, enables more
-			creative solutions and creates high team culture. It cemented my leadership and product
-			management style.
-		</p>
-		<p>
-			<a href={links.careerStory}> Read more about my approach... </a>
-		</p>
-	</div>
-	<div class="blog---featured-post---image">
-		<BackgroundEffect />
+	<h3>Career</h3>
+	<hr />
+	<p>
+		I'm a nerd 🤓 I dig deep to figure out how things work, especially when it comes to people. The
+		toughest pain points have a psychological layer which I’m deeply empathetic to. Building great
+		consumer products means diving into these tricky, emotional spaces—and let me tell you, I live
+		for the challenge. Empowering users isn’t just a nice-to-have; it’s the beating heart of why I
+		build products.
+	</p>
+	<h2>I turn psychology into product</h2>
+	<p>
+		Building great products doesn't stop at ideas - it's about execution. There's an elegant art of
+		turning vision into reality, blending the scientific method with creativity and iteration. I
+		love bringing teams together to discover, build, and refine great products.
+	</p>
+	<div>
+		<a class="link-button" href={links.careerStory}> Read more about my approach... </a>
 	</div>
 </section>
 
@@ -628,111 +624,28 @@
 	}
 
 	section.career {
-		display: grid;
-		grid-auto-columns: 1fr;
-		grid-column-gap: 32px;
-		grid-row-gap: 0px;
-		grid-template-columns: minmax(250px, 1fr) 0.25fr 1fr;
-		grid-template-rows: auto auto auto;
+		margin: 0 2rem;
 		padding-bottom: 10rem;
 
-		@media screen and (min-width: 1240px) {
-			-webkit-box-align: start;
-			align-items: start;
-			grid-template-columns: minmax(250px, 1fr) 0.25fr 1fr;
-			grid-template-rows: auto auto auto auto auto;
-		}
-
-		@media screen and (min-width: 1920px) {
-			grid-column-gap: 86px;
-			grid-template-columns: 1.5fr 1fr 1fr;
-		}
-
-		.blog---featured-post---image {
-			@media screen and (max-width: 791px) {
-				height: 300px;
-				overflow: hidden;
-				grid-row-start: 1;
-				grid-row-end: 2;
-				grid-column-start: 1;
-				grid-column-end: 4;
-			}
+		& > p,
+		& > h3,
+		& > hr {
+			margin-left: 2rem;
 
 			@media screen and (min-width: 1240px) {
-				overflow: hidden;
-				height: 500px;
-				align-self: start;
-			}
-
-			@media screen and (min-width: 1920px) {
-				grid-column-start: span 1;
-				grid-column-end: span 1;
-				grid-row-start: span 1;
-				grid-row-end: span 1;
-			}
-
-			img {
-				max-width: 100%;
-				border-radius: 10px;
+				margin-left: 5rem;
 			}
 		}
 
-		.blog---feature---content {
-			grid-row-start: 1;
-			grid-row-end: 2;
-			grid-column-start: 1;
-			grid-column-end: 3;
-			grid-column-gap: 1rem;
-			grid-row-gap: 1rem;
-			white-space: normal;
-
-			@media screen and (max-width: 791px) {
-				margin-right: 1rem;
-				grid-row-start: span 1;
-				grid-row-end: span 1;
-				grid-column-start: span 3;
-				grid-column-end: span 3;
-			}
+		h2 {
+			color: #4d5fff;
 
 			@media screen and (min-width: 1240px) {
-				margin-right: 0px;
-				-webkit-box-orient: vertical;
-				-webkit-box-direction: normal;
-				-webkit-flex-direction: column;
-				-ms-flex-direction: column;
-				flex-direction: column;
-				grid-column-gap: 1rem;
-				grid-row-gap: 1rem;
-				// font-size: 2.3rem;
-				// line-height: 1.3;
-				// font-weight: 400;
+				padding-left: 10px;
 			}
 
-			& > p,
-			& > h3,
-			& > hr {
-				margin-left: 2rem;
-
-				@media screen and (min-width: 1240px) {
-					margin-left: 5rem;
-				}
-			}
-
-			h2 {
-				color: #4d5fff;
-
-				@media screen and (min-width: 1240px) {
-					padding-left: 10px;
-				}
-
-				@media screen and (max-width: 1030px) and (min-width: 791px) {
-					padding-left: 10px;
-				}
-			}
-
-			a {
-				font: var(--alt-text);
-				text-decoration: underline;
+			@media screen and (max-width: 1030px) and (min-width: 791px) {
+				padding-left: 10px;
 			}
 		}
 	}

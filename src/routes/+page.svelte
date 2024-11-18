@@ -18,7 +18,7 @@
 		writing:
 			'https://www.notion.so/arjunkalburgi/eaf021a4614746a2ad6c91d5bad6772c?v=cdeb161315c34b5b88711535371ee71a',
 		lilaStory:
-			'https://www.notion.so/arjunkalburgi/Personal-Finance-that-Feels-Good-4ea821686e764038a808822a8b41ea64',
+			'https://arjunkalburgi.notion.site/The-story-of-building-Lila-12d6e92f6ecf80488fefc60232c1008c?pvs=4',
 		books:
 			'https://www.notion.so/arjunkalburgi/eaf021a4614746a2ad6c91d5bad6772c?v=89329eec6f0b47839c58fe1b8a0a2b46',
 		careerStory:
@@ -127,10 +127,10 @@
 						/>
 						<span>#project</span>
 					</div>
-					<h4>Personal Finance that Feels Good</h4>
+					<h4>Building my first company</h4>
 					<p>
-						I want to productize healthy personal finance that helps people make the most of their
-						money
+						The start was really rough, but as I started figuring it out, it started coming together
+						and built momentum.
 					</p>
 				</a>
 				<div>

@@ -7,18 +7,26 @@
 </script>
 
 <div class="container">
-	<h1 class="logo">
-		<img
-			src="{base}/logo.svg"
-			alt="Arjun Kalburgi's logo - it's a leaf that lays on it's side, with a sharp leaf blade and a soft stem - symbolizing that he grows sharply but remains humble."
-		/>
-	</h1>
+	<header>
+		<h1 class="logo">
+			<img
+				src="{base}/logo.svg"
+				alt="Arjun Kalburgi's logo - it's a leaf that lays on it's side, with a sharp leaf blade and a soft stem - symbolizing that he grows sharply but remains humble."
+			/>
+		</h1>
+		<div class="links">
+			<a href="#Content">Content</a>
+			<a href="#Career">Career</a>
+			<a href="#Contact">Contact</a>
+		</div>
+	</header>
 
 	<main>
 		<slot />
 	</main>
 
 	<footer>
+		<a name="Contact" aria-hidden="true" style="visibility: hidden">Get in touch</a>
 		<h3>Let’s be in touch</h3>
 		<p>Enter your email and I’ll reach out! Let’s see how we can <i>inspire each other</i>.</p>
 		<div>
@@ -37,18 +45,35 @@
 		margin-bottom: 10vh;
 	}
 
-	h1 {
+	header {
 		position: absolute;
-		margin: 0;
-		margin-left: 1rem;
 
-		img {
-			width: 10rem;
+		// desktop only
+		@media screen and (min-width: 791px) {
+			width: calc(100% - 2rem);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		margin: 0 1rem;
 
-			@media screen and (max-width: 791px) {
-				width: 15rem;
-				margin-top: 1rem;
+		h1 {
+			margin: 0;
+
+			img {
+				width: 10rem;
+
+				@media screen and (max-width: 791px) {
+					width: 15rem;
+					margin-top: 1rem;
+				}
 			}
+		}
+
+		.links {
+			display: flex;
+			gap: 1rem;
+			font-size: smaller;
 		}
 	}
 

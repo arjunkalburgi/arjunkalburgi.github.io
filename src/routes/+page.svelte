@@ -77,6 +77,7 @@
 </section>
 
 <section class="intro-content thin">
+	<a name="Content" aria-hidden="true" style="visibility: hidden">My creativity</a>
 	<div class="intro-bg" />
 	<h3>Creative Output</h3>
 	<span>
@@ -253,6 +254,7 @@
 </section>
 
 <section class="career wide">
+	<a name="Career" aria-hidden="true" style="visibility: hidden">My career</a>
 	<div class="blog---feature---content">
 		<h3>Career Life</h3>
 		<hr />

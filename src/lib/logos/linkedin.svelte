@@ -18,7 +18,7 @@
 
 <style lang="scss">
 	svg {
-		width: 2rem;
+		width: 1rem;
 		color: black;
 
 		&:hover {

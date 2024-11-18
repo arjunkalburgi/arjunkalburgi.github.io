@@ -1,7 +1,8 @@
 <script>
 	import { base } from '$app/paths';
 	import CanIHaveYoEmail from '$lib/CanIHaveYoEmail.svelte';
-	import Twitter from '$lib/logos/twitter.svelte';
+	import Tiktok from '$lib/logos/tiktok.svelte';
+	import Instagram from '$lib/logos/instagram.svelte';
 	import LinkedIn from '$lib/logos/linkedin.svelte';
 	import Github from '$lib/logos/github.svelte';
 </script>
@@ -33,8 +34,9 @@
 			<CanIHaveYoEmail hideLabel />
 			<ul class="buttonRow">
 				<li><a href="https://linkedin.com/in/arjunkalburgi"><LinkedIn /></a></li>
+				<li><a href="https://instagram.com/arjun._.kalburgi"><Instagram /></a></li>
+				<li><a href="https://www.tiktok.com/@arjipoo"><Tiktok /></a></li>
 				<li><a href="https://github.com/arjunkalburgi"><Github /></a></li>
-				<li><a href="https://twitter.com/arjunkalburgi"><Twitter /></a></li>
 			</ul>
 		</div>
 	</footer>

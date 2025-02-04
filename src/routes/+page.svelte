@@ -6,9 +6,46 @@
 	import HeaderImage from '$lib/HeaderImage.svelte';
 	import BackgroundEffect from '$lib/BackgroundEffect.svelte';
 
-	let carosel;
-	let scrollDirection = 'left';
 	let tiktokScript = false;
+
+	let imageContainer;
+	const images = [
+		{ image: `${base}/together/bar.jpg`, alt: 'group of friends at the bar' },
+		{ image: `${base}/together/baseball.jpg`, alt: 'group of friends at the baseball game' },
+		{ image: `${base}/together/caribana.jpg`, alt: 'group of friends at Caribana parade' },
+		{ image: `${base}/together/hiking.jpg`, alt: 'group of friends hiking' },
+		{ image: `${base}/together/party-2.jpg`, alt: 'group of friends at a house party' },
+		{ image: `${base}/together/party.png`, alt: 'group of friends partying outside' },
+		{ image: `${base}/together/station.jpg`, alt: 'group of friends in the subway station' }
+	];
+	let positions = [];
+	let maxZIndex = images.length - 1;
+	let currentPicture = images.length - 1;
+
+	function randomizePositions() {
+		if (!imageContainer) return;
+
+		const containerWidth = imageContainer.clientWidth;
+		const containerHeight = imageContainer.clientHeight;
+
+		positions = images.map((_, i) => ({
+			left: `${Math.random() * (containerWidth - 250)}px`, // Adjusted for image width
+			top: `${Math.random() * (containerHeight - 250)}px`, // Adjusted for image height
+			opacity: 1,
+			zIndex: i
+		}));
+	}
+
+	function randomizePosition(currentPicture) {
+		if (!imageContainer) return;
+
+		const containerWidth = imageContainer.clientWidth;
+		const containerHeight = imageContainer.clientHeight;
+
+		positions[currentPicture].left = `${Math.random() * (containerWidth - 250)}px`;
+		positions[currentPicture].top = `${Math.random() * (containerHeight - 250)}px`;
+		positions[currentPicture].zIndex = ++maxZIndex;
+	}
 
 	const links = {
 		projects:
@@ -26,22 +63,13 @@
 	};
 
 	onMount(() => {
-		if (
-			!window.navigator.userAgent.includes('iPhone') ||
-			window.matchMedia('(prefers-reduced-motion: reduce)').matches
-		) {
-			setInterval(() => {
-				if (!carosel) return;
+		randomizePositions();
 
-				if (scrollDirection === 'left') {
-					carosel.scrollTo(carosel.scrollLeft + 5, 0);
-					if (carosel.scrollLeft === carosel.scrollLeftMax) scrollDirection = 'right';
-				}
-				if (scrollDirection === 'right') {
-					carosel.scrollTo(carosel.scrollLeft - 5, 0);
-					if (carosel.scrollLeft === 0) scrollDirection = 'left';
-				}
-			}, 15);
+		if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+			setInterval(() => {
+				currentPicture = (currentPicture - 1 + 7) % 7;
+				randomizePosition(currentPicture);
+			}, 5000);
 
 			animate({
 				className: 'intro-bg',
@@ -190,35 +218,22 @@
 	</div>
 </section>
 
-<section class="images wide">
-	<div class="carosel" bind:this={carosel}>
-		<img use:lazyImage data-src="{base}/together/bar.jpg" alt="group of friends at the bar" />
-		<img
-			use:lazyImage
-			data-src="{base}/together/baseball.jpg"
-			alt="group of friends at the baseball game"
-		/>
-		<img
-			use:lazyImage
-			data-src="{base}/together/caribana.jpg"
-			alt="group of friends at Caribana parade"
-		/>
-		<img use:lazyImage data-src="{base}/together/hiking.jpg" alt="group of friends hiking" />
-		<img
-			use:lazyImage
-			data-src="{base}/together/party-2.jpg"
-			alt="group of friends at a house party"
-		/>
-		<img
-			use:lazyImage
-			data-src="{base}/together/party.png"
-			alt="group of friends partying outside"
-		/>
-		<img
-			use:lazyImage
-			data-src="{base}/together/station.jpg"
-			alt="group of friends in the subway station"
-		/>
+<section class="images">
+	<div class="imageContainer" bind:this={imageContainer}>
+		{#each images as img, i}
+			<img
+				use:lazyImage
+				src={img.image}
+				alt={img.alt}
+				class={currentPicture === i ? 'animate' : ''}
+				style="
+					left: {positions[i]?.left}; 
+					top: {positions[i]?.top}; 
+					opacity: 1;
+					z-index: {positions[i]?.zIndex};
+				"
+			/>
+		{/each}
 	</div>
 </section>
 
@@ -574,39 +589,46 @@
 
 	section.images {
 		position: relative;
-		height: 250px;
-		overflow: hidden;
+		overflow: visible;
 		padding-left: 0;
 		padding-right: 0;
+		padding-bottom: 2rem;
 
-		.carosel {
-			position: absolute;
+		@media screen and (max-width: 791px) {
+			overflow: hidden;
+		}
+
+		.imageContainer {
+			position: relative;
 			width: 100%;
-			display: flex;
-			flex-direction: row;
-			gap: 1rem;
-			overflow-x: auto;
-			scroll-snap-type: x mandatory;
-			scroll-behavior: smooth;
-			-webkit-overflow-scrolling: touch;
-
-			&::-webkit-scrollbar {
-				width: 10px;
-				height: 10px;
-			}
-			&::-webkit-scrollbar-thumb {
-				background: black;
-				border-radius: 10px;
-			}
-			&::-webkit-scrollbar-track {
-				background: transparent;
-			}
+			height: 60vh;
+			overflow: visible;
+			margin: auto;
 		}
 
 		img {
 			height: 250px;
 			width: auto;
 			margin-bottom: 11px;
+			position: absolute;
+			box-shadow: 0px 0px 40px #111;
+			// transition: opacity 0.5s ease-in-out;
+			// transition: opacity 0.5s ease-in-out, left 0.8s ease-in-out, top 0.8s ease-in-out;
+
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+					transform: scale(0.9);
+				}
+				to {
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+
+			&.animate {
+				animation: fadeIn 1s ease-in-out;
+			}
 		}
 	}
 

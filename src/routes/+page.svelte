@@ -16,9 +16,9 @@
 		entreStory:
 			'https://www.notion.so/arjunkalburgi/What-it-means-to-be-an-Entrepreneur-0c90fcc2fe104673bc1afa5c92bc4998',
 		writing:
-			'https://www.notion.so/arjunkalburgi/eaf021a4614746a2ad6c91d5bad6772c?v=cdeb161315c34b5b88711535371ee71a',
+			'https://arjunkalburgi.notion.site/How-I-became-the-cross-functional-collaborator-I-am-today-14d6e92f6ecf80ddaec4ef1bdfddf981?pvs=4',
 		lilaStory:
-			'https://arjunkalburgi.notion.site/The-story-of-building-Lila-12d6e92f6ecf80488fefc60232c1008c?pvs=4',
+			'https://arjunkalburgi.notion.site/I-built-an-AI-powered-game-that-reduced-impulse-spending-1906e92f6ecf80f3a20ddd5d96120f93?pvs=4',
 		books:
 			'https://www.notion.so/arjunkalburgi/eaf021a4614746a2ad6c91d5bad6772c?v=89329eec6f0b47839c58fe1b8a0a2b46',
 		careerStory:
@@ -107,15 +107,12 @@
 						<BackgroundEffect alt="lightbulb switching on and off" src="{base}/lightbulb.gif" />
 						<span>#writing</span>
 					</div>
-					<h4>What it means to be an entrepreneur</h4>
+					<h4>Collaboration is a culture, not a todo list</h4>
 					<p>
-						My take? Entrepreneurs are like any other type of artist or creative, their job is to
-						create.
+						In this blog post I explore my journey as a collaborator and how I learned to be a
+						connector.
 					</p>
 				</a>
-				<div>
-					<a class="link-button" target="_blank" href={links.writing}>Read more writing</a>
-				</div>
 			</div>
 			<div class="section">
 				<a class="post" href={links.lilaStory}>
@@ -128,13 +125,10 @@
 					</div>
 					<h4>Building my first company</h4>
 					<p>
-						The start was really rough, but as I started figuring it out, it started coming together
-						and built momentum.
+						I built an AI-powered game that impulsive spenders opened 6.7x per week to turn
+						themselves into informed spenders.
 					</p>
 				</a>
-				<div>
-					<a class="link-button" target="_blank" href={links.projects}> See more projects </a>
-				</div>
 			</div>
 		</div>
 		<div class="tiktok section">
@@ -155,7 +149,7 @@
 				</blockquote>
 				<script async src="https://www.tiktok.com/embed.js"></script>
 			{:else}
-				<a href="https://www.tiktok.com/@arjipoo/video/7167011413393706246">
+				<a class="tiktokpic" href="https://www.tiktok.com/@arjipoo/video/7167011413393706246">
 					<img
 						target="_blank"
 						style="width: 325px;"
@@ -164,13 +158,17 @@
 					/>
 				</a>
 			{/if}
-			<div>
-				<a class="link-button" target="_blank" href="https://www.tiktok.com/@arjipoo">
-					Watch more Tiktoks
-				</a>
-			</div>
 		</div>
 	</div>
+	<hr />
+	<div>
+		<p>
+			Read more of my writing <a target="_blank" href={links.writing}>here</a>, see more of my
+			projects <a target="_blank" href={links.projects}>here</a>, and watch more of my TikToks
+			<a target="_blank" href="https://www.tiktok.com/@arjipoo">here</a>.
+		</p>
+	</div>
+	<div />
 </section>
 
 <section class="story">
@@ -265,22 +263,40 @@
 	</div>
 </section>
 
-<section class="career wide">
+<section class="career">
 	<a name="Career" aria-hidden="true" style="visibility: hidden">My career</a>
 	<h3>Career</h3>
 	<hr />
 	<p>
-		I'm a nerd 🤓 I dig deep to figure out how things work, especially when it comes to people. The
-		toughest pain points have a psychological layer which I’m deeply empathetic to. Building great
-		consumer products means diving into these tricky, emotional spaces—and let me tell you, I live
-		for the challenge. Empowering users isn’t just a nice-to-have; it’s the beating heart of why I
-		build products.
+		I’ve spent the last 5 years diving deep into consumer experience, especially obsessing over how
+		people interact with their money. Whether I held the title of PM or not, I’ve been building
+		products that flow with people’s daily lives, making them feel more approachable (and honestly,
+		less painful).
 	</p>
-	<h2>I turn psychology into product</h2>
 	<p>
-		Building great products doesn't stop at ideas - it's about execution. There's an elegant art of
-		turning vision into reality, blending the scientific method with creativity and iteration. I
-		love bringing teams together to discover, build, and refine great products.
+		That obsession led me to start Lila, a gamified money app for Gen Z and Millennials stuck in
+		stressful impulsive spending habits. I ran over 40 deep-dive interviews to break down the
+		problem from first-principles at the psychology layer, and built an AI-driven game experience
+		that got people to actually check their spending on average 6.7 times per week — a 3000% boost.
+		Turns out, making finances fun actually works.
+	</p>
+	<h2>I'm a Product Innovator</h2>
+	<p>
+		Through Lila, I developed my formula for innovation as a creative process. It’s an iterative
+		cycle of user feedback, team-wide ideation, data-driven decision-making, MVP feature scoping and
+		progressive delivery. This is my superpower as a PM, and I’m looking forward to bringing
+		innovation to the rest of my career.
+	</p>
+	<p>
+		I’m also very adept as a people-person. At Nylas, I stepped up when our new self-serve revenue
+		product stalled. With sales drying up, this channel was mission-critical, but progress was
+		stuck. So I jumped in and started talking to everyone — I aligned priorities between VP Product
+		and Eng, reenergized the team, and got the pilot launched in 3 weeks.
+	</p>
+	<p>
+		If you’re working on something cool in fintech or anything consumer-facing, let’s connect! I'm
+		brought on to be a Product Innovator, accelerating team's iterative learning, collaboration, and
+		product success.
 	</p>
 	<div>
 		<a class="link-button" href={links.careerStory}> Read more about my approach... </a>
@@ -472,6 +488,10 @@
 			gap: 2rem;
 
 			.post {
+				background: white;
+				padding: 10px;
+				border-radius: 10px;
+
 				div.post-art {
 					position: relative;
 					height: 160px;
@@ -485,12 +505,9 @@
 					}
 				}
 
-				&:hover div.post-art {
-					border: 1px solid #656565;
-					border-radius: 10px;
-					box-sizing: border-box;
-					-moz-box-sizing: border-box;
-					-webkit-box-sizing: border-box;
+				&:hover {
+					outline: 1px solid #ababab;
+					text-decoration: none;
 				}
 
 				h4 {
@@ -500,7 +517,14 @@
 
 				p {
 					margin: 0;
+					font-size: 1rem;
 				}
+			}
+		}
+
+		.tiktok.section {
+			.tiktokpic:hover {
+				outline: 1px solid #ababab;
 			}
 		}
 
@@ -600,11 +624,6 @@
 			padding-bottom: 10px;
 		}
 
-		a {
-			text-decoration: underline;
-			text-decoration-color: #ababab;
-		}
-
 		div {
 			padding: 0.5rem 2rem 2rem;
 			border: 1px solid #ababab;
@@ -623,17 +642,10 @@
 	}
 
 	section.career {
-		margin: 0 2rem;
 		padding-bottom: 10rem;
 
-		& > p,
-		& > h3,
-		& > hr {
+		& > *:not(h2) {
 			margin-left: 2rem;
-
-			@media screen and (min-width: 1240px) {
-				margin-left: 5rem;
-			}
 		}
 
 		h2 {
@@ -655,6 +667,11 @@
 		padding: 0.75rem;
 		border-radius: 10px;
 		margin: 1rem 0;
+	}
+
+	a:not(.link-button, .post) {
+		text-decoration: underline;
+		text-decoration-color: #ababab;
 	}
 
 	:global(main) {

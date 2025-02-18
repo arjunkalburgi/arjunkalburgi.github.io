@@ -135,7 +135,7 @@
 						<BackgroundEffect alt="lightbulb switching on and off" src="{base}/lightbulb.gif" />
 						<span>#writing</span>
 					</div>
-					<h4>Collaboration is a culture, not a todo list</h4>
+					<h4>Collaboration is a culture, not a todo list 🔗</h4>
 					<p>
 						In this blog post I explore my journey as a collaborator and how I learned to be a
 						connector.
@@ -151,7 +151,7 @@
 						/>
 						<span>#project</span>
 					</div>
-					<h4>Building my first company</h4>
+					<h4>Building my first company 🔗</h4>
 					<p>
 						I built an AI-powered game that impulsive spenders opened 6.7x per week to turn
 						themselves into informed spenders.
@@ -505,7 +505,8 @@
 			.post {
 				background: white;
 				padding: 10px;
-				border-radius: 10px;
+				border-radius: 8px;
+				border: 1px solid rgb(22 24 35 / 12%);
 
 				div.post-art {
 					position: relative;
@@ -521,7 +522,7 @@
 				}
 
 				&:hover {
-					outline: 1px solid #ababab;
+					background-color: #f8f8f8;
 					text-decoration: none;
 				}
 
@@ -566,7 +567,7 @@
 	section.story {
 		div {
 			padding: 3rem 3rem 1rem;
-			border: 1px solid #ababab;
+			border: 1px solid rgb(22 24 35 / 12%);
 			background-color: white;
 			border-radius: 10px;
 
@@ -609,6 +610,7 @@
 		img {
 			height: 250px;
 			width: auto;
+			border-radius: 10px;
 			margin-bottom: 11px;
 			position: absolute;
 			box-shadow: 0px 0px 40px #111;
@@ -648,7 +650,7 @@
 
 		div {
 			padding: 0.5rem 2rem 2rem;
-			border: 1px solid #ababab;
+			border: 1px solid rgb(22 24 35 / 12%);
 			background-color: white;
 			border-radius: 10px;
 
@@ -684,7 +686,7 @@
 	}
 
 	.link-button {
-		border: 1px solid lightgray;
+		border: 1px solid rgb(22 24 35 / 12%);
 		background: white;
 		padding: 0.75rem;
 		border-radius: 10px;

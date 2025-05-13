@@ -83,7 +83,8 @@
 		}
 
 		setTimeout(() => {
-			tiktokScript = !window.navigator.userAgent.includes('iPhone');
+			const ua = navigator.userAgent || navigator.vendor || window.opera;
+			tiktokScript = /iPhone|iPod/i.test(ua); // catches iPhones and iPads
 		}, 1500);
 	});
 </script>
@@ -196,21 +197,34 @@
 </section>
 
 <section class="story">
-	<div>
+	<div class="bg">
 		<h2>Bringing people together</h2>
-		<p>
-			I’m so extroverted, I welcome social challenges. Hate small talk? I’ll get deep. All
-			strangers? I know what to say. Crippling anxiety? I am a safe place. But there’s no better
-			time for my extroversion than when I myself am feeling depressed.<br /><br />In early November
-			2022, I was so sad. My dad’s passing 10 months prior was hitting me hard. One particularly
-			down day, I hosted six friends for a game of We Are Not Strangers. They all knew my sadness,
-			and came with their hearts open.<br /><br />By the end of the night we had all cried, laughed
-			a good amount, exchanged several hugs, and shared some of the darkest parts of ourselves. I
-			can’t really describe how it felt afterwards, like I was uplifted, like we had healed
-			together.<br /><br />As each friend said their goodbyes, it became apparent how rare and
-			beautiful this night was. I truly believe that this night was an example of the beauty of
-			life. I want to live every day connecting with others and bringing people together.
-		</p>
+		<div class="columns">
+			<p>
+				A core part of enjoying life is the connections we make along the way. Lucky for me, I’m so
+				extroverted, there isn't any challenges situation where I can't make connections.
+			</p>
+			<p>
+				Hate small talk? I’ll get deep. All strangers? I know what to say. Crippling anxiety? I am a
+				safe place. But there’s no better time for my extroversion than when I myself am feeling
+				depressed.
+			</p>
+			<p>
+				In early November 2022, I was so sad. My dad’s passing 10 months prior was hitting me hard.
+				One particularly down day, I hosted six friends for a game of We Are Not Strangers. They all
+				knew my sadness, and came with their hearts open.
+			</p>
+			<p>
+				By the end of the night we had all cried, laughed a good amount, exchanged several hugs, and
+				shared some of the darkest parts of ourselves. I can’t really describe how it felt
+				afterwards, like I was uplifted, like we had healed together.
+			</p>
+			<p>
+				As each friend said their goodbyes, it became apparent how rare and beautiful this night
+				was. I truly believe that this night was an example of the beauty of life. I want to live
+				every day connecting with others, bringing people together and enjoying the ride of life.
+			</p>
+		</div>
 	</div>
 </section>
 
@@ -276,8 +290,7 @@
 
 <section class="career">
 	<a name="Career" aria-hidden="true" style="visibility: hidden">My career</a>
-	<h3>Career</h3>
-	<hr />
+	<h2>Building products</h2>
 	<p>
 		I’ve spent the last 5 years diving deep into consumer experience, especially obsessing over how
 		people interact with their money. Whether I held the title of PM or not, I’ve been building
@@ -291,7 +304,7 @@
 		that got people to actually check their spending on average 6.7 times per week — a 3000% boost.
 		Turns out, making finances fun actually works.
 	</p>
-	<h2>I'm a Product Innovator</h2>
+	<p class="cursive">I'm a Product Innovator</p>
 	<p>
 		Through Lila, I developed my formula for innovation as a creative process. It’s an iterative
 		cycle of user feedback, team-wide ideation, data-driven decision-making, MVP feature scoping and
@@ -450,15 +463,6 @@
 				justify-content: start;
 				align-items: center;
 			}
-			.cursive {
-				font: var(--alt-text);
-				text-align: center;
-				width: 50%;
-
-				@media screen and (max-width: 791px) {
-					display: none;
-				}
-			}
 		}
 	}
 
@@ -558,8 +562,8 @@
 	}
 
 	section.story {
-		div {
-			padding: 3rem 3rem 1rem;
+		div.bg {
+			padding: 3rem;
 			border: 1px solid var(--border-color);
 			background-color: var(--bg-colorlight);
 			border-radius: 10px;
@@ -568,13 +572,20 @@
 				margin-top: 0;
 			}
 
-			p {
+			div.columns {
 				column-count: 2;
 				column-gap: 40px;
 				margin-bottom: 0;
 
 				@media screen and (max-width: 791px) {
 					column-count: 1;
+				}
+
+				p:first-of-type {
+					margin-top: 0;
+				}
+				p:last-of-type {
+					margin-bottom: 0;
 				}
 			}
 		}
@@ -660,13 +671,11 @@
 	section.career {
 		padding-bottom: 10rem;
 
-		& > *:not(h2) {
+		& > *:not(.cursive) {
 			margin-left: 2rem;
 		}
 
-		h2 {
-			color: #4d5fff;
-
+		.cursive {
 			@media screen and (min-width: 1240px) {
 				padding-left: 10px;
 			}
@@ -688,6 +697,11 @@
 	a:not(.link-button, .post) {
 		text-decoration: underline;
 		text-decoration-color: var(--brand-colordark);
+	}
+
+	.cursive {
+		font: var(--alt-text);
+		width: 50%;
 	}
 
 	:global(main) {

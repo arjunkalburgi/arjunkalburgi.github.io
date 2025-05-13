@@ -102,31 +102,27 @@
 	</div>
 	<div class="blog---feature---content">
 		<p>
-			Hi there! My name is Arjun, I love learning new things and being creative with what I learn. I
-			got a big smile, a huge laugh and boatloads of enthusiasm from my belief that:
+			Hi there! My name is Arjun, I love learning new things and being creative. I got a big smile,
+			a huge laugh, and boatloads of enthusiasm that comes from living my core value:
 		</p>
 		<div>
-			<h2>Life is meant to be enjoyed - preferably together</h2>
-			<p>Living life,<br />Arjun style</p>
+			<h2>Let's enjoy life together</h2>
 		</div>
-		<p>
-			This means I like exploring the world we live in, thinking about how things work experimenting
-			with it. It means bringing people together, sharing each other’s company and having fun
-			goofing off. In general, it’s a lot of fun.
-		</p>
-		<p>Let me show you...</p>
+		<p>This entails a lot of things, let me show you...</p>
+		<p>Welcome to: <span class="cursive">Living life, Arjun style</span></p>
 	</div>
 </section>
 
 <section class="intro-content thin">
 	<a name="Content" aria-hidden="true" style="visibility: hidden">My creativity</a>
 	<div class="intro-bg" />
-	<h3>Creative output</h3>
+	<h2>Expressing myself</h2>
 	<p>
-		Expressing myself is a huge part of how I enjoy life and there are so many ways in which I love
-		to do that.
+		Creative outlets are a huge part of enjoying life, it’s how we connect with others and truly
+		understand ourselves. When we share our thoughts, emotions, and creativity, it fosters a deeper
+		sense of fulfillment and authenticity in everything we do.
 	</p>
-	<hr />
+	<p>Check out some of the things I've created:</p>
 	<div>
 		<div class="posts">
 			<div class="section">
@@ -153,8 +149,8 @@
 					</div>
 					<h4>Building my first company 🔗</h4>
 					<p>
-						I built an AI-powered game that impulsive spenders opened 6.7x per week to turn
-						themselves into informed spenders.
+						I built an AI product that helped impulsive & anxious spenders break their avoidance
+						habit and make intentional decisions with their money.
 					</p>
 				</a>
 			</div>
@@ -188,12 +184,12 @@
 			{/if}
 		</div>
 	</div>
-	<hr />
 	<div>
 		<p>
-			Read more of my writing <a target="_blank" href={links.writing}>here</a>, see more of my
-			projects <a target="_blank" href={links.projects}>here</a>, and watch more of my TikToks
-			<a target="_blank" href="https://www.tiktok.com/@arjipoo">here</a>.
+			I've got a lot of content across the internet. You can <a target="_blank" href={links.writing}
+				>read more of my writing</a
+			>, <a target="_blank" href={links.projects}>check out some of my projects</a>, and
+			<a target="_blank" href="https://www.tiktok.com/@arjipoo">watch more of my TikToks</a>.
 		</p>
 	</div>
 	<div />
@@ -448,25 +444,19 @@
 				}
 			}
 
-			div {
+			h2 {
 				display: flex;
 				flex-direction: row;
-				justify-content: center;
+				justify-content: start;
 				align-items: center;
+			}
+			.cursive {
+				font: var(--alt-text);
+				text-align: center;
+				width: 50%;
 
-				h2 {
-					color: #e9681b;
-				}
-
-				p {
-					font: var(--alt-text);
-					transform: rotate(-90deg);
-					text-align: center;
-					width: 50%;
-
-					@media screen and (max-width: 791px) {
-						display: none;
-					}
+				@media screen and (max-width: 791px) {
+					display: none;
 				}
 			}
 		}
@@ -503,10 +493,10 @@
 			gap: 2rem;
 
 			.post {
-				background: white;
+				background: var(--bg-colorlight);
 				padding: 10px;
-				border-radius: 8px;
-				border: 1px solid rgb(22 24 35 / 12%);
+				border-radius: 18px;
+				border: 1px solid var(--border-color);
 
 				div.post-art {
 					position: relative;
@@ -518,6 +508,7 @@
 						position: absolute;
 						bottom: 5px;
 						right: 8px;
+						color: var(--text-color);
 					}
 				}
 
@@ -534,11 +525,13 @@
 				p {
 					margin: 0;
 					font-size: 1rem;
+					color: var(--text-color);
 				}
 			}
 		}
 
 		.tiktok.section {
+			border-radius: 18px;
 			.tiktokpic:hover {
 				outline: 1px solid #ababab;
 			}
@@ -567,13 +560,12 @@
 	section.story {
 		div {
 			padding: 3rem 3rem 1rem;
-			border: 1px solid rgb(22 24 35 / 12%);
-			background-color: white;
+			border: 1px solid var(--border-color);
+			background-color: var(--bg-colorlight);
 			border-radius: 10px;
 
 			h2 {
 				margin-top: 0;
-				color: #714dff;
 			}
 
 			p {
@@ -650,9 +642,9 @@
 
 		div {
 			padding: 0.5rem 2rem 2rem;
-			border: 1px solid rgb(22 24 35 / 12%);
-			background-color: white;
-			border-radius: 10px;
+			border: 1px solid var(--border-color);
+			background-color: var(--bg-colorlight);
+			border-radius: 18px;
 
 			@media screen and (max-width: 791px) {
 				width: 67vw;
@@ -695,7 +687,7 @@
 
 	a:not(.link-button, .post) {
 		text-decoration: underline;
-		text-decoration-color: #ababab;
+		text-decoration-color: var(--brand-colordark);
 	}
 
 	:global(main) {

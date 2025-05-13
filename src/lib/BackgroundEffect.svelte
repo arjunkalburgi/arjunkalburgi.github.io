@@ -22,10 +22,13 @@
 	};
 
 	onMount(() => {
-		cloudAnimationData.noSway =
-			window.navigator.userAgent.includes('iPhone') ||
-			window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-		animate(cloudAnimationData);
+		const ua = navigator.userAgent || navigator.vendor || window.opera;
+		const isIOS = /iPhone|iPod|iPad/i.test(ua); // catches iOS
+		const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		cloudAnimationData.noSway = isIOS || isReducedMotion;
+		if (!isIOS && !isReducedMotion) {
+			animate(cloudAnimationData);
+		}
 	});
 </script>
 
@@ -56,6 +59,7 @@
 		isolation: isolate;
 
 		.bg_animation_container {
+			will-change: transform;
 			position: absolute;
 			top: -80%;
 			left: -80%;

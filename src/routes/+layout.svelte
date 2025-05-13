@@ -15,11 +15,6 @@
 				alt="Arjun Kalburgi's logo - it's a leaf that lays on it's side, with a sharp leaf blade and a soft stem - symbolizing that he grows sharply but remains humble."
 			/>
 		</h1>
-		<div class="links">
-			<a href="#Content">Content</a>
-			<a href="#Career">Career</a>
-			<a href="#Contact">Contact</a>
-		</div>
 	</header>
 
 	<main>
@@ -27,18 +22,14 @@
 	</main>
 
 	<footer>
-		<a name="Contact" aria-hidden="true" style="visibility: hidden">Get in touch</a>
-		<h3>Let’s be in touch</h3>
-		<p>Enter your email and I’ll reach out! Let’s see how we can <i>inspire each other</i>.</p>
-		<div>
-			<CanIHaveYoEmail hideLabel />
-			<ul class="buttonRow">
-				<li><a href="https://linkedin.com/in/arjunkalburgi"><LinkedIn /></a></li>
-				<li><a href="https://instagram.com/arjun._.kalburgi"><Instagram /></a></li>
-				<li><a href="https://www.tiktok.com/@arjipoo"><Tiktok /></a></li>
-				<li><a href="https://github.com/arjunkalburgi"><Github /></a></li>
-			</ul>
-		</div>
+		<h2>Let's inspire each other</h2>
+		<p>I'm always excited to meet thoughtful folks and life enjoyers.</p>
+		<p>Building something? Facing a tough challenge? Exploring ideas? I'd love to help.</p>
+		<p>I try to meet someone new every day. Maybe that's you?</p>
+		<p>
+			Feel free to <a href="mailto:askalburgi@gmail.com">drop me a note</a> or
+			<a href="https://calendar.app.google/MbZyXQHeCAa7LtiJ6">schedule a time to chat</a>.
+		</p>
 	</footer>
 </div>
 
@@ -70,12 +61,6 @@
 					margin-top: 1rem;
 				}
 			}
-		}
-
-		.links {
-			display: flex;
-			gap: 1rem;
-			font-size: smaller;
 		}
 	}
 

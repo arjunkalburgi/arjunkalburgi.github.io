@@ -190,10 +190,12 @@
 	</div>
 	<div>
 		<p>
-			I've got a lot of content across the internet. You can <a target="_blank" href={links.writing}
-				>read more of my writing</a
-			>, <a target="_blank" href={links.projects}>check out some of my projects</a>, and
-			<a target="_blank" href="https://www.tiktok.com/@arjipoo">watch more of my TikToks</a>.
+			I've got a lot of content across the internet. You can read more of <a
+				target="_blank"
+				href={links.writing}>my writing</a
+			>, check out some of <a target="_blank" href={links.projects}>my projects</a>, and watch more
+			of
+			<a target="_blank" href="https://www.tiktok.com/@arjipoo">my TikToks</a>.
 		</p>
 	</div>
 	<div />
@@ -292,42 +294,23 @@
 </section>
 
 <section class="career">
-	<a name="Career" aria-hidden="true" style="visibility: hidden">My career</a>
 	<h2>Building products</h2>
 	<p>
-		I’ve spent the last 5 years diving deep into consumer experience, especially obsessing over how
-		people interact with their money. Whether I held the title of PM or not, I’ve been building
-		products that flow with people’s daily lives, making them feel more approachable (and honestly,
-		less painful).
+		I’ve been building 0→1 products as a founder, PM, and engineer for {new Date().getFullYear() -
+			2019} years. Building products is a lot like painting a picture; they bring our ideas, beliefs,
+		and values to life. Expressing myself through products has become my favourite way to share my understandings
+		of the world, and the humans living in it.
 	</p>
 	<p>
-		That obsession led me to start Lila, a gamified money app for Gen Z and Millennials stuck in
-		stressful impulsive spending habits. I ran over 40 deep-dive interviews to break down the
-		problem from first-principles at the psychology layer, and built an AI-driven game experience
-		that got people to actually check their spending on average 6.7 times per week — a 3000% boost.
-		Turns out, making finances fun actually works.
-	</p>
-	<p class="cursive">I'm a Product Innovator</p>
-	<p>
-		Through Lila, I developed my formula for innovation as a creative process. It’s an iterative
-		cycle of user feedback, team-wide ideation, data-driven decision-making, MVP feature scoping and
-		progressive delivery. This is my superpower as a PM, and I’m looking forward to bringing
-		innovation to the rest of my career.
+		The understanding is key. Sometimes it's a new way to look at a topic. Other times it's a better
+		process to achieve a goal. Once I gain that deep understanding, I can craft great products that
+		help change the way it's users think or behave.
 	</p>
 	<p>
-		I’m also very adept as a people-person. At Nylas, I stepped up when our new self-serve revenue
-		product stalled. With sales drying up, this channel was mission-critical, but progress was
-		stuck. So I jumped in and started talking to everyone — I aligned priorities between VP Product
-		and Eng, reenergized the team, and got the pilot launched in 3 weeks.
+		Sounds fluffy doesn't it? My process is actually infused with a lot of creativity, curiosity,
+		and hard work. Feel free to <a target="_blank" href={links.careerStory}>dive deeper</a> into how
+		I go from idea generation to successful adoption
 	</p>
-	<p>
-		If you’re working on something cool in fintech or anything consumer-facing, let’s connect! I'm
-		brought on to be a Product Innovator, accelerating team's iterative learning, collaboration, and
-		product success.
-	</p>
-	<div>
-		<a class="link-button" href={links.careerStory}> Read more about my approach... </a>
-	</div>
 </section>
 
 <style lang="scss">
@@ -520,7 +503,7 @@
 				}
 
 				&:hover {
-					background-color: #f8f8f8;
+					background-color: var(--border-color);
 					text-decoration: none;
 				}
 

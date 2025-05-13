@@ -65,7 +65,11 @@
 	onMount(() => {
 		randomizePositions();
 
-		if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+		const ua = navigator.userAgent || navigator.vendor || window.opera;
+		const isIOS = /iPhone|iPod|iPad/i.test(ua); // catches iOS
+		const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+		if (!isReducedMotion && !isIOS) {
 			setInterval(() => {
 				currentPicture = (currentPicture - 1 + 7) % 7;
 				randomizePosition(currentPicture);

@@ -83,8 +83,7 @@
 		}
 
 		setTimeout(() => {
-			const ua = navigator.userAgent || navigator.vendor || window.opera;
-			tiktokScript = /iPhone|iPod/i.test(ua); // catches iPhones and iPads
+			tiktokScript = 'ontouchstart' in window && window.innerWidth <= 768; // mobile devices
 		}, 1500);
 	});
 </script>

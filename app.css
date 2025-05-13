@@ -40,6 +40,13 @@ h3 {
 	color: var(--brand-colour);
 }
 
+h4,
+h5,
+h6 {
+	font: var(--title);
+	color: var(--title-color);
+}
+
 h2 {
 	font: var(--display);
 }

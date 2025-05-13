@@ -17,26 +17,27 @@ body {
 	--title: normal 1.5rem/1.3 'Belgrano';
 	--alt-text: normal 1.375rem/1.2 'La Belle Aurore';
 
-	--brand-colour: #12a962;
-	--brand-colourlight: #12a962;
-	--brand-colourdark: #005d31;
-	--brand-contrastlight: #efefef;
-	--brand-contrastdark: #081a11;
+	--bg-color: #fbf8f3;
+	--bg-colorlight: #fcfcfc;
+	--border-color: #f2e9da;
 
-	--secondary-color: #d0dde9;
+	--brand-colour: #e9681b;
+	--brand-colourlight: #e9ab1b;
+	--brand-colourdark: #ad4708;
+	--brand-contrastlight: #fbf8f3;
+	--brand-contrastdark: #4f3c18;
+
+	--secondary-color: #ded0e9;
 	--accent-color: var(--brand-colour);
-	--text-color: #49453d;
-	--title-color: #2e2c29;
+	--text-color: #604a1d;
+	--title-color: #4f3c18;
 }
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
 	font: var(--title);
-	color: var(--title-color);
+	color: var(--brand-colour);
 }
 
 h2 {
@@ -45,7 +46,7 @@ h2 {
 
 a {
 	text-decoration: none;
-	color: #656565;
+	color: var(--brand-colourdark);
 }
 
 a:hover {

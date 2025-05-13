@@ -83,7 +83,7 @@
 		}
 
 		setTimeout(() => {
-			tiktokScript = 'ontouchstart' in window && window.innerWidth <= 768; // mobile devices
+			tiktokScript = false; //'ontouchstart' in window && window.innerWidth <= 768; // mobile devices
 		}, 1500);
 	});
 </script>

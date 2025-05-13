@@ -29,8 +29,8 @@
 		const containerHeight = imageContainer.clientHeight;
 
 		positions = images.map((_, i) => ({
-			left: `${Math.random() * (containerWidth - 250)}px`, // Adjusted for image width
-			top: `${Math.random() * (containerHeight - 250)}px`, // Adjusted for image height
+			left: `${Math.min(Math.random() * (containerWidth - 250), containerWidth - 250)}px`, // Ensuring the image doesn't overflow.
+			top: `${Math.min(Math.random() * (containerHeight - 250), containerHeight - 250)}px`, // Ensuring the image doesn't overflow.
 			opacity: 1,
 			zIndex: i
 		}));

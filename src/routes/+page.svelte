@@ -65,11 +65,8 @@
 	onMount(() => {
 		randomizePositions();
 
-		const ua = navigator.userAgent || navigator.vendor || window.opera;
-		const isIOS = /iPhone|iPod|iPad/i.test(ua); // catches iOS
 		const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-		if (!isReducedMotion && !isIOS) {
+		if (!isReducedMotion) {
 			setInterval(() => {
 				currentPicture = (currentPicture - 1 + 7) % 7;
 				randomizePosition(currentPicture);
@@ -86,8 +83,10 @@
 			});
 		}
 
+		const ua = navigator.userAgent || navigator.vendor || window.opera;
+		const isIOS = /iPhone|iPod|iPad/i.test(ua); // catches iOS
 		setTimeout(() => {
-			tiktokScript = false; //'ontouchstart' in window && window.innerWidth <= 768; // mobile devices
+			tiktokScript = !isIOS;
 		}, 1500);
 	});
 </script>

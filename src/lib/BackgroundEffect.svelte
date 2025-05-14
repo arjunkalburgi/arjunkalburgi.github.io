@@ -25,8 +25,9 @@
 		const ua = navigator.userAgent || navigator.vendor || window.opera;
 		const isIOS = /iPhone|iPod|iPad/i.test(ua); // catches iOS
 		const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-		cloudAnimationData.noSway = isIOS || isReducedMotion;
+
 		if (!isIOS && !isReducedMotion) {
+			cloudAnimationData.noSway = isIOS || isReducedMotion;
 			animate(cloudAnimationData);
 		}
 	});

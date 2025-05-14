@@ -208,7 +208,7 @@
 		<div class="columns">
 			<p>
 				A core part of enjoying life is the connections we make along the way. Lucky for me, I’m so
-				extroverted, there isn't any challenges situation where I can't make connections.
+				extroverted, there isn't any challenging situation where I can't make connections.
 			</p>
 			<p>
 				Hate small talk? I’ll get deep. All strangers? I know what to say. Crippling anxiety? I am a
@@ -221,8 +221,8 @@
 				knew my sadness, and came with their hearts open.
 			</p>
 			<p>
-				By the end of the night we had all cried, laughed a good amount, exchanged several hugs, and
-				shared some of the darkest parts of ourselves. I can’t really describe how it felt
+				By the end of the night, we had all cried, laughed a good amount, exchanged several hugs,
+				and shared some of the darkest parts of ourselves. I can’t really describe how it felt
 				afterwards, like I was uplifted, like we had healed together.
 			</p>
 			<p>
@@ -249,6 +249,10 @@
 					z-index: {positions[i]?.zIndex};
 					filter: blur({Math.abs(positions[i]?.zIndex - positions[currentPicture]?.zIndex)}px);
 				"
+				on:click={() => {
+					currentPicture = (currentPicture - 1 + 7) % 7;
+					randomizePosition(currentPicture);
+				}}
 			/>
 		{/each}
 	</div>
@@ -282,7 +286,7 @@
 				I'm not religious, but the takeaways of <a
 					href="https://www.goodreads.com/book/show/6708.The_Power_of_Now"
 					>The Power of Now by Eckhart Tolle</a
-				> help me view the world.
+				> helps me view the world.
 			</p>
 			<p>
 				View more <a href={links.books}>book recommendations</a>
@@ -308,7 +312,7 @@
 				taught me how to think over FaceTime.
 			</p>
 			<p>
-				Scour the <a
+				Explore the <a
 					href="https://arjunkalburgi.notion.site/The-friends-along-the-way-eaa33349cc1c4712a3156be0cfb5faf8"
 				>
 					full village
@@ -322,17 +326,17 @@
 	<h2>Building products</h2>
 	<p>
 		I’ve been building 0→1 products as a founder, PM, and engineer for {new Date().getFullYear() -
-			2019} years. Building products is a lot like painting a picture; they bring our ideas, beliefs,
-		and values to life. Expressing myself through products has become my favourite way to share my understandings
-		of the world, and the humans living in it.
+			2019} years. Building products is like making a painting; they're both a process of bringing our
+		ideas, beliefs, and values to life. Expressing myself through products has become my favourite way
+		to share my understandings of the world, and the humans living in it.
 	</p>
 	<p>
 		The understanding is key. Sometimes it's a new way to look at a topic. Other times it's a better
 		process to achieve a goal. Once I gain that deep understanding, I can craft great products that
-		help change the way it's users think or behave.
+		help change the way its users think or behave.
 	</p>
 	<p>
-		Sounds fluffy doesn't it? My process is actually infused with a lot of creativity, curiosity,
+		Sounds fluffy, doesn't it? My process is actually infused with a lot of creativity, curiosity,
 		and hard work. Feel free to <a target="_blank" href={links.careerStory}>dive deeper</a> into how
 		I go from idea generation to successful adoption
 	</p>
@@ -649,7 +653,7 @@
 			@media screen and not (max-width: 791px) {
 				height: auto;
 				max-height: 33vh;
-				width: 33vw;
+				max-width: 33vw;
 			}
 
 			@keyframes fadeIn {

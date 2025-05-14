@@ -17,19 +17,13 @@
 		],
 		noRotation: true,
 		noSpin: true,
+		noSway: true,
 		width: 800,
 		height: 800
 	};
 
 	onMount(() => {
-		const ua = navigator.userAgent || navigator.vendor || window.opera;
-		const isIOS = /iPhone|iPod|iPad/i.test(ua); // catches iOS
-		const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-		if (!isIOS && !isReducedMotion) {
-			cloudAnimationData.noSway = isIOS || isReducedMotion;
-			animate(cloudAnimationData);
-		}
+		animate(cloudAnimationData);
 	});
 </script>
 

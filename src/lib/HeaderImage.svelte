@@ -16,14 +16,12 @@
 		],
 		noRotation: true,
 		noSpin: true,
+		noSway: true,
 		width: 800,
 		height: 800
 	};
 
 	onMount(() => {
-		cloudAnimationData.noSway =
-			window.navigator.userAgent.includes('iPhone') ||
-			window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 		animate(cloudAnimationData);
 	});
 </script>
@@ -65,6 +63,7 @@
 		height: 620px;
 
 		.bg_animation_container {
+			will-change: transform;
 			position: absolute;
 			top: -80%;
 			left: -80%;

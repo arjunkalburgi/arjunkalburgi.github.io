@@ -106,6 +106,7 @@
 		}
 
 		.footer-bg {
+			will-change: transform;
 			overflow: visible;
 			position: absolute;
 			width: 100vw;

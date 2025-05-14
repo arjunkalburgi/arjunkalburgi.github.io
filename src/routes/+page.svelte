@@ -582,6 +582,7 @@
 		}
 
 		.intro-bg {
+			will-change: transform;
 			position: absolute;
 			width: 100vw;
 

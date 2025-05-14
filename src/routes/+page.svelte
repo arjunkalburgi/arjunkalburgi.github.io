@@ -68,7 +68,10 @@
 		randomizePositions();
 
 		const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-		if (!isReducedMotion) {
+		const ua = navigator.userAgent || navigator.vendor || window.opera;
+		const isIOS = /iPhone|iPod|iPad/i.test(ua); // catches iOS
+
+		if (!isReducedMotion && !isIOS) {
 			setInterval(() => {
 				currentPicture = (currentPicture - 1 + 7) % 7;
 				randomizePosition(currentPicture);
@@ -83,13 +86,9 @@
 					base + '/element/leaf03.svg'
 				]
 			});
-		}
 
-		const ua = navigator.userAgent || navigator.vendor || window.opera;
-		const isIOS = /iPhone|iPod|iPad/i.test(ua); // catches iOS
-		setTimeout(() => {
-			tiktokScript = !isIOS;
-		}, 1500);
+			tiktokScript = true;
+		}
 	});
 </script>
 

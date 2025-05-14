@@ -617,7 +617,7 @@
 			margin-bottom: 11px;
 			position: absolute;
 			box-shadow: 0px 0px 40px #111;
-			// transition: opacity 0.5s ease-in-out;
+			transition: filter 1s ease-in-out;
 			// transition: opacity 0.5s ease-in-out, left 0.8s ease-in-out, top 0.8s ease-in-out;
 
 			@keyframes fadeIn {

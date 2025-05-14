@@ -62,6 +62,8 @@
 			'https://www.notion.so/arjunkalburgi/My-Approach-How-I-Build-Products-with-Teams-db411d150cf346f8b4c0098422016b10'
 	};
 
+	let activeTab = 'books';
+
 	onMount(() => {
 		randomizePositions();
 
@@ -245,6 +247,7 @@
 					top: {positions[i]?.top}; 
 					opacity: 1;
 					z-index: {positions[i]?.zIndex};
+					filter: blur({Math.abs(positions[i]?.zIndex - positions[currentPicture]?.zIndex)}px);
 				"
 			/>
 		{/each}
@@ -252,43 +255,55 @@
 </section>
 
 <section class="recs">
-	<div class="books">
-		<h4>Book club hours</h4>
-		<p>Here are two books I recommend to anyone.</p>
-		<p>
-			<a href="https://www.goodreads.com/en/book/show/33517721-the-culture-code"
-				>The Culture Code by Daniel Coyle</a
-			> teaches you how to make people around you feel comfortable.
-		</p>
-		<p>
-			I'm not religious, but the takeaways of <a
-				href="https://www.goodreads.com/book/show/6708.The_Power_of_Now"
-				>The Power of Now by Eckhart Tolle</a
-			> help me view the world.
-		</p>
-		<p>I can recommend more! Let's chat all about books</p>
-		<a href={links.books}> More books... </a>
+	<div class="tabs">
+		<div>
+			<button class:selected={activeTab === 'books'} on:click={() => (activeTab = 'books')}>
+				Books
+			</button>
+			<button class:selected={activeTab === 'village'} on:click={() => (activeTab = 'village')}>
+				Friends
+			</button>
+		</div>
 	</div>
-	<div>
-		<h4>It takes a village</h4>
-		<p>I'm incredibly blessed to have amazing people in my life.</p>
-		<p>
-			<a href="https://instagram.com/krisna.bhargava">Krisna</a> is my cousin/big brother. He practically
-			taught me how to think over 10 years of FaceTiming.
-		</p>
-		<p>
-			<a href="https://instagram.com/sincerelysanika">Sanika</a> and I became besties over the internet.
-			She is often the catalyst of my emotional growth.
-		</p>
-		<p>
-			<a href="https://instagram.com/radhikals">Radhika</a> and I are two peas in a pod. No one soaks-in
-			life like her, but I'm a close second.
-		</p>
-		<a
-			href="https://arjunkalburgi.notion.site/The-friends-along-the-way-eaa33349cc1c4712a3156be0cfb5faf8"
-		>
-			More people...
-		</a>
+	<div class="content">
+		<div class="books" class:selected={activeTab === 'books'}>
+			<h4>Book club hours</h4>
+			<p>Here are two books I recommend to anyone.</p>
+			<p>
+				<a href="https://www.goodreads.com/en/book/show/33517721-the-culture-code"
+					>The Culture Code by Daniel Coyle</a
+				> teaches you how to make people around you feel comfortable.
+			</p>
+			<p>
+				I'm not religious, but the takeaways of <a
+					href="https://www.goodreads.com/book/show/6708.The_Power_of_Now"
+					>The Power of Now by Eckhart Tolle</a
+				> help me view the world.
+			</p>
+			<p>I can recommend more! Let's chat all about books</p>
+			<a href={links.books}> More books... </a>
+		</div>
+		<div class="village" class:selected={activeTab === 'village'}>
+			<h4>It takes a village</h4>
+			<p>I'm incredibly blessed to have amazing people in my life.</p>
+			<p>
+				<a href="https://instagram.com/krisna.bhargava">Krisna</a> is my cousin/big brother. He practically
+				taught me how to think over 10 years of FaceTiming.
+			</p>
+			<p>
+				<a href="https://instagram.com/sincerelysanika">Sanika</a> and I became besties over the internet.
+				She is often the catalyst of my emotional growth.
+			</p>
+			<p>
+				<a href="https://instagram.com/radhikals">Radhika</a> and I are two peas in a pod. No one soaks-in
+				life like her, but I'm a close second.
+			</p>
+			<a
+				href="https://arjunkalburgi.notion.site/The-friends-along-the-way-eaa33349cc1c4712a3156be0cfb5faf8"
+			>
+				More people...
+			</a>
+		</div>
 	</div>
 </section>
 
@@ -623,27 +638,64 @@
 	}
 
 	section.recs {
-		display: grid;
-		grid-gap: 50px;
-		grid-template-columns: auto auto;
+		.tabs {
+			@media screen and not (max-width: 791px) {
+				display: none;
+			}
 
-		@media screen and (max-width: 791px) {
-			padding-left: 20px;
-			padding-right: 20px;
-			grid-gap: 20px;
+			position: relative;
+			div {
+				position: absolute;
+				bottom: -2px;
+				left: 20px;
+			}
+			button {
+				border: 1px solid var(--border-color);
+				border-bottom: 0px;
+				background-color: var(--bg-colorlight);
+				padding: 0.75rem;
+				border-radius: 10px 10px 0px 0px;
+				position: relative;
+				z-index: 3;
 
-			overflow: scroll;
-			padding-bottom: 10px;
+				&:not(.selected) {
+					z-index: 1;
+					background-color: var(--border-color);
+				}
+			}
+		}
+		.content {
+			@media screen and not (max-width: 791px) {
+				display: grid;
+				grid-gap: 50px;
+				grid-template-columns: auto auto;
+			}
+
+			@media screen and (max-width: 791px) {
+				z-index: 2;
+				position: relative;
+				padding: 3rem 48px;
+				border: 1px solid var(--border-color);
+				background-color: var(--bg-colorlight);
+				border-radius: 10px;
+			}
 		}
 
-		div {
+		div.books,
+		div.village {
 			padding: 0.5rem 2rem 2rem;
 			border: 1px solid var(--border-color);
 			background-color: var(--bg-colorlight);
 			border-radius: 18px;
 
 			@media screen and (max-width: 791px) {
-				width: 67vw;
+				padding: 0;
+				border: none;
+				background-color: transparent;
+
+				&:not(.selected) {
+					display: none;
+				}
 			}
 
 			& > a {
@@ -669,14 +721,6 @@
 				padding-left: 10px;
 			}
 		}
-	}
-
-	.link-button {
-		border: 1px solid rgb(22 24 35 / 12%);
-		background: white;
-		padding: 0.75rem;
-		border-radius: 10px;
-		margin: 1rem 0;
 	}
 
 	a:not(.link-button, .post) {

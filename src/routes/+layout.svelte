@@ -1,10 +1,28 @@
 <script>
+	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
-	import CanIHaveYoEmail from '$lib/CanIHaveYoEmail.svelte';
-	import Tiktok from '$lib/logos/tiktok.svelte';
-	import Instagram from '$lib/logos/instagram.svelte';
-	import LinkedIn from '$lib/logos/linkedin.svelte';
-	import Github from '$lib/logos/github.svelte';
+	import { animate } from '@arjunanimations/leaves';
+
+	onMount(() => {
+		const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		const ua = navigator.userAgent || navigator.vendor || window.opera;
+		const isIOS = /iPhone|iPod|iPad/i.test(ua); // catches iOS
+
+		animate({
+			className: 'footer-bg',
+			numOfSprites: 12,
+			pathsOfSprites: [
+				base + '/cloud/pink.PNG',
+				base + '/cloud/orange.PNG',
+				base + '/cloud/blue.PNG'
+			],
+			noRotation: true,
+			noSway: isReducedMotion || isIOS,
+			noSpin: isReducedMotion || isIOS,
+			width: 1000,
+			height: 1000
+		});
+	});
 </script>
 
 <div class="container">
@@ -22,6 +40,7 @@
 	</main>
 
 	<footer>
+		<div class="footer-bg" />
 		<h2>Let's inspire each other</h2>
 		<p>I'm always excited to meet thoughtful folks and life enjoyers.</p>
 		<p>Building something? Facing a tough challenge? Exploring ideas? I'd love to help.</p>
@@ -34,6 +53,10 @@
 </div>
 
 <style lang="scss">
+	.container {
+		overflow: hidden;
+	}
+
 	main {
 		margin-bottom: 10vh;
 	}
@@ -73,7 +96,8 @@
 		max-width: 700px;
 		margin-left: auto;
 		margin-right: auto;
-		margin-bottom: 8rem;
+		padding-bottom: 8rem;
+		position: relative;
 
 		@media screen and (max-width: 791px) {
 			padding-left: 20px;
@@ -81,18 +105,12 @@
 			width: unset;
 		}
 
-		.buttonRow {
-			padding-left: 0px;
-			height: 32px;
-
-			li {
-				float: left;
-				list-style: none;
-
-				&:not(:first-of-type) {
-					margin: 0 0 0 20px;
-				}
-			}
+		.footer-bg {
+			overflow: visible;
+			position: absolute;
+			width: 100vw;
+			height: 60%;
+			left: -50vw;
 		}
 	}
 </style>

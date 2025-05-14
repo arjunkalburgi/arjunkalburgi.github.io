@@ -69,18 +69,17 @@
 			max-width: 800px;
 		}
 
+		padding: 20vh 40px 40px 40px;
 		max-width: 700px;
 		margin-left: auto;
 		margin-right: auto;
+		margin-bottom: 8rem;
 
 		@media screen and (max-width: 791px) {
 			padding-left: 20px;
 			padding-right: 20px;
 			width: unset;
 		}
-
-		padding: 40px;
-		margin-bottom: 8rem;
 
 		.buttonRow {
 			padding-left: 0px;

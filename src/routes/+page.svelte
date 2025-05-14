@@ -266,12 +266,16 @@
 	</div>
 	<div class="content">
 		<div class="books" class:selected={activeTab === 'books'}>
-			<h4>Book club hours</h4>
-			<p>Here are two books I recommend to anyone.</p>
+			<h2>Feeding the mind</h2>
+			<p>Here are a few books I highly recommend, good to go back to from time to time.</p>
+			<p>
+				<a href="https://www.goodreads.com/book/show/25614523-originals">Originals by Adam Grant</a>
+				basically describes me. Sometimes I use it when I need help being more me.
+			</p>
 			<p>
 				<a href="https://www.goodreads.com/en/book/show/33517721-the-culture-code"
 					>The Culture Code by Daniel Coyle</a
-				> teaches you how to make people around you feel comfortable.
+				> is about making people around you feel comfortable.
 			</p>
 			<p>
 				I'm not religious, but the takeaways of <a
@@ -279,29 +283,36 @@
 					>The Power of Now by Eckhart Tolle</a
 				> help me view the world.
 			</p>
-			<p>I can recommend more! Let's chat all about books</p>
-			<a href={links.books}> More books... </a>
+			<p>
+				View more <a href={links.books}>book recommendations</a>
+			</p>
 		</div>
 		<div class="village" class:selected={activeTab === 'village'}>
-			<h4>It takes a village</h4>
+			<h2>It takes a village</h2>
 			<p>I'm incredibly blessed to have amazing people in my life.</p>
 			<p>
-				<a href="https://instagram.com/krisna.bhargava">Krisna</a> is my cousin/big brother. He practically
-				taught me how to think over 10 years of FaceTiming.
+				<a href="https://www.instagram.com/sanjana.naik">Sanjana</a> is my partner and teammate. We share
+				the joy of connecting with others.
 			</p>
 			<p>
-				<a href="https://instagram.com/sincerelysanika">Sanika</a> and I became besties over the internet.
-				She is often the catalyst of my emotional growth.
+				<a href="https://www.instagram.com/shash__nk">Shashaank</a> and I are best friends, living life
+				together as well as any best friends do.
 			</p>
 			<p>
-				<a href="https://instagram.com/radhikals">Radhika</a> and I are two peas in a pod. No one soaks-in
-				life like her, but I'm a close second.
+				<a href="https://instagram.com/sincerelysanika">Sanika</a> and I became besties online. She is
+				often the catalyst of my emotional growth.
 			</p>
-			<a
-				href="https://arjunkalburgi.notion.site/The-friends-along-the-way-eaa33349cc1c4712a3156be0cfb5faf8"
-			>
-				More people...
-			</a>
+			<p>
+				<a href="https://instagram.com/krisna.bhargava">Krisna</a> is my cousin/big bro. He practically
+				taught me how to think over FaceTime.
+			</p>
+			<p>
+				Scour the <a
+					href="https://arjunkalburgi.notion.site/The-friends-along-the-way-eaa33349cc1c4712a3156be0cfb5faf8"
+				>
+					full village
+				</a>
+			</p>
 		</div>
 	</div>
 </section>
@@ -363,8 +374,8 @@
 			max-width: 700px;
 
 			@media screen and (max-width: 791px) {
-				padding-left: 20px;
-				padding-right: 20px;
+				padding-left: calc(10px + 1rem);
+				padding-right: calc(10px + 1rem);
 				width: unset;
 			}
 		}
@@ -427,7 +438,6 @@
 			white-space: normal;
 
 			@media screen and (max-width: 791px) {
-				margin-right: 1rem;
 				grid-row-start: span 1;
 				grid-row-end: span 1;
 				grid-column-start: span 3;
@@ -449,7 +459,8 @@
 			}
 
 			& > p {
-				margin-left: 2rem;
+				margin-left: 1rem;
+				margin-right: 1rem;
 
 				@media screen and (min-width: 1240px) {
 					margin-left: 5rem;
@@ -567,6 +578,10 @@
 			background-color: var(--bg-colorlight);
 			border-radius: 10px;
 
+			@media screen and (max-width: 791px) {
+				padding: 1rem;
+			}
+
 			h2 {
 				margin-top: 0;
 			}
@@ -673,7 +688,7 @@
 			@media screen and (max-width: 791px) {
 				z-index: 2;
 				position: relative;
-				padding: 3rem 48px;
+				padding: 1rem;
 				border: 1px solid var(--border-color);
 				background-color: var(--bg-colorlight);
 				border-radius: 10px;
@@ -682,10 +697,14 @@
 
 		div.books,
 		div.village {
-			padding: 0.5rem 2rem 2rem;
+			padding: 2rem;
 			border: 1px solid var(--border-color);
 			background-color: var(--bg-colorlight);
 			border-radius: 18px;
+
+			h2 {
+				margin-top: 0;
+			}
 
 			@media screen and (max-width: 791px) {
 				padding: 0;
@@ -696,20 +715,12 @@
 					display: none;
 				}
 			}
-
-			& > a {
-				font: var(--alt-text);
-				text-decoration: underline;
-			}
 		}
 	}
 
 	section.career {
-		padding-bottom: 10rem;
-
-		& > *:not(.cursive) {
-			margin-left: 2rem;
-		}
+		padding-left: calc(10px + 1rem);
+		padding-right: calc(10px + 1rem);
 
 		.cursive {
 			@media screen and (min-width: 1240px) {
@@ -734,9 +745,5 @@
 
 	:global(main) {
 		margin-bottom: 0 !important;
-	}
-
-	:global(footer) {
-		padding-top: 0 !important;
 	}
 </style>

@@ -6,27 +6,28 @@
 
 	export let alt;
 	export let src;
-
-	const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-	const ua = navigator.userAgent || navigator.vendor || window.opera;
-	const isIOS = /iPhone|iPod|iPad/i.test(ua); // catches iOS
-
-	const cloudAnimationData = {
-		className: 'bg_animation_container',
-		numOfSprites: 3,
-		pathsOfSprites: [
-			base + '/cloud/pink.PNG',
-			base + '/cloud/orange.PNG',
-			base + '/cloud/blue.PNG'
-		],
-		noRotation: true,
-		noSpin: isReducedMotion,
-		noSway: isReducedMotion,
-		width: 800,
-		height: 800
-	};
+	let isIOS;
 
 	onMount(() => {
+		const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		const ua = navigator.userAgent || navigator.vendor || window.opera;
+		const isIOS = /iPhone|iPod|iPad/i.test(ua); // catches iOS
+
+		const cloudAnimationData = {
+			className: 'bg_animation_container',
+			numOfSprites: 3,
+			pathsOfSprites: [
+				base + '/cloud/pink.PNG',
+				base + '/cloud/orange.PNG',
+				base + '/cloud/blue.PNG'
+			],
+			noRotation: true,
+			noSpin: isReducedMotion,
+			noSway: isReducedMotion,
+			width: 800,
+			height: 800
+		};
+
 		if (!isIOS) animate(cloudAnimationData);
 	});
 </script>

@@ -5,6 +5,7 @@
 	import { useLazyImage as lazyImage } from 'svelte-lazy-image';
 	import HeaderImage from '$lib/HeaderImage.svelte';
 	import BackgroundEffect from '$lib/BackgroundEffect.svelte';
+	import ScrollIndicator from '$lib/ScrollIndicator.svelte';
 
 	let tiktokScript = false;
 
@@ -109,11 +110,12 @@
 			Hi there! My name is Arjun, I love learning new things and being creative. I got a big smile,
 			a huge laugh, and boatloads of enthusiasm that comes from living my core value:
 		</p>
-		<div>
-			<h2>Let's enjoy life together</h2>
-		</div>
+		<h2>Let's enjoy life together</h2>
 		<p>This entails a lot of things, let me show you...</p>
-		<p>Welcome to: <span class="cursive">Living life, Arjun style</span></p>
+		<div class="scroll-indicator-container">
+			<p>Welcome to: <span class="cursive">Living life, Arjun style</span></p>
+			<ScrollIndicator />
+		</div>
 	</div>
 </section>
 
@@ -315,7 +317,7 @@
 				Explore the <a
 					href="https://arjunkalburgi.notion.site/The-friends-along-the-way-eaa33349cc1c4712a3156be0cfb5faf8"
 				>
-					full village
+					entire village
 				</a>
 			</p>
 		</div>
@@ -393,10 +395,9 @@
 		grid-row-gap: 0px;
 		grid-template-columns: minmax(250px, 1fr) 0.25fr 1fr;
 		grid-template-rows: auto auto auto;
+		align-items: center;
 
 		@media screen and (min-width: 1240px) {
-			-webkit-box-align: start;
-			align-items: start;
 			grid-template-columns: minmax(250px, 1fr) 0.25fr 1fr;
 			grid-template-rows: auto auto auto auto auto;
 		}
@@ -463,7 +464,7 @@
 				// font-weight: 400;
 			}
 
-			& > p {
+			& > :not(h2) {
 				margin-left: 1rem;
 				margin-right: 1rem;
 
@@ -477,6 +478,14 @@
 				flex-direction: row;
 				justify-content: start;
 				align-items: center;
+			}
+
+			.scroll-indicator-container {
+				width: fit-content;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 2rem;
 			}
 		}
 	}
@@ -754,11 +763,6 @@
 				padding-left: 10px;
 			}
 		}
-	}
-
-	a:not(.link-button, .post) {
-		text-decoration: underline;
-		text-decoration-color: var(--brand-colordark);
 	}
 
 	.cursive {

@@ -177,28 +177,29 @@
 				</blockquote>
 				<script async src="https://www.tiktok.com/embed.js"></script>
 			{:else}
-				<a class="tiktokpic" href="https://www.tiktok.com/@arjipoo/video/7167011413393706246">
-					<img
+				<div class="posts">
+					<a
+						class="post"
 						target="_blank"
-						style="width: 325px;"
-						src="{base}/tiktok.jpeg"
-						alt="Arjun's Bhangra Flex tiktok screenshot"
-					/>
-				</a>
+						href="https://www.tiktok.com/@arjipoo/video/7167011413393706246"
+					>
+						<div class="post-art">
+							<img src="{base}/tiktok.jpeg" alt="Arjun's Bhangra Flex tiktok screenshot" />
+						</div>
+						<h4>Bhangra Flex 🔗</h4>
+						<p>Bringing out the bhangra moves at some of the good Toronto views.</p>
+					</a>
+				</div>
 			{/if}
 		</div>
 	</div>
-	<div>
-		<p>
-			I've got a lot of content across the internet. You can read more of <a
-				target="_blank"
-				href={links.writing}>my writing</a
-			>, check out some of <a target="_blank" href={links.projects}>my projects</a>, and watch more
-			of
-			<a target="_blank" href="https://www.tiktok.com/@arjipoo">my TikToks</a>.
-		</p>
-	</div>
-	<div />
+	<p>
+		I've got a lot of content across the internet. You can read more of <a
+			target="_blank"
+			href={links.writing}>my writing</a
+		>, check out some of <a target="_blank" href={links.projects}>my projects</a>, and watch more of
+		<a target="_blank" href="https://www.tiktok.com/@arjipoo">my TikToks</a>.
+	</p>
 </section>
 
 <section class="story">
@@ -489,7 +490,7 @@
 
 		& > div {
 			display: grid;
-			grid-template-columns: 1fr auto;
+			grid-template-columns: 53% auto;
 			grid-column-gap: 50px;
 
 			@media screen and (max-width: 791px) {
@@ -546,8 +547,15 @@
 
 		.tiktok.section {
 			border-radius: 18px;
-			.tiktokpic:hover {
-				outline: 1px solid #ababab;
+			.posts .post .post-art {
+				height: auto;
+
+				img {
+					width: 100%;
+					height: auto;
+					object-fit: cover;
+					border-radius: 10px;
+				}
 			}
 		}
 
@@ -622,6 +630,10 @@
 			height: 60vh;
 			overflow: visible;
 			margin: auto;
+
+			@media screen and (max-width: 791px) {
+				left: -10vw;
+			}
 		}
 
 		img {
@@ -633,6 +645,12 @@
 			box-shadow: 0px 0px 40px #111;
 			transition: filter 1s ease-in-out;
 			// transition: opacity 0.5s ease-in-out, left 0.8s ease-in-out, top 0.8s ease-in-out;
+
+			@media screen and not (max-width: 791px) {
+				height: auto;
+				max-height: 33vh;
+				width: 33vw;
+			}
 
 			@keyframes fadeIn {
 				from {
@@ -664,6 +682,7 @@
 				left: 20px;
 			}
 			button {
+				color: var(--text-colordark);
 				border: 1px solid var(--border-color);
 				border-bottom: 0px;
 				background-color: var(--bg-colorlight);

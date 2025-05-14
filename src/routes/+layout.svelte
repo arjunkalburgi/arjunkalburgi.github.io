@@ -3,25 +3,29 @@
 	import { base } from '$app/paths';
 	import { animate } from '@arjunanimations/leaves';
 
+	let isIOS;
+
 	onMount(() => {
 		const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 		const ua = navigator.userAgent || navigator.vendor || window.opera;
-		const isIOS = /iPhone|iPod|iPad/i.test(ua); // catches iOS
+		isIOS = /iPhone|iPod|iPad/i.test(ua); // catches iOS
 
-		animate({
-			className: 'footer-bg',
-			numOfSprites: 12,
-			pathsOfSprites: [
-				base + '/cloud/pink.PNG',
-				base + '/cloud/orange.PNG',
-				base + '/cloud/blue.PNG'
-			],
-			noRotation: true,
-			noSway: isReducedMotion || isIOS,
-			noSpin: isReducedMotion || isIOS,
-			width: 1000,
-			height: 1000
-		});
+		if (!isIOS) {
+			animate({
+				className: 'footer-bg',
+				numOfSprites: 12,
+				pathsOfSprites: [
+					base + '/cloud/pink.PNG',
+					base + '/cloud/orange.PNG',
+					base + '/cloud/blue.PNG'
+				],
+				noRotation: true,
+				noSway: isReducedMotion,
+				noSpin: isReducedMotion,
+				width: 1000,
+				height: 1000
+			});
+		}
 	});
 </script>
 
@@ -40,7 +44,15 @@
 	</main>
 
 	<footer>
-		<div class="footer-bg" />
+		{#if isIOS}
+			<div class="clouds">
+				<img src="{base}/cloud/pink.PNG" alt="pink cloud" />
+				<img src="{base}/cloud/orange.PNG" alt="orange cloud" />
+				<img src="{base}/cloud/blue.PNG" alt="blue cloud" />
+			</div>
+		{:else}
+			<div class="footer-bg" />
+		{/if}
 		<h2>Let's inspire each other</h2>
 		<p>I'm always excited to meet thoughtful folks and life enjoyers.</p>
 		<p>Building something? Facing a tough challenge? Exploring ideas? I'd love to help.</p>
@@ -112,6 +124,18 @@
 			width: 100vw;
 			height: 60%;
 			left: -50vw;
+		}
+
+		.clouds {
+			position: absolute;
+			z-index: -1;
+			width: 100%;
+			display: grid;
+			grid-template-columns: 30% 30% 30%;
+
+			img {
+				justify-self: center;
+			}
 		}
 	}
 </style>

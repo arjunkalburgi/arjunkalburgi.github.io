@@ -77,22 +77,22 @@
 				currentPicture = (currentPicture - 1 + 7) % 7;
 				randomizePosition(currentPicture);
 			}, 5000);
+
+			animate({
+				className: 'intro-bg',
+				numOfSprites: 12,
+				pathsOfSprites: [
+					base + '/element/leaf01.svg',
+					base + '/element/leaf02.svg',
+					base + '/element/leaf03.svg'
+				],
+				noRotation: isReducedMotion || isIOS,
+				noSway: isReducedMotion || isIOS,
+				noSpin: isReducedMotion || isIOS
+			});
+
+			tiktokScript = true;
 		}
-
-		animate({
-			className: 'intro-bg',
-			numOfSprites: 12,
-			pathsOfSprites: [
-				base + '/element/leaf01.svg',
-				base + '/element/leaf02.svg',
-				base + '/element/leaf03.svg'
-			],
-			noRotation: isReducedMotion || isIOS,
-			noSway: isReducedMotion || isIOS,
-			noSpin: isReducedMotion || isIOS
-		});
-
-		tiktokScript = !isIOS;
 	});
 </script>
 

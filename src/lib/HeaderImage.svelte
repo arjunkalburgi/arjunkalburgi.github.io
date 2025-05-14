@@ -6,6 +6,10 @@
 	export let alt;
 	export let src;
 
+	const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+	const ua = navigator.userAgent || navigator.vendor || window.opera;
+	const isIOS = /iPhone|iPod|iPad/i.test(ua); // catches iOS
+
 	const cloudAnimationData = {
 		className: 'bg_animation_container',
 		numOfSprites: 6,
@@ -15,19 +19,19 @@
 			base + '/cloud/blue.PNG'
 		],
 		noRotation: true,
-		noSpin: true,
-		noSway: true,
+		noSpin: isReducedMotion,
+		noSway: isReducedMotion,
 		width: 800,
 		height: 800
 	};
 
 	onMount(() => {
-		animate(cloudAnimationData);
+		if (!isIOS) animate(cloudAnimationData);
 	});
 </script>
 
 <div>
-	<div class="bg">
+	<div class="bg {isIOS ? 'static' : 'animated'}">
 		<div class="bg_animation_container" />
 	</div>
 	<img class="main" {alt} {src} />
@@ -58,9 +62,20 @@
 	}
 
 	.bg {
-		background-color: #e6e7f0;
-		background-color: #e6e7f036;
 		height: 620px;
+
+		&.animated {
+			background-color: #e6e7f036;
+		}
+		&.static {
+			background: rgba(255, 181, 43, 0.27);
+			background: linear-gradient(
+				90deg,
+				rgba(99, 192, 230, 0.26) 0%,
+				rgba(227, 84, 225, 0.19) 51%,
+				rgba(255, 181, 43, 0.27) 100%
+			);
+		}
 
 		.bg_animation_container {
 			will-change: transform;

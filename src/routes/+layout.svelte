@@ -131,10 +131,18 @@
 			z-index: -1;
 			width: 100%;
 			display: grid;
-			grid-template-columns: 30% 30% 30%;
+			grid-template-columns: 42% 5% 42%;
 
 			img {
 				justify-self: center;
+				height: 100vh;
+
+				&:first-of-type {
+					justify-self: end;
+				}
+				&:last-of-type {
+					justify-self: start;
+				}
 			}
 		}
 	}

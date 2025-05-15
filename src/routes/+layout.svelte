@@ -46,9 +46,9 @@
 	<footer>
 		{#if isIOS}
 			<div class="clouds">
+				<img src="{base}/cloud/blue.PNG" alt="blue cloud" />
 				<img src="{base}/cloud/pink.PNG" alt="pink cloud" />
 				<img src="{base}/cloud/orange.PNG" alt="orange cloud" />
-				<img src="{base}/cloud/blue.PNG" alt="blue cloud" />
 			</div>
 		{:else}
 			<div class="footer-bg" />

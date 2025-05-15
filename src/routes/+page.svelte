@@ -64,13 +64,15 @@
 	};
 
 	let activeTab = 'books';
+	let isReducedMotion;
+	let isIOS;
 
 	onMount(() => {
 		randomizePositions();
 
-		const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 		const ua = navigator.userAgent || navigator.vendor || window.opera;
-		const isIOS = /iPhone|iPod|iPad/i.test(ua); // catches iOS
+		isIOS = /iPhone|iPod|iPad/i.test(ua); // catches iOS
 
 		if (!isReducedMotion && !isIOS) {
 			setInterval(() => {
@@ -261,6 +263,9 @@
 			/>
 		{/each}
 	</div>
+	{#if isReducedMotion || isIOS}
+		<small>Tap the picture to flip to the next one</small>
+	{/if}
 </section>
 
 <section class="recs">
@@ -331,19 +336,20 @@
 	<h2>Building products</h2>
 	<p>
 		I’ve been building 0→1 products as a founder, PM, and engineer for {new Date().getFullYear() -
-			2019} years. Building products is like making a painting; they're both a process of bringing our
-		ideas, beliefs, and values to life. Expressing myself through products has become my favourite way
-		to share my understandings of the world, and the humans living in it.
+			2019} years. I build products the same way artists express themselves through their art.
 	</p>
 	<p>
-		The understanding is key. Sometimes it's a new way to look at a topic. Other times it's a better
-		process to achieve a goal. Once I gain that deep understanding, I can craft great products that
-		help change the way its users think or behave.
+		For me, building products is a creative process that brings my ideas, beliefs, and values to
+		life. It's become my favourite way to share my understandings of the world, and the humans
+		living in it.
 	</p>
 	<p>
-		Sounds fluffy, doesn't it? My process is actually infused with a lot of creativity, curiosity,
-		and hard work. Feel free to <a target="_blank" href={links.careerStory}>dive deeper</a> into how
-		I go from idea generation to successful adoption
+		The understanding is key; coming from deep research, a new perspective, or a better process. I
+		use it to craft products that help change the way its users think or behave.
+	</p>
+	<p>
+		Sounds fluffy, doesn't it? It's actually just creativity and curiousity-driven. Let's talk about
+		how it could help your next project
 	</p>
 </section>
 
@@ -636,6 +642,7 @@
 		padding-left: 0;
 		padding-right: 0;
 		padding-bottom: 2rem;
+		text-align: center;
 
 		@media screen and (max-width: 791px) {
 			overflow: hidden;
@@ -650,12 +657,15 @@
 
 			@media screen and (max-width: 791px) {
 				left: -10vw;
+				top: -5rem;
 			}
 		}
 
 		img {
-			height: 250px;
+			height: auto;
 			width: auto;
+			max-height: 33vh;
+			max-width: 33vw;
 			border-radius: 10px;
 			margin-bottom: 11px;
 			position: absolute;
@@ -663,10 +673,9 @@
 			transition: filter 1s ease-in-out;
 			// transition: opacity 0.5s ease-in-out, left 0.8s ease-in-out, top 0.8s ease-in-out;
 
-			@media screen and not (max-width: 791px) {
-				height: auto;
-				max-height: 33vh;
-				max-width: 33vw;
+			@media screen and (max-width: 791px) {
+				max-height: 370px;
+				max-width: 350px;
 			}
 
 			@keyframes fadeIn {
@@ -695,7 +704,7 @@
 			position: relative;
 			div {
 				position: absolute;
-				bottom: -2px;
+				bottom: -1px;
 				left: 20px;
 			}
 			button {
@@ -703,7 +712,7 @@
 				border: 1px solid var(--border-color);
 				border-bottom: 0px;
 				background-color: var(--bg-colorlight);
-				padding: 0.75rem;
+				padding: 0.75rem 0.75rem 0.5rem 0.75rem;
 				border-radius: 10px 10px 0px 0px;
 				position: relative;
 				z-index: 3;

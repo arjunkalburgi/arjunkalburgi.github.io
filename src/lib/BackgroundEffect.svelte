@@ -53,7 +53,7 @@
 		height: 100%;
 		position: relative;
 		overflow: hidden;
-		border-radius: 10px;
+		border-radius: var(--border-radius-inner);
 		isolation: isolate;
 
 		&.animated {

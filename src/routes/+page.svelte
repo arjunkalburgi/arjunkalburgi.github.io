@@ -269,7 +269,7 @@
 </section>
 
 <section class="recs">
-	<div class="tabs">
+	<div class="tabs" class:secondTab={activeTab === 'village'}>
 		<div>
 			<button class:selected={activeTab === 'books'} on:click={() => (activeTab = 'books')}>
 				Books
@@ -279,7 +279,7 @@
 			</button>
 		</div>
 	</div>
-	<div class="content">
+	<div class="content" class:firstTab={activeTab === 'books'}>
 		<div class="books" class:selected={activeTab === 'books'}>
 			<h2>Feeding the mind</h2>
 			<p>Here are a few books I highly recommend, good to go back to from time to time.</p>
@@ -419,7 +419,7 @@
 		.blog---featured-post---image {
 			overflow: hidden;
 			position: relative;
-			border-radius: 10px;
+			border-radius: var(--border-radius);
 			isolation: isolate;
 
 			@media screen and (max-width: 791px) {
@@ -532,7 +532,7 @@
 			.post {
 				background: var(--bg-colorlight);
 				padding: 10px;
-				border-radius: 18px;
+				border-radius: var(--border-radius);
 				border: 1px solid var(--border-color);
 
 				div.post-art {
@@ -568,7 +568,7 @@
 		}
 
 		.tiktok.section {
-			border-radius: 18px;
+			border-radius: var(--border-radius);
 			.posts .post .post-art {
 				height: auto;
 
@@ -576,7 +576,7 @@
 					width: 100%;
 					height: auto;
 					object-fit: cover;
-					border-radius: 10px;
+					border-radius: var(--border-radius-inner);
 				}
 			}
 		}
@@ -607,7 +607,7 @@
 			padding: 3rem;
 			border: 1px solid var(--border-color);
 			background-color: var(--bg-colorlight);
-			border-radius: 10px;
+			border-radius: var(--border-radius);
 
 			@media screen and (max-width: 791px) {
 				padding: 1rem;
@@ -666,7 +666,7 @@
 			width: auto;
 			max-height: 33vh;
 			max-width: 33vw;
-			border-radius: 10px;
+			border-radius: var(--border-radius);
 			margin-bottom: 11px;
 			position: absolute;
 			box-shadow: 0px 0px 40px #111;
@@ -705,7 +705,6 @@
 			div {
 				position: absolute;
 				bottom: -1px;
-				left: 20px;
 			}
 			button {
 				color: var(--text-colordark);
@@ -713,7 +712,7 @@
 				border-bottom: 0px;
 				background-color: var(--bg-colorlight);
 				padding: 0.75rem 0.75rem 0.5rem 0.75rem;
-				border-radius: 10px 10px 0px 0px;
+				border-radius: var(--border-radius-inner) var(--border-radius-inner) 0px 0px;
 				position: relative;
 				z-index: 3;
 
@@ -721,6 +720,17 @@
 					z-index: 1;
 					background-color: var(--border-color);
 				}
+			}
+
+			&.secondTab::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: var(--border-radius);
+				height: var(--border-radius);
+				background-color: var(--border-color);
+				z-index: -1;
 			}
 		}
 		.content {
@@ -736,7 +746,11 @@
 				padding: 1rem;
 				border: 1px solid var(--border-color);
 				background-color: var(--bg-colorlight);
-				border-radius: 10px;
+				border-radius: var(--border-radius);
+
+				&.firstTab {
+					border-radius: 0 var(--border-radius) var(--border-radius);
+				}
 			}
 		}
 
@@ -745,7 +759,7 @@
 			padding: 2rem;
 			border: 1px solid var(--border-color);
 			background-color: var(--bg-colorlight);
-			border-radius: 18px;
+			border-radius: var(--border-radius);
 
 			h2 {
 				margin-top: 0;

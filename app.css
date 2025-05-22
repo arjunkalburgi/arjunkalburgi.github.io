@@ -20,6 +20,8 @@ body {
 	--bg-color: #fbf8f3;
 	--bg-colorlight: #fcfcfc;
 	--border-color: #f2e9da;
+	--border-radius: 18px;
+	--border-radius-inner: 8px;
 
 	--brand-colour: #e9681b;
 	--brand-colourlight: #e9ab1b;

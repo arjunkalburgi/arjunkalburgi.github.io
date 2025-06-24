@@ -11,17 +11,19 @@
 
 	let imageContainer;
 	const images = [
-		{ image: `${base}/together/bar.jpg`, alt: 'group of friends at the bar' },
-		{ image: `${base}/together/baseball.jpg`, alt: 'group of friends at the baseball game' },
-		{ image: `${base}/together/caribana.jpg`, alt: 'group of friends at Caribana parade' },
+		{ image: `${base}/together/coffee.jpg`, alt: 'group of friends having coffee' },
+		{ image: `${base}/together/cuz.jpg`, alt: 'my cousins at the club' },
+		{ image: `${base}/together/dancefail.jpg`, alt: 'group of friends dancing and having fun' },
 		{ image: `${base}/together/hiking.jpg`, alt: 'group of friends hiking' },
-		{ image: `${base}/together/party-2.jpg`, alt: 'group of friends at a house party' },
-		{ image: `${base}/together/party.png`, alt: 'group of friends partying outside' },
+		{ image: `${base}/together/home.jpg`, alt: 'group of friends at home' },
+		{ image: `${base}/together/rukus.jpg`, alt: 'group of friends making a rukus' },
+		{ image: `${base}/together/sourkids.jpg`, alt: 'a couple being goofy over Sour Patch Kids' },
 		{ image: `${base}/together/station.jpg`, alt: 'group of friends in the subway station' }
 	];
 	let positions = [];
 	let maxZIndex = images.length - 1;
 	let currentPicture = images.length - 1;
+	let currentImageInterval;
 
 	function randomizePositions() {
 		if (!imageContainer) return;
@@ -48,6 +50,13 @@
 		positions[currentPicture].zIndex = ++maxZIndex;
 	}
 
+	function rotateImages() {
+		currentImageInterval = setInterval(() => {
+			currentPicture = (currentPicture - 1 + 7) % 7;
+			randomizePosition(currentPicture);
+		}, 5000);
+	}
+
 	const links = {
 		projects:
 			'https://www.notion.so/arjunkalburgi/eaf021a4614746a2ad6c91d5bad6772c?v=f9dea10aacda4c6696842874cd77fb67',
@@ -57,8 +66,10 @@
 			'https://arjunkalburgi.notion.site/How-I-became-the-cross-functional-collaborator-I-am-today-14d6e92f6ecf80ddaec4ef1bdfddf981?pvs=4',
 		lilaStory:
 			'https://arjunkalburgi.notion.site/I-built-an-AI-powered-game-that-reduced-impulse-spending-1906e92f6ecf80f3a20ddd5d96120f93?pvs=4',
-		books:
-			'https://www.notion.so/arjunkalburgi/eaf021a4614746a2ad6c91d5bad6772c?v=89329eec6f0b47839c58fe1b8a0a2b46',
+		books: 'https://fable.co/arjun-kalburgi-388914478318',
+		book_originals: 'https://fable.co/review/3d1fd124-9d0d-4b15-b2a9-0ac589a0dcfd/share',
+		book_emotions: 'https://fable.co/review/ea266520-acf0-4c38-ba03-bdd5586e26e3/share',
+		book_steve: 'https://fable.co/review/284803b7-1d17-47a8-8b67-610e3c1778e7/share',
 		careerStory:
 			'https://www.notion.so/arjunkalburgi/My-Approach-How-I-Build-Products-with-Teams-db411d150cf346f8b4c0098422016b10'
 	};
@@ -75,10 +86,7 @@
 		isIOS = /iPhone|iPod|iPad/i.test(ua); // catches iOS
 
 		if (!isReducedMotion && !isIOS) {
-			setInterval(() => {
-				currentPicture = (currentPicture - 1 + 7) % 7;
-				randomizePosition(currentPicture);
-			}, 5000);
+			rotateImages();
 
 			animate({
 				className: 'intro-bg',
@@ -112,13 +120,13 @@
 	</div>
 	<div class="blog---feature---content">
 		<p>
-			Hi there! My name is Arjun, I love learning new things and being creative. I got a big smile,
-			a huge laugh, and boatloads of enthusiasm that comes from living my core value:
+			hi there! my name is Arjun, I love learning new things and being creative. I got a big smile,
+			a full heart, and boatloads of enthusiasm. it comes from living my core value:
 		</p>
-		<h2>Let's enjoy life together</h2>
-		<p>This entails a lot of things, let me show you...</p>
+		<h2>let's enjoy life together</h2>
+		<p>this entails a lot of things, let me show you...</p>
 		<div class="scroll-indicator-container">
-			<p>Welcome to: <span class="cursive">Living life, Arjun style</span></p>
+			<p>Welcome to: <span class="cursive">living life, Arjun style</span></p>
 			<ScrollIndicator />
 		</div>
 	</div>
@@ -259,6 +267,8 @@
 				on:click={() => {
 					currentPicture = (currentPicture - 1 + 7) % 7;
 					randomizePosition(currentPicture);
+					clearInterval(currentImageInterval);
+					rotateImages();
 				}}
 			/>
 		{/each}
@@ -282,24 +292,19 @@
 	<div class="content" class:firstTab={activeTab === 'books'}>
 		<div class="books" class:selected={activeTab === 'books'}>
 			<h2>Feeding the mind</h2>
-			<p>Here are a few books I highly recommend, good to go back to from time to time.</p>
+			<p>Here are a few books that are very me. They're good to come back to.</p>
 			<p>
-				<a href="https://www.goodreads.com/book/show/25614523-originals">Originals by Adam Grant</a>
+				<a href="book_originals">Originals by Adam Grant</a>
 				basically describes me. Sometimes I use it when I need help being more me.
 			</p>
 			<p>
-				<a href="https://www.goodreads.com/en/book/show/33517721-the-culture-code"
-					>The Culture Code by Daniel Coyle</a
-				> is about making people around you feel comfortable.
+				<a href="book_emotions">An Emotional Education</a> is really about all of us, on the inside.
 			</p>
 			<p>
-				I'm not religious, but the takeaways of <a
-					href="https://www.goodreads.com/book/show/6708.The_Power_of_Now"
-					>The Power of Now by Eckhart Tolle</a
-				> helps me view the world.
+				Although we are very different, <a href="book_steve">Steve Jobs</a> shares my creative spirit.
 			</p>
 			<p>
-				View more <a href={links.books}>book recommendations</a>
+				Peep all my <a href={links.books}>readings</a>
 			</p>
 		</div>
 		<div class="village" class:selected={activeTab === 'village'}>
@@ -473,13 +478,11 @@
 				// font-weight: 400;
 			}
 
-			& > :not(h2) {
-				margin-left: 1rem;
-				margin-right: 1rem;
+			margin-left: 1rem;
+			margin-right: 1rem;
 
-				@media screen and (min-width: 1240px) {
-					margin-left: 5rem;
-				}
+			@media screen and (min-width: 1240px) {
+				margin-left: 5rem;
 			}
 
 			h2 {
@@ -782,6 +785,7 @@
 		padding-right: calc(10px + 1rem);
 
 		.cursive {
+			margin-left: 6px;
 			@media screen and (min-width: 1240px) {
 				padding-left: 10px;
 			}

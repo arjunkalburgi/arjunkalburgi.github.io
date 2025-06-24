@@ -104,7 +104,8 @@
 			max-width: 800px;
 		}
 
-		padding: 20vh 40px 40px 40px;
+		$footer-padding-top: 20vh;
+		padding: $footer-padding-top 40px 40px 40px;
 		max-width: 700px;
 		margin-left: auto;
 		margin-right: auto;
@@ -128,6 +129,7 @@
 
 		.clouds {
 			position: absolute;
+			top: $footer-padding-top/2;
 			z-index: -1;
 			width: 100%;
 			display: grid;

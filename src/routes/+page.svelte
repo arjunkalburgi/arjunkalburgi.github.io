@@ -294,14 +294,15 @@
 			<h2>Feeding the mind</h2>
 			<p>Here are a few books that are very me. They're good to come back to.</p>
 			<p>
-				<a href="book_originals">Originals by Adam Grant</a>
+				<a href={links.book_originals}>Originals by Adam Grant</a>
 				basically describes me. Sometimes I use it when I need help being more me.
 			</p>
 			<p>
-				<a href="book_emotions">An Emotional Education</a> is really about all of us, on the inside.
+				<a href={links.book_emotions}>An Emotional Education</a> is really about all of us, on the inside.
 			</p>
 			<p>
-				Although we are very different, <a href="book_steve">Steve Jobs</a> shares my creative spirit.
+				Although we are very different, <a href={links.book_steve}>Steve Jobs</a> shares my creative
+				spirit.
 			</p>
 			<p>
 				Peep all my <a href={links.books}>readings</a>

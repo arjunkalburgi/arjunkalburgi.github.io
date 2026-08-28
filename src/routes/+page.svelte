@@ -58,20 +58,17 @@
 	}
 
 	const links = {
-		projects:
-			'https://www.notion.so/arjunkalburgi/eaf021a4614746a2ad6c91d5bad6772c?v=f9dea10aacda4c6696842874cd77fb67',
-		entreStory:
-			'https://www.notion.so/arjunkalburgi/What-it-means-to-be-an-Entrepreneur-0c90fcc2fe104673bc1afa5c92bc4998',
-		writing:
-			'https://arjunkalburgi.notion.site/How-I-became-the-cross-functional-collaborator-I-am-today-14d6e92f6ecf80ddaec4ef1bdfddf981?pvs=4',
-		lilaStory:
-			'https://arjunkalburgi.notion.site/I-built-an-AI-powered-game-that-reduced-impulse-spending-1906e92f6ecf80f3a20ddd5d96120f93?pvs=4',
+		content:
+			'https://arjunkalburgi.notion.site/About-Arjun-c7cb723a93dd467d9e7f237033572611',
+		writingHighlight:
+			'https://arjunkalburgi.notion.site/What-it-means-to-be-an-Entrepreneur-0c90fcc2fe104673bc1afa5c92bc4998',
+		projectHighlight:
+			'https://arjunkalburgi.notion.site/The-Meditation-Game-1a16e92f6ecf80f5b18fc8692d2f50de?pvs=74',
 		books: 'https://fable.co/arjun-kalburgi-388914478318',
 		book_originals: 'https://fable.co/review/3d1fd124-9d0d-4b15-b2a9-0ac589a0dcfd/share',
 		book_emotions: 'https://fable.co/review/ea266520-acf0-4c38-ba03-bdd5586e26e3/share',
 		book_steve: 'https://fable.co/review/284803b7-1d17-47a8-8b67-610e3c1778e7/share',
-		careerStory:
-			'https://www.notion.so/arjunkalburgi/My-Approach-How-I-Build-Products-with-Teams-db411d150cf346f8b4c0098422016b10'
+		village: 'https://arjunkalburgi.notion.site/The-friends-along-the-way-eaa33349cc1c4712a3156be0cfb5faf8',
 	};
 
 	let activeTab = 'books';
@@ -82,10 +79,10 @@
 		randomizePositions();
 
 		isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-		const ua = navigator.userAgent || navigator.vendor || window.opera;
-		isIOS = /iPhone|iPod|iPad/i.test(ua); // catches iOS
+		isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
+		isSmallViewport = window.matchMedia('(max-width: 768px)').matches;
 
-		if (!isReducedMotion && !isIOS) {
+		if (!isReducedMotion && !isCoarsePointer && !isSmallViewport) {
 			rotateImages();
 
 			animate({
@@ -145,20 +142,20 @@
 	<div>
 		<div class="posts">
 			<div class="section">
-				<a class="post" href={links.entreStory}>
+				<a class="post" href={links.writingHighlight}>
 					<div class="post-art">
 						<BackgroundEffect alt="lightbulb switching on and off" src="{base}/lightbulb.gif" />
 						<span>#writing</span>
 					</div>
-					<h4>Collaboration is a culture, not a todo list 🔗</h4>
+					<h4>What is entrepreneurship? 🔗</h4>
 					<p>
-						In this blog post I explore my journey as a collaborator and how I learned to be a
-						connector.
+						In this blog post I explore what entrepreneurship means to me and why it's become 
+						so core to who I am as a person.
 					</p>
 				</a>
 			</div>
 			<div class="section">
-				<a class="post" href={links.lilaStory}>
+				<a class="post" href={links.projectHighlight}>
 					<div class="post-art">
 						<BackgroundEffect
 							alt="stack of money with wings flapping up and down"
@@ -166,10 +163,10 @@
 						/>
 						<span>#project</span>
 					</div>
-					<h4>Building my first company 🔗</h4>
+					<h4>Building a meditation app 🔗</h4>
 					<p>
-						I built an AI product that helped impulsive & anxious spenders break their avoidance
-						habit and make intentional decisions with their money.
+						We’ve been approaching meditation all wrong! In this project I strategize how to make 
+						meditation more approachable via gamification. 
 					</p>
 				</a>
 			</div>
@@ -209,11 +206,11 @@
 		</div>
 	</div>
 	<p>
-		I've got a lot of content across the internet. You can read more of <a
+		I've got a lot of content across the internet. You can read more of it <a
 			target="_blank"
-			href={links.writing}>my writing</a
-		>, check out some of <a target="_blank" href={links.projects}>my projects</a>, and watch more of
-		<a target="_blank" href="https://www.tiktok.com/@arjipoo">my TikToks</a>.
+			href={links.content}>here</a
+		>, and watch more of my
+		<a target="_blank" href="https://www.tiktok.com/@arjipoo">TikToks</a>.
 	</p>
 </section>
 
@@ -328,11 +325,7 @@
 				taught me how to think over FaceTime.
 			</p>
 			<p>
-				Explore the <a
-					href="https://arjunkalburgi.notion.site/The-friends-along-the-way-eaa33349cc1c4712a3156be0cfb5faf8"
-				>
-					entire village
-				</a>
+				Explore the <a href={links.village}>entire village</a>
 			</p>
 		</div>
 	</div>
@@ -341,21 +334,19 @@
 <section class="career">
 	<h2>Building products</h2>
 	<p>
-		I’ve been building 0→1 products as a founder, PM, and engineer for {new Date().getFullYear() -
-			2019} years. I build products the same way artists express themselves through their art.
+		I've been building 0→1 products for {new Date().getFullYear() - 2019} years — as the first hire 
+		at an early-stage startup, a founding frontend engineer at Nylas ($175M from Tiger Global, 8VC, 
+		Citi Ventures), a solo founder who replaced traditional budgeting for Millennials and Gen Zs, 
+		and most recently the first production engineer at Tabs ($91M from Lightspeed, General Catalyst, 
+		Primary).
 	</p>
 	<p>
-		For me, building products is a creative process that brings my ideas, beliefs, and values to
-		life. It's become my favourite way to share my understandings of the world, and the humans
-		living in it.
+		I get recruited into fast-paced, ambiguous environments to stitch pieces together and ship 
+		products that users love, using AI to move at 10x speed.
 	</p>
 	<p>
-		The understanding is key; coming from deep research, a new perspective, or a better process. I
-		use it to craft products that help change the way its users think or behave.
-	</p>
-	<p>
-		Sounds fluffy, doesn't it? It's actually just creativity and curiousity-driven. Let's talk about
-		how it could help your next project
+		Sounds like a lot, but I'm honestly just curious — I like to chase the things that don't make sense 
+		until they do. If you have something you're curious about, let's talk how I can help.
 	</p>
 </section>
 
